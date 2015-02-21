@@ -13,11 +13,12 @@
 		14BD24181A987A870015DF09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BD24171A987A870015DF09 /* Images.xcassets */; };
 		14BD241B1A987A870015DF09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BD24191A987A870015DF09 /* LaunchScreen.xib */; };
 		14BD24271A987A870015DF09 /* GKUserKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */; };
-		14BD24331A9895E40015DF09 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD24321A9895E40015DF09 /* User.m */; };
 		14BD24401A98AF2E0015DF09 /* RegistrationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD243C1A98AF2E0015DF09 /* RegistrationTableViewCell.m */; };
 		14BD24411A98AF2E0015DF09 /* RegistrationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BD243D1A98AF2E0015DF09 /* RegistrationTableViewCell.xib */; };
 		14BD24421A98AF2E0015DF09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD243F1A98AF2E0015DF09 /* ViewController.m */; };
 		90A672F55A2E42DC80C33531 /* libPods-GKUserKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */; };
+		E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */; };
+		E5A126E61A98B2870016AF23 /* GKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E41A98B2870016AF23 /* GKUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +43,6 @@
 		14BD24201A987A870015DF09 /* GKUserKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GKUserKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BD24251A987A870015DF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKUserKitExampleTests.m; sourceTree = "<group>"; };
-		14BD24311A9895E40015DF09 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		14BD24321A9895E40015DF09 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		14BD243B1A98AF2E0015DF09 /* RegistrationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationTableViewCell.h; sourceTree = "<group>"; };
 		14BD243C1A98AF2E0015DF09 /* RegistrationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationTableViewCell.m; sourceTree = "<group>"; };
 		14BD243D1A98AF2E0015DF09 /* RegistrationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationTableViewCell.xib; sourceTree = "<group>"; };
@@ -51,6 +50,10 @@
 		14BD243F1A98AF2E0015DF09 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKUserKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE32C04908DA3EBE876A8FB /* Pods-GKUserKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		E5A126E11A98B2870016AF23 /* GKUserAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserAccessToken.h; path = Model/GKUserAccessToken.h; sourceTree = "<group>"; };
+		E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserAccessToken.m; path = Model/GKUserAccessToken.m; sourceTree = "<group>"; };
+		E5A126E31A98B2870016AF23 /* GKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUser.h; path = Model/GKUser.h; sourceTree = "<group>"; };
+		E5A126E41A98B2870016AF23 /* GKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUser.m; path = Model/GKUser.m; sourceTree = "<group>"; };
 		F17EC053ABA9F4C999CD991F /* Pods-GKUserKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,8 +140,7 @@
 		14BD24301A98954C0015DF09 /* GKUserKit */ = {
 			isa = PBXGroup;
 			children = (
-				14BD24311A9895E40015DF09 /* User.h */,
-				14BD24321A9895E40015DF09 /* User.m */,
+				E5A126E01A98B2520016AF23 /* Model */,
 			);
 			path = GKUserKit;
 			sourceTree = "<group>";
@@ -170,6 +172,17 @@
 				364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5A126E01A98B2520016AF23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5A126E11A98B2870016AF23 /* GKUserAccessToken.h */,
+				E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */,
+				E5A126E31A98B2870016AF23 /* GKUser.h */,
+				E5A126E41A98B2870016AF23 /* GKUser.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +322,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				14BD24401A98AF2E0015DF09 /* RegistrationTableViewCell.m in Sources */,
-				14BD24331A9895E40015DF09 /* User.m in Sources */,
+				E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */,
+				E5A126E61A98B2870016AF23 /* GKUser.m in Sources */,
 				14BD24101A987A870015DF09 /* AppDelegate.m in Sources */,
 				14BD240D1A987A870015DF09 /* main.m in Sources */,
 				14BD24421A98AF2E0015DF09 /* ViewController.m in Sources */,
