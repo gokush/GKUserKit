@@ -8,9 +8,15 @@
 
 #import "ViewController.h"
 #import "RegistrationTableViewCell.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface ViewController ()
-
+{
+    RACSignal *emailSignal;
+    RACSignal *nicknameSignal;
+    RACSignal *pwdSignal;
+    RACSignal *formValidSignal;
+}
 @end
 
 @implementation ViewController
@@ -38,7 +44,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case 0:
-            return 2;
+            return 3;
             break;
         case 1:
             return 1;
@@ -69,23 +75,54 @@
     if (indexpath.section == 0) {
         switch (indexpath.row) {
             case 0:
+            {
                 cell.label.text = @"邮箱";
                 cell.textField.placeholder = @"Email";
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+                 emailSignal = [cell.textField rac_textSignal];
+                [emailSignal map:^id(id value) {
+                    return @([cell isValidEmail:value]);
+                }];
+            }
                 break;
             case 1:
+            {
                 cell.label.text = @"昵称";
                 cell.textField.placeholder = @"昵称";
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+                nicknameSignal = [cell.textField rac_textSignal];
+                [nicknameSignal map:^id(NSString *value) {
+                    return @(value.length > 2 && value.length < 10);
+                }];
+            }
+                break;
+            case 2:
+            {
+                cell.label.text = @"密码";
+                cell.textField.placeholder = @"密码";
+                cell.textField.secureTextEntry = YES;
+                [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+                pwdSignal = [cell.textField rac_textSignal];
+                [pwdSignal map:^id(NSString *value) {
+                    return @(value.length > 1);
+                }];
+            }
                 break;
             default:
                 break;
         }
     } else {
-        cell.label.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
+        UIColor *blueColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
+        cell.label.textColor = blueColor;
         cell.label.text = @"注册";
         cell.textField.hidden = YES;
+        formValidSignal = [RACSignal combineLatest:@[emailSignal, nicknameSignal, pwdSignal] reduce:^id(NSNumber *emailValid, NSNumber *nicknameValid, NSNumber *pwdValid){
+            return @([emailValid boolValue] && [nicknameValid boolValue] && [pwdValid boolValue]);
+        }];
         
+        [formValidSignal subscribeNext:^(id x) {
+            cell.label.textColor = [x boolValue] ? blueColor : [UIColor grayColor];
+        }];
     }
     
     

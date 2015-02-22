@@ -11,5 +11,5 @@
 @interface RegistrationTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-
+- (BOOL) isValidEmail:(NSString *)emailText;
 @end
