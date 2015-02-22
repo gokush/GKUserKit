@@ -6,11 +6,11 @@
 //  Copyright (c) 2015年 GKCommerce. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "RegistrationTableViewCell.h"
+#import "GKRegistrationController.h"
+#import "GKRegistrationTableViewCell.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
-@interface ViewController ()
+@interface GKRegistrationController ()
 {
     RACSignal *emailSignal;
     RACSignal *nicknameSignal;
@@ -19,7 +19,7 @@
 }
 @end
 
-@implementation ViewController
+@implementation GKRegistrationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,13 +27,15 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     [self.view addSubview:self.tableView];
     
-    for (NSString* identifier in @[@"RegistrationTableViewCell"]) {
+    for (NSString* identifier in @[@"GKRegistrationTableViewCell"]) {
         [self.tableView registerNib:[UINib nibWithNibName:identifier bundle:nil]
              forCellReuseIdentifier:identifier];
     }
     
     self.tableView.dataSource = self;
     self.tableView.delegate   = self;
+    
+    self.title = @"用户注册";
     
 }
 
@@ -59,17 +61,18 @@
 }
 
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self configureBasicCell:tableView cellForRowAtIndexPath:indexPath];
 }
 
 - (UITableViewCell *)configureBasicCell:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexpath {
-    NSString *identifier = @"RegistrationTableViewCell";
+    NSString *identifier = @"GKRegistrationTableViewCell";
     
-    RegistrationTableViewCell *cell = (RegistrationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexpath];
+    GKRegistrationTableViewCell *cell = (GKRegistrationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexpath];
     
     if (!cell) {
-        cell = [[RegistrationTableViewCell alloc] init];
+        cell = [[GKRegistrationTableViewCell alloc] init];
     }
     
     if (indexpath.section == 0) {
@@ -80,9 +83,13 @@
                 cell.textField.placeholder = @"Email";
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
                  emailSignal = [cell.textField rac_textSignal];
-                [emailSignal map:^id(id value) {
+                [[emailSignal map:^id(id value) {
                     return @([cell isValidEmail:value]);
+                }] subscribeNext:^(NSNumber *x) {
+                    NSLog(@"%@ and %d", [x class], x.boolValue);
                 }];
+                
+                
             }
                 break;
             case 1:
@@ -91,8 +98,10 @@
                 cell.textField.placeholder = @"昵称";
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
                 nicknameSignal = [cell.textField rac_textSignal];
-                [nicknameSignal map:^id(NSString *value) {
+                [[nicknameSignal map:^id(NSString *value) {
                     return @(value.length > 2 && value.length < 10);
+                }] subscribeNext:^(NSNumber *x) {
+                    NSLog(@"%@ and %d", [x class], x.boolValue);
                 }];
             }
                 break;
@@ -103,8 +112,10 @@
                 cell.textField.secureTextEntry = YES;
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
                 pwdSignal = [cell.textField rac_textSignal];
-                [pwdSignal map:^id(NSString *value) {
+                [[pwdSignal map:^id(NSString *value) {
                     return @(value.length > 1);
+                }] subscribeNext:^(NSNumber *x) {
+                    NSLog(@"%@ and %d", [x class], x.boolValue);
                 }];
             }
                 break;
@@ -117,6 +128,7 @@
         cell.label.text = @"注册";
         cell.textField.hidden = YES;
         formValidSignal = [RACSignal combineLatest:@[emailSignal, nicknameSignal, pwdSignal] reduce:^id(NSNumber *emailValid, NSNumber *nicknameValid, NSNumber *pwdValid){
+            NSLog(@"%@, %@, %@",emailValid, nicknameValid, pwdValid);
             return @([emailValid boolValue] && [nicknameValid boolValue] && [pwdValid boolValue]);
         }];
         

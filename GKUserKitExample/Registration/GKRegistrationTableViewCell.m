@@ -6,14 +6,14 @@
 //  Copyright (c) 2015年 GKCommerce. All rights reserved.
 //
 
-#import "RegistrationTableViewCell.h"
+#import "GKRegistrationTableViewCell.h"
 #define EMAIL_REGEX @"^\\s*\\w+(?:\\.{0,1}[\\w-]+)*@[a-zA-Z0-9]+(?:[-.][a-zA-Z0-9]+)*\\.[a-zA-Z]+\\s*$"
 
 
-@implementation RegistrationTableViewCell
+@implementation GKRegistrationTableViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
