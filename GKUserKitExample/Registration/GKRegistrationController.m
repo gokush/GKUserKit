@@ -82,11 +82,8 @@
                 cell.label.text = @"邮箱";
                 cell.textField.placeholder = @"Email";
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-                 emailSignal = [cell.textField rac_textSignal];
-                [[emailSignal map:^id(id value) {
+                 emailSignal = [[cell.textField rac_textSignal] map:^id(id value) {
                     return @([cell isValidEmail:value]);
-                }] subscribeNext:^(NSNumber *x) {
-                    NSLog(@"%@ and %d", [x class], x.boolValue);
                 }];
                 
                 
@@ -97,11 +94,8 @@
                 cell.label.text = @"昵称";
                 cell.textField.placeholder = @"昵称";
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-                nicknameSignal = [cell.textField rac_textSignal];
-                [[nicknameSignal map:^id(NSString *value) {
+                nicknameSignal = [[cell.textField rac_textSignal] map:^id(NSString *value) {
                     return @(value.length > 2 && value.length < 10);
-                }] subscribeNext:^(NSNumber *x) {
-                    NSLog(@"%@ and %d", [x class], x.boolValue);
                 }];
             }
                 break;
@@ -111,11 +105,8 @@
                 cell.textField.placeholder = @"密码";
                 cell.textField.secureTextEntry = YES;
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-                pwdSignal = [cell.textField rac_textSignal];
-                [[pwdSignal map:^id(NSString *value) {
+                pwdSignal = [[cell.textField rac_textSignal] map:^id(NSString *value) {
                     return @(value.length > 1);
-                }] subscribeNext:^(NSNumber *x) {
-                    NSLog(@"%@ and %d", [x class], x.boolValue);
                 }];
             }
                 break;
