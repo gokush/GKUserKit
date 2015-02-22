@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XkT-Kk-mjg">
-                        <rect key="frame" x="167" y="7" width="145" height="30"/>
+                        <rect key="frame" x="105" y="0.5" width="207" height="43"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="XkT-Kk-mjg" secondAttribute="height" multiplier="29:6" id="4bv-k1-Dyq"/>
                         </constraints>
@@ -34,6 +34,7 @@
                     <constraint firstItem="XkT-Kk-mjg" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="5nJ-lJ-Td6"/>
                     <constraint firstAttribute="centerY" secondItem="XkT-Kk-mjg" secondAttribute="centerY" id="G2T-a5-cFR"/>
                     <constraint firstItem="oqA-kk-c4I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="PoF-zo-6CH"/>
+                    <constraint firstItem="XkT-Kk-mjg" firstAttribute="leading" secondItem="oqA-kk-c4I" secondAttribute="trailing" constant="50" id="bm4-Cd-oaR"/>
                     <constraint firstAttribute="centerY" secondItem="oqA-kk-c4I" secondAttribute="centerY" id="xDX-Ef-GQl"/>
                 </constraints>
             </tableViewCellContentView>
