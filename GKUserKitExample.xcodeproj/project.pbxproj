@@ -13,9 +13,9 @@
 		14BD24181A987A870015DF09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BD24171A987A870015DF09 /* Images.xcassets */; };
 		14BD241B1A987A870015DF09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BD24191A987A870015DF09 /* LaunchScreen.xib */; };
 		14BD24271A987A870015DF09 /* GKUserKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */; };
-		14BD24401A98AF2E0015DF09 /* RegistrationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD243C1A98AF2E0015DF09 /* RegistrationTableViewCell.m */; };
-		14BD24411A98AF2E0015DF09 /* RegistrationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BD243D1A98AF2E0015DF09 /* RegistrationTableViewCell.xib */; };
-		14BD24421A98AF2E0015DF09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD243F1A98AF2E0015DF09 /* ViewController.m */; };
+		14BD24401A98AF2E0015DF09 /* GKRegistrationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD243C1A98AF2E0015DF09 /* GKRegistrationTableViewCell.m */; };
+		14BD24411A98AF2E0015DF09 /* GKRegistrationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BD243D1A98AF2E0015DF09 /* GKRegistrationTableViewCell.xib */; };
+		14BD24421A98AF2E0015DF09 /* GKRegistrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD243F1A98AF2E0015DF09 /* GKRegistrationController.m */; };
 		90A672F55A2E42DC80C33531 /* libPods-GKUserKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */; };
 		E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */; };
 		E5A126E61A98B2870016AF23 /* GKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E41A98B2870016AF23 /* GKUser.m */; };
@@ -43,11 +43,11 @@
 		14BD24201A987A870015DF09 /* GKUserKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GKUserKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BD24251A987A870015DF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKUserKitExampleTests.m; sourceTree = "<group>"; };
-		14BD243B1A98AF2E0015DF09 /* RegistrationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationTableViewCell.h; sourceTree = "<group>"; };
-		14BD243C1A98AF2E0015DF09 /* RegistrationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationTableViewCell.m; sourceTree = "<group>"; };
-		14BD243D1A98AF2E0015DF09 /* RegistrationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationTableViewCell.xib; sourceTree = "<group>"; };
-		14BD243E1A98AF2E0015DF09 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		14BD243F1A98AF2E0015DF09 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		14BD243B1A98AF2E0015DF09 /* GKRegistrationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegistrationTableViewCell.h; sourceTree = "<group>"; };
+		14BD243C1A98AF2E0015DF09 /* GKRegistrationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegistrationTableViewCell.m; sourceTree = "<group>"; };
+		14BD243D1A98AF2E0015DF09 /* GKRegistrationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKRegistrationTableViewCell.xib; sourceTree = "<group>"; };
+		14BD243E1A98AF2E0015DF09 /* GKRegistrationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegistrationController.h; sourceTree = "<group>"; };
+		14BD243F1A98AF2E0015DF09 /* GKRegistrationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegistrationController.m; sourceTree = "<group>"; };
 		364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKUserKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE32C04908DA3EBE876A8FB /* Pods-GKUserKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		E5A126E11A98B2870016AF23 /* GKUserAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserAccessToken.h; path = Model/GKUserAccessToken.h; sourceTree = "<group>"; };
@@ -148,11 +148,11 @@
 		14BD243A1A98AF2E0015DF09 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				14BD243B1A98AF2E0015DF09 /* RegistrationTableViewCell.h */,
-				14BD243C1A98AF2E0015DF09 /* RegistrationTableViewCell.m */,
-				14BD243D1A98AF2E0015DF09 /* RegistrationTableViewCell.xib */,
-				14BD243E1A98AF2E0015DF09 /* ViewController.h */,
-				14BD243F1A98AF2E0015DF09 /* ViewController.m */,
+				14BD243B1A98AF2E0015DF09 /* GKRegistrationTableViewCell.h */,
+				14BD243C1A98AF2E0015DF09 /* GKRegistrationTableViewCell.m */,
+				14BD243D1A98AF2E0015DF09 /* GKRegistrationTableViewCell.xib */,
+				14BD243E1A98AF2E0015DF09 /* GKRegistrationController.h */,
+				14BD243F1A98AF2E0015DF09 /* GKRegistrationController.m */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14BD24411A98AF2E0015DF09 /* RegistrationTableViewCell.xib in Resources */,
+				14BD24411A98AF2E0015DF09 /* GKRegistrationTableViewCell.xib in Resources */,
 				14BD24161A987A870015DF09 /* Main.storyboard in Resources */,
 				14BD241B1A987A870015DF09 /* LaunchScreen.xib in Resources */,
 				14BD24181A987A870015DF09 /* Images.xcassets in Resources */,
@@ -321,12 +321,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14BD24401A98AF2E0015DF09 /* RegistrationTableViewCell.m in Sources */,
+				14BD24401A98AF2E0015DF09 /* GKRegistrationTableViewCell.m in Sources */,
 				E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */,
 				E5A126E61A98B2870016AF23 /* GKUser.m in Sources */,
 				14BD24101A987A870015DF09 /* AppDelegate.m in Sources */,
 				14BD240D1A987A870015DF09 /* main.m in Sources */,
-				14BD24421A98AF2E0015DF09 /* ViewController.m in Sources */,
+				14BD24421A98AF2E0015DF09 /* GKRegistrationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
