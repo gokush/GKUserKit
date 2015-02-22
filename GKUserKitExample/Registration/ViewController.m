@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     [self.view addSubview:self.tableView];
     
     for (NSString* identifier in @[@"RegistrationTableViewCell"]) {
@@ -32,15 +32,24 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    switch (section) {
+        case 0:
+            return 2;
+            break;
+        case 1:
+            return 1;
+        default:
+            return 0;
+            break;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    return 45.0f;
 }
 
 
@@ -57,18 +66,28 @@
         cell = [[RegistrationTableViewCell alloc] init];
     }
     
-    switch (indexpath.row) {
-        case 0:
-            cell.label.text = @"邮箱";
-            cell.textField.placeholder = @"Email";
-            break;
-        case 1:
-            cell.label.text = @"昵称";
-            cell.textField.placeholder = @"昵称";
-            break;
-        default:
-            break;
+    if (indexpath.section == 0) {
+        switch (indexpath.row) {
+            case 0:
+                cell.label.text = @"邮箱";
+                cell.textField.placeholder = @"Email";
+                [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+                break;
+            case 1:
+                cell.label.text = @"昵称";
+                cell.textField.placeholder = @"昵称";
+                [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+                break;
+            default:
+                break;
+        }
+    } else {
+        cell.label.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
+        cell.label.text = @"注册";
+        cell.textField.hidden = YES;
+        
     }
+    
     
     
     return cell;

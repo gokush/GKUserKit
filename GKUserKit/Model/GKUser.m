@@ -20,7 +20,7 @@
       self.email = [aDecoder decodeObjectForKey:@"email"];
       self.accessToken = [aDecoder decodeObjectForKey:@"accessToken"];
       self.avatar = [aDecoder decodeObjectForKey:@"avatar"];
-      self.cart = [[Cart alloc] initWithUser:self];
+//      self.cart = [[Cart alloc] initWithUser:self];
     }
     
     return self;
