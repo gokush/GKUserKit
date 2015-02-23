@@ -13,6 +13,7 @@
 @implementation GKUserBackendMock
 
 - (RACSignal *) submitUserFormData:(NSString *)email passWord:(NSString *)passWord {
+    @weakify(self)
     return
     [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         

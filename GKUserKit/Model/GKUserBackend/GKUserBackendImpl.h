@@ -15,6 +15,6 @@
 
 @property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
 
-- (RACSignal *) submitUserFormData:(NSString *)email passWord:(NSString *)passWord;
+- (RACSignal *)submitUserFormData:(NSString *)email passWord:(NSString *)passWord;
 
 @end

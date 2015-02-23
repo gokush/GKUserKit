@@ -10,6 +10,6 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 @protocol GKUserBackend <NSObject>
 
-- (RACSignal *) submitUserFormData:(NSString *)email passWord:(NSString *)passWord;
+- (RACSignal *)submitUserFormData:(NSString *)email passWord:(NSString *)passWord;
 
 @end
