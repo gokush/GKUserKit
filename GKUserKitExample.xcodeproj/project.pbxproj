@@ -26,6 +26,7 @@
 		C8CA7F5C1A9A121D00E0B44F /* GKForgotPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CA7F5B1A9A121D00E0B44F /* GKForgotPasswordController.xib */; };
 		C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CA7F5E1A9A167E00E0B44F /* GKVerificationTableViewCell.m */; };
 		C8CA7F611A9A167E00E0B44F /* GKVerificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CA7F5F1A9A167E00E0B44F /* GKVerificationTableViewCell.xib */; };
+		E555C3C11A9B70C900836965 /* GKUserRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C3C01A9B70C900836965 /* GKUserRegistration.m */; };
 		E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */; };
 		E5A126E61A98B2870016AF23 /* GKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E41A98B2870016AF23 /* GKUser.m */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,8 @@
 		C8CA7F5D1A9A167E00E0B44F /* GKVerificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKVerificationTableViewCell.h; sourceTree = "<group>"; };
 		C8CA7F5E1A9A167E00E0B44F /* GKVerificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKVerificationTableViewCell.m; sourceTree = "<group>"; };
 		C8CA7F5F1A9A167E00E0B44F /* GKVerificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKVerificationTableViewCell.xib; sourceTree = "<group>"; };
+		E555C3BF1A9B70C900836965 /* GKUserRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserRegistration.h; path = Model/GKUserRegistration.h; sourceTree = "<group>"; };
+		E555C3C01A9B70C900836965 /* GKUserRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserRegistration.m; path = Model/GKUserRegistration.m; sourceTree = "<group>"; };
 		E5A126E11A98B2870016AF23 /* GKUserAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserAccessToken.h; path = Model/GKUserAccessToken.h; sourceTree = "<group>"; };
 		E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserAccessToken.m; path = Model/GKUserAccessToken.m; sourceTree = "<group>"; };
 		E5A126E31A98B2870016AF23 /* GKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUser.h; path = Model/GKUser.h; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				1447783D1A9B448D00751FD3 /* GKUserService.h */,
 				1447783E1A9B4CE600751FD3 /* GKUserServiceImpl.h */,
 				1447783F1A9B4CE600751FD3 /* GKUserServiceImpl.m */,
+				E555C3BF1A9B70C900836965 /* GKUserRegistration.h */,
+				E555C3C01A9B70C900836965 /* GKUserRegistration.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 				144778591A9B62CB00751FD3 /* GKUserContainerMock.m in Sources */,
 				C8CA7F5A1A9A11FC00E0B44F /* GKForgotPasswordController.m in Sources */,
 				1447784C1A9B608000751FD3 /* GKUserBackendImpl.m in Sources */,
+				E555C3C11A9B70C900836965 /* GKUserRegistration.m in Sources */,
 				147927661A9B399A003648FF /* GKRegistrationController.m in Sources */,
 				14BD240D1A987A870015DF09 /* main.m in Sources */,
 			);
