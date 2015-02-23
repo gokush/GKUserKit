@@ -11,4 +11,7 @@
 
 @interface GKUserContainerMock : NSObject  <GKUserContainer>
 
+@property (strong, nonatomic) id<GKUserBackend> userBackend;
+@property (strong, nonatomic) id<GKUserService> userService;
+
 @end

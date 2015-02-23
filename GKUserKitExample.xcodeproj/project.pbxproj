@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		144778401A9B4CE600751FD3 /* GKUserServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1447783F1A9B4CE600751FD3 /* GKUserServiceImpl.m */; };
-		144778441A9B52CF00751FD3 /* GKUserContainerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 144778431A9B52CF00751FD3 /* GKUserContainerImpl.m */; };
-		144778471A9B550600751FD3 /* GKUserContainerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 144778461A9B550600751FD3 /* GKUserContainerMock.m */; };
 		1447784C1A9B608000751FD3 /* GKUserBackendImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1447784B1A9B608000751FD3 /* GKUserBackendImpl.m */; };
 		144778511A9B613000751FD3 /* GKUserBackendMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 144778501A9B613000751FD3 /* GKUserBackendMock.m */; };
+		144778581A9B62CB00751FD3 /* GKUserContainerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 144778551A9B62CB00751FD3 /* GKUserContainerImpl.m */; };
+		144778591A9B62CB00751FD3 /* GKUserContainerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 144778571A9B62CB00751FD3 /* GKUserContainerMock.m */; };
 		147927661A9B399A003648FF /* GKRegistrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147927621A9B399A003648FF /* GKRegistrationController.m */; };
 		147927671A9B399A003648FF /* GKRegistrationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 147927641A9B399A003648FF /* GKRegistrationTableViewCell.m */; };
 		147927681A9B399A003648FF /* GKRegistrationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147927651A9B399A003648FF /* GKRegistrationTableViewCell.xib */; };
@@ -44,16 +44,16 @@
 		1447783D1A9B448D00751FD3 /* GKUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserService.h; path = Model/GKUserService.h; sourceTree = "<group>"; };
 		1447783E1A9B4CE600751FD3 /* GKUserServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserServiceImpl.h; path = Model/GKUserServiceImpl.h; sourceTree = "<group>"; };
 		1447783F1A9B4CE600751FD3 /* GKUserServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserServiceImpl.m; path = Model/GKUserServiceImpl.m; sourceTree = "<group>"; };
-		144778411A9B52A000751FD3 /* GKUserContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserContainer.h; path = Model/GKUserContainer.h; sourceTree = "<group>"; };
-		144778421A9B52CF00751FD3 /* GKUserContainerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserContainerImpl.h; path = Model/GKUserContainerImpl.h; sourceTree = "<group>"; };
-		144778431A9B52CF00751FD3 /* GKUserContainerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserContainerImpl.m; path = Model/GKUserContainerImpl.m; sourceTree = "<group>"; };
-		144778451A9B550600751FD3 /* GKUserContainerMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserContainerMock.h; path = Model/GKUserContainerMock.h; sourceTree = "<group>"; };
-		144778461A9B550600751FD3 /* GKUserContainerMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserContainerMock.m; path = Model/GKUserContainerMock.m; sourceTree = "<group>"; };
 		144778491A9B608000751FD3 /* GKUserBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserBackend.h; sourceTree = "<group>"; };
 		1447784A1A9B608000751FD3 /* GKUserBackendImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserBackendImpl.h; sourceTree = "<group>"; };
 		1447784B1A9B608000751FD3 /* GKUserBackendImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserBackendImpl.m; sourceTree = "<group>"; };
 		1447784F1A9B613000751FD3 /* GKUserBackendMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserBackendMock.h; sourceTree = "<group>"; };
 		144778501A9B613000751FD3 /* GKUserBackendMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserBackendMock.m; sourceTree = "<group>"; };
+		144778531A9B62CB00751FD3 /* GKUserContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserContainer.h; sourceTree = "<group>"; };
+		144778541A9B62CB00751FD3 /* GKUserContainerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserContainerImpl.h; sourceTree = "<group>"; };
+		144778551A9B62CB00751FD3 /* GKUserContainerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserContainerImpl.m; sourceTree = "<group>"; };
+		144778561A9B62CB00751FD3 /* GKUserContainerMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserContainerMock.h; sourceTree = "<group>"; };
+		144778571A9B62CB00751FD3 /* GKUserContainerMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserContainerMock.m; sourceTree = "<group>"; };
 		147927611A9B399A003648FF /* GKRegistrationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegistrationController.h; sourceTree = "<group>"; };
 		147927621A9B399A003648FF /* GKRegistrationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegistrationController.m; sourceTree = "<group>"; };
 		147927631A9B399A003648FF /* GKRegistrationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegistrationTableViewCell.h; sourceTree = "<group>"; };
@@ -115,6 +115,19 @@
 			);
 			name = GKUserBackend;
 			path = Model/GKUserBackend;
+			sourceTree = "<group>";
+		};
+		144778521A9B62CB00751FD3 /* GKUserContainer */ = {
+			isa = PBXGroup;
+			children = (
+				144778531A9B62CB00751FD3 /* GKUserContainer.h */,
+				144778541A9B62CB00751FD3 /* GKUserContainerImpl.h */,
+				144778551A9B62CB00751FD3 /* GKUserContainerImpl.m */,
+				144778561A9B62CB00751FD3 /* GKUserContainerMock.h */,
+				144778571A9B62CB00751FD3 /* GKUserContainerMock.m */,
+			);
+			name = GKUserContainer;
+			path = Model/GKUserContainer;
 			sourceTree = "<group>";
 		};
 		147927601A9B399A003648FF /* GKRegistration */ = {
@@ -232,6 +245,7 @@
 		E5A126E01A98B2520016AF23 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				144778521A9B62CB00751FD3 /* GKUserContainer */,
 				144778481A9B608000751FD3 /* GKUserBackend */,
 				E5A126E11A98B2870016AF23 /* GKUserAccessToken.h */,
 				E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */,
@@ -240,11 +254,6 @@
 				1447783D1A9B448D00751FD3 /* GKUserService.h */,
 				1447783E1A9B4CE600751FD3 /* GKUserServiceImpl.h */,
 				1447783F1A9B4CE600751FD3 /* GKUserServiceImpl.m */,
-				144778411A9B52A000751FD3 /* GKUserContainer.h */,
-				144778451A9B550600751FD3 /* GKUserContainerMock.h */,
-				144778461A9B550600751FD3 /* GKUserContainerMock.m */,
-				144778421A9B52CF00751FD3 /* GKUserContainerImpl.h */,
-				144778431A9B52CF00751FD3 /* GKUserContainerImpl.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -392,11 +401,11 @@
 				C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */,
 				E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */,
 				E5A126E61A98B2870016AF23 /* GKUser.m in Sources */,
-				144778471A9B550600751FD3 /* GKUserContainerMock.m in Sources */,
 				14BD24101A987A870015DF09 /* AppDelegate.m in Sources */,
+				144778581A9B62CB00751FD3 /* GKUserContainerImpl.m in Sources */,
 				144778511A9B613000751FD3 /* GKUserBackendMock.m in Sources */,
+				144778591A9B62CB00751FD3 /* GKUserContainerMock.m in Sources */,
 				C8CA7F5A1A9A11FC00E0B44F /* GKForgotPasswordController.m in Sources */,
-				144778441A9B52CF00751FD3 /* GKUserContainerImpl.m in Sources */,
 				1447784C1A9B608000751FD3 /* GKUserBackendImpl.m in Sources */,
 				147927661A9B399A003648FF /* GKRegistrationController.m in Sources */,
 				14BD240D1A987A870015DF09 /* main.m in Sources */,

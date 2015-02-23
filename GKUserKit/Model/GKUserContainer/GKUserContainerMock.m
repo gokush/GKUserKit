@@ -7,7 +7,11 @@
 //
 
 #import "GKUserContainerMock.h"
-
+#import "GKUserBackendMock.h"
 @implementation GKUserContainerMock
+
+- (id<GKUserBackend>) userBackend {
+    return [[GKUserBackendMock alloc] init];
+}
 
 @end
