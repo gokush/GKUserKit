@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GKUserBackend.h"
 #import "GKUserRegistration.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
