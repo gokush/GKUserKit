@@ -1,1686 +1,672 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>02EFB2AC4D09512BF8516A6B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-GKUserKitExampleTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-GKUserKitExampleTests/Pods-GKUserKitExampleTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1447783D1A9B448D00751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GKUserService.h</string>
-			<key>path</key>
-			<string>Model/GKUserService.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1447783E1A9B4CE600751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GKUserServiceImpl.h</string>
-			<key>path</key>
-			<string>Model/GKUserServiceImpl.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1447783F1A9B4CE600751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GKUserServiceImpl.m</string>
-			<key>path</key>
-			<string>Model/GKUserServiceImpl.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>144778401A9B4CE600751FD3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1447783F1A9B4CE600751FD3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>144778481A9B608000751FD3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>144778491A9B608000751FD3</string>
-				<string>1447784A1A9B608000751FD3</string>
-				<string>1447784B1A9B608000751FD3</string>
-				<string>1447784F1A9B613000751FD3</string>
-				<string>144778501A9B613000751FD3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>GKUserBackend</string>
-			<key>path</key>
-			<string>Model/GKUserBackend</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>144778491A9B608000751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GKUserBackend.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1447784A1A9B608000751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GKUserBackendImpl.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1447784B1A9B608000751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GKUserBackendImpl.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1447784C1A9B608000751FD3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1447784B1A9B608000751FD3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1447784F1A9B613000751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GKUserBackendMock.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>144778501A9B613000751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GKUserBackendMock.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>144778511A9B613000751FD3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>144778501A9B613000751FD3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>144778521A9B62CB00751FD3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>144778531A9B62CB00751FD3</string>
-				<string>144778541A9B62CB00751FD3</string>
-				<string>144778551A9B62CB00751FD3</string>
-				<string>144778561A9B62CB00751FD3</string>
-				<string>144778571A9B62CB00751FD3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>GKUserContainer</string>
-			<key>path</key>
-			<string>Model/GKUserContainer</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>144778531A9B62CB00751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GKUserContainer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>144778541A9B62CB00751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GKUserContainerImpl.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>144778551A9B62CB00751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GKUserContainerImpl.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>144778561A9B62CB00751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GKUserContainerMock.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>144778571A9B62CB00751FD3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GKUserContainerMock.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>144778581A9B62CB00751FD3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>144778551A9B62CB00751FD3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>144778591A9B62CB00751FD3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>144778571A9B62CB00751FD3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>147927601A9B399A003648FF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>147927611A9B399A003648FF</string>
-				<string>147927621A9B399A003648FF</string>
-				<string>147927631A9B399A003648FF</string>
-				<string>147927641A9B399A003648FF</string>
-				<string>147927651A9B399A003648FF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>GKRegistration</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>147927611A9B399A003648FF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GKRegistrationController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>147927621A9B399A003648FF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GKRegistrationController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>147927631A9B399A003648FF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GKRegistrationTableViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>147927641A9B399A003648FF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GKRegistrationTableViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>147927651A9B399A003648FF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>path</key>
-			<string>GKRegistrationTableViewCell.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>147927661A9B399A003648FF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>147927621A9B399A003648FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>147927671A9B399A003648FF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>147927641A9B399A003648FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>147927681A9B399A003648FF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>147927651A9B399A003648FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>14BD23FE1A987A870015DF09</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>14BD24301A98954C0015DF09</string>
-				<string>14BD24091A987A870015DF09</string>
-				<string>14BD24231A987A870015DF09</string>
-				<string>14BD24081A987A870015DF09</string>
-				<string>2C3098EC9E9024CFB0FB527F</string>
-				<string>7D7EC9C8AE9772C01D6DE9C4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD23FF1A987A870015DF09</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0610</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>GKCommerce</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>14BD24061A987A870015DF09</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1.1</string>
-					</dict>
-					<key>14BD241F1A987A870015DF09</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1.1</string>
-						<key>TestTargetID</key>
-						<string>14BD24061A987A870015DF09</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>14BD24021A987A870015DF09</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>14BD23FE1A987A870015DF09</string>
-			<key>productRefGroup</key>
-			<string>14BD24081A987A870015DF09</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>14BD24061A987A870015DF09</string>
-				<string>14BD241F1A987A870015DF09</string>
-			</array>
-		</dict>
-		<key>14BD24021A987A870015DF09</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>14BD24281A987A870015DF09</string>
-				<string>14BD24291A987A870015DF09</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>14BD24031A987A870015DF09</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>144778401A9B4CE600751FD3</string>
-				<string>147927671A9B399A003648FF</string>
-				<string>C8CA7F601A9A167E00E0B44F</string>
-				<string>E5A126E51A98B2870016AF23</string>
-				<string>E5A126E61A98B2870016AF23</string>
-				<string>14BD24101A987A870015DF09</string>
-				<string>144778581A9B62CB00751FD3</string>
-				<string>144778511A9B613000751FD3</string>
-				<string>144778591A9B62CB00751FD3</string>
-				<string>C8CA7F5A1A9A11FC00E0B44F</string>
-				<string>1447784C1A9B608000751FD3</string>
-				<string>E555C3C11A9B70C900836965</string>
-				<string>147927661A9B399A003648FF</string>
-				<string>14BD240D1A987A870015DF09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>14BD24041A987A870015DF09</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>90A672F55A2E42DC80C33531</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>14BD24051A987A870015DF09</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>14BD24161A987A870015DF09</string>
-				<string>C8CA7F5C1A9A121D00E0B44F</string>
-				<string>14BD241B1A987A870015DF09</string>
-				<string>C8CA7F611A9A167E00E0B44F</string>
-				<string>147927681A9B399A003648FF</string>
-				<string>14BD24181A987A870015DF09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>14BD24061A987A870015DF09</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>14BD242A1A987A870015DF09</string>
-			<key>buildPhases</key>
-			<array>
-				<string>1C9708CAB619360854A78EA1</string>
-				<string>14BD24031A987A870015DF09</string>
-				<string>14BD24041A987A870015DF09</string>
-				<string>14BD24051A987A870015DF09</string>
-				<string>86939D373150884FF533A071</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>GKUserKitExample</string>
-			<key>productName</key>
-			<string>GKUserKitExample</string>
-			<key>productReference</key>
-			<string>14BD24071A987A870015DF09</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>14BD24071A987A870015DF09</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>GKUserKitExample.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>14BD24081A987A870015DF09</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>14BD24071A987A870015DF09</string>
-				<string>14BD24201A987A870015DF09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD24091A987A870015DF09</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>14BD240E1A987A870015DF09</string>
-				<string>14BD240F1A987A870015DF09</string>
-				<string>14BD24141A987A870015DF09</string>
-				<string>14BD24171A987A870015DF09</string>
-				<string>14BD24191A987A870015DF09</string>
-				<string>14BD240A1A987A870015DF09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>GKUserKitExample</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD240A1A987A870015DF09</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>14BD240B1A987A870015DF09</string>
-				<string>14BD240C1A987A870015DF09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD240B1A987A870015DF09</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD240C1A987A870015DF09</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD240D1A987A870015DF09</key>
-		<dict>
-			<key>fileRef</key>
-			<string>14BD240C1A987A870015DF09</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>14BD240E1A987A870015DF09</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD240F1A987A870015DF09</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD24101A987A870015DF09</key>
-		<dict>
-			<key>fileRef</key>
-			<string>14BD240F1A987A870015DF09</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>14BD24141A987A870015DF09</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>14BD24151A987A870015DF09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD24151A987A870015DF09</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD24161A987A870015DF09</key>
-		<dict>
-			<key>fileRef</key>
-			<string>14BD24141A987A870015DF09</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>14BD24171A987A870015DF09</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD24181A987A870015DF09</key>
-		<dict>
-			<key>fileRef</key>
-			<string>14BD24171A987A870015DF09</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>14BD24191A987A870015DF09</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>14BD241A1A987A870015DF09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD241A1A987A870015DF09</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD241B1A987A870015DF09</key>
-		<dict>
-			<key>fileRef</key>
-			<string>14BD24191A987A870015DF09</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>14BD241C1A987A870015DF09</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>14BD24271A987A870015DF09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>14BD241D1A987A870015DF09</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C987B9B6891FCAC9D52E001C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>14BD241E1A987A870015DF09</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>14BD241F1A987A870015DF09</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>14BD242D1A987A870015DF09</string>
-			<key>buildPhases</key>
-			<array>
-				<string>233B6920FD11908CBC8591FD</string>
-				<string>14BD241C1A987A870015DF09</string>
-				<string>14BD241D1A987A870015DF09</string>
-				<string>14BD241E1A987A870015DF09</string>
-				<string>623F5086E1E92A47BAE4867C</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>14BD24221A987A870015DF09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>GKUserKitExampleTests</string>
-			<key>productName</key>
-			<string>GKUserKitExampleTests</string>
-			<key>productReference</key>
-			<string>14BD24201A987A870015DF09</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>14BD24201A987A870015DF09</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>GKUserKitExampleTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>14BD24211A987A870015DF09</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>14BD23FF1A987A870015DF09</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>14BD24061A987A870015DF09</string>
-			<key>remoteInfo</key>
-			<string>GKUserKitExample</string>
-		</dict>
-		<key>14BD24221A987A870015DF09</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>14BD24061A987A870015DF09</string>
-			<key>targetProxy</key>
-			<string>14BD24211A987A870015DF09</string>
-		</dict>
-		<key>14BD24231A987A870015DF09</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>14BD24261A987A870015DF09</string>
-				<string>14BD24241A987A870015DF09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>GKUserKitExampleTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD24241A987A870015DF09</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>14BD24251A987A870015DF09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD24251A987A870015DF09</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD24261A987A870015DF09</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GKUserKitExampleTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14BD24271A987A870015DF09</key>
-		<dict>
-			<key>fileRef</key>
-			<string>14BD24261A987A870015DF09</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>14BD24281A987A870015DF09</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>14BD24291A987A870015DF09</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>14BD242A1A987A870015DF09</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>14BD242B1A987A870015DF09</string>
-				<string>14BD242C1A987A870015DF09</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>14BD242B1A987A870015DF09</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4FE32C04908DA3EBE876A8FB</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
-				<key>INFOPLIST_FILE</key>
-				<string>GKUserKitExample/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>14BD242C1A987A870015DF09</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F17EC053ABA9F4C999CD991F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
-				<key>INFOPLIST_FILE</key>
-				<string>GKUserKitExample/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>14BD242D1A987A870015DF09</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>14BD242E1A987A870015DF09</string>
-				<string>14BD242F1A987A870015DF09</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>14BD242E1A987A870015DF09</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>73FF49C2A16D4A464CB892FB</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>GKUserKitExampleTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/GKUserKitExample.app/GKUserKitExample</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>14BD242F1A987A870015DF09</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>02EFB2AC4D09512BF8516A6B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>GKUserKitExampleTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/GKUserKitExample.app/GKUserKitExample</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>14BD24301A98954C0015DF09</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>147927601A9B399A003648FF</string>
-				<string>C8CA7F571A9A11C700E0B44F</string>
-				<string>E5A126E01A98B2520016AF23</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>GKUserKit</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1C9708CAB619360854A78EA1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>233B6920FD11908CBC8591FD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>2C3098EC9E9024CFB0FB527F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4FE32C04908DA3EBE876A8FB</string>
-				<string>F17EC053ABA9F4C999CD991F</string>
-				<string>73FF49C2A16D4A464CB892FB</string>
-				<string>02EFB2AC4D09512BF8516A6B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>364F6077750896C4F31DB077</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-GKUserKitExample.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4FE32C04908DA3EBE876A8FB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-GKUserKitExample.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5BDF58C889FEC4E523B1459E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-GKUserKitExampleTests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>623F5086E1E92A47BAE4867C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-GKUserKitExampleTests/Pods-GKUserKitExampleTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>73FF49C2A16D4A464CB892FB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-GKUserKitExampleTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-GKUserKitExampleTests/Pods-GKUserKitExampleTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D7EC9C8AE9772C01D6DE9C4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>364F6077750896C4F31DB077</string>
-				<string>5BDF58C889FEC4E523B1459E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>86939D373150884FF533A071</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>90A672F55A2E42DC80C33531</key>
-		<dict>
-			<key>fileRef</key>
-			<string>364F6077750896C4F31DB077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C8CA7F571A9A11C700E0B44F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C8CA7F581A9A11FC00E0B44F</string>
-				<string>C8CA7F591A9A11FC00E0B44F</string>
-				<string>C8CA7F5B1A9A121D00E0B44F</string>
-				<string>C8CA7F5D1A9A167E00E0B44F</string>
-				<string>C8CA7F5E1A9A167E00E0B44F</string>
-				<string>C8CA7F5F1A9A167E00E0B44F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>GKForgotPassword</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C8CA7F581A9A11FC00E0B44F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GKForgotPasswordController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C8CA7F591A9A11FC00E0B44F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GKForgotPasswordController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C8CA7F5A1A9A11FC00E0B44F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C8CA7F591A9A11FC00E0B44F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C8CA7F5B1A9A121D00E0B44F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>path</key>
-			<string>GKForgotPasswordController.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C8CA7F5C1A9A121D00E0B44F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C8CA7F5B1A9A121D00E0B44F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C8CA7F5D1A9A167E00E0B44F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GKVerificationTableViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C8CA7F5E1A9A167E00E0B44F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GKVerificationTableViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C8CA7F5F1A9A167E00E0B44F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>path</key>
-			<string>GKVerificationTableViewCell.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C8CA7F601A9A167E00E0B44F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C8CA7F5E1A9A167E00E0B44F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C8CA7F611A9A167E00E0B44F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C8CA7F5F1A9A167E00E0B44F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C987B9B6891FCAC9D52E001C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5BDF58C889FEC4E523B1459E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E555C3BF1A9B70C900836965</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GKUserRegistration.h</string>
-			<key>path</key>
-			<string>Model/GKUserRegistration.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E555C3C01A9B70C900836965</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GKUserRegistration.m</string>
-			<key>path</key>
-			<string>Model/GKUserRegistration.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E555C3C11A9B70C900836965</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E555C3C01A9B70C900836965</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E5A126E01A98B2520016AF23</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>144778521A9B62CB00751FD3</string>
-				<string>144778481A9B608000751FD3</string>
-				<string>E5A126E11A98B2870016AF23</string>
-				<string>E5A126E21A98B2870016AF23</string>
-				<string>E5A126E31A98B2870016AF23</string>
-				<string>E5A126E41A98B2870016AF23</string>
-				<string>1447783D1A9B448D00751FD3</string>
-				<string>1447783E1A9B4CE600751FD3</string>
-				<string>1447783F1A9B4CE600751FD3</string>
-				<string>E555C3BF1A9B70C900836965</string>
-				<string>E555C3C01A9B70C900836965</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Model</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5A126E11A98B2870016AF23</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GKUserAccessToken.h</string>
-			<key>path</key>
-			<string>Model/GKUserAccessToken.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5A126E21A98B2870016AF23</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GKUserAccessToken.m</string>
-			<key>path</key>
-			<string>Model/GKUserAccessToken.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5A126E31A98B2870016AF23</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GKUser.h</string>
-			<key>path</key>
-			<string>Model/GKUser.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5A126E41A98B2870016AF23</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GKUser.m</string>
-			<key>path</key>
-			<string>Model/GKUser.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5A126E51A98B2870016AF23</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E5A126E21A98B2870016AF23</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E5A126E61A98B2870016AF23</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E5A126E41A98B2870016AF23</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F17EC053ABA9F4C999CD991F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-GKUserKitExample.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>14BD23FF1A987A870015DF09</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		144778401A9B4CE600751FD3 /* GKUserServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1447783F1A9B4CE600751FD3 /* GKUserServiceImpl.m */; };
+		1447784C1A9B608000751FD3 /* GKUserBackendImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1447784B1A9B608000751FD3 /* GKUserBackendImpl.m */; };
+		144778511A9B613000751FD3 /* GKUserBackendMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 144778501A9B613000751FD3 /* GKUserBackendMock.m */; };
+		144778581A9B62CB00751FD3 /* GKUserContainerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 144778551A9B62CB00751FD3 /* GKUserContainerImpl.m */; };
+		144778591A9B62CB00751FD3 /* GKUserContainerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 144778571A9B62CB00751FD3 /* GKUserContainerMock.m */; };
+		147927661A9B399A003648FF /* GKRegistrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147927621A9B399A003648FF /* GKRegistrationController.m */; };
+		147927671A9B399A003648FF /* GKRegistrationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 147927641A9B399A003648FF /* GKRegistrationTableViewCell.m */; };
+		147927681A9B399A003648FF /* GKRegistrationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147927651A9B399A003648FF /* GKRegistrationTableViewCell.xib */; };
+		14BD240D1A987A870015DF09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD240C1A987A870015DF09 /* main.m */; };
+		14BD24101A987A870015DF09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD240F1A987A870015DF09 /* AppDelegate.m */; };
+		14BD24161A987A870015DF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BD24141A987A870015DF09 /* Main.storyboard */; };
+		14BD24181A987A870015DF09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BD24171A987A870015DF09 /* Images.xcassets */; };
+		14BD241B1A987A870015DF09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BD24191A987A870015DF09 /* LaunchScreen.xib */; };
+		14BD24271A987A870015DF09 /* GKUserKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */; };
+		90A672F55A2E42DC80C33531 /* libPods-GKUserKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */; };
+		C8CA7F5A1A9A11FC00E0B44F /* GKForgotPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CA7F591A9A11FC00E0B44F /* GKForgotPasswordController.m */; };
+		C8CA7F5C1A9A121D00E0B44F /* GKForgotPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CA7F5B1A9A121D00E0B44F /* GKForgotPasswordController.xib */; };
+		C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CA7F5E1A9A167E00E0B44F /* GKVerificationTableViewCell.m */; };
+		C8CA7F611A9A167E00E0B44F /* GKVerificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CA7F5F1A9A167E00E0B44F /* GKVerificationTableViewCell.xib */; };
+		C987B9B6891FCAC9D52E001C /* libPods-GKUserKitExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDF58C889FEC4E523B1459E /* libPods-GKUserKitExampleTests.a */; };
+		E555C3C11A9B70C900836965 /* GKUserRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C3C01A9B70C900836965 /* GKUserRegistration.m */; };
+		E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */; };
+		E5A126E61A98B2870016AF23 /* GKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E41A98B2870016AF23 /* GKUser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14BD24211A987A870015DF09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14BD23FF1A987A870015DF09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14BD24061A987A870015DF09;
+			remoteInfo = GKUserKitExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02EFB2AC4D09512BF8516A6B /* Pods-GKUserKitExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExampleTests/Pods-GKUserKitExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		1447783D1A9B448D00751FD3 /* GKUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserService.h; path = Model/GKUserService.h; sourceTree = "<group>"; };
+		1447783E1A9B4CE600751FD3 /* GKUserServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserServiceImpl.h; path = Model/GKUserServiceImpl.h; sourceTree = "<group>"; };
+		1447783F1A9B4CE600751FD3 /* GKUserServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserServiceImpl.m; path = Model/GKUserServiceImpl.m; sourceTree = "<group>"; };
+		144778491A9B608000751FD3 /* GKUserBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserBackend.h; sourceTree = "<group>"; };
+		1447784A1A9B608000751FD3 /* GKUserBackendImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserBackendImpl.h; sourceTree = "<group>"; };
+		1447784B1A9B608000751FD3 /* GKUserBackendImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserBackendImpl.m; sourceTree = "<group>"; };
+		1447784F1A9B613000751FD3 /* GKUserBackendMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserBackendMock.h; sourceTree = "<group>"; };
+		144778501A9B613000751FD3 /* GKUserBackendMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserBackendMock.m; sourceTree = "<group>"; };
+		144778531A9B62CB00751FD3 /* GKUserContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserContainer.h; sourceTree = "<group>"; };
+		144778541A9B62CB00751FD3 /* GKUserContainerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserContainerImpl.h; sourceTree = "<group>"; };
+		144778551A9B62CB00751FD3 /* GKUserContainerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserContainerImpl.m; sourceTree = "<group>"; };
+		144778561A9B62CB00751FD3 /* GKUserContainerMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserContainerMock.h; sourceTree = "<group>"; };
+		144778571A9B62CB00751FD3 /* GKUserContainerMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserContainerMock.m; sourceTree = "<group>"; };
+		147927611A9B399A003648FF /* GKRegistrationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegistrationController.h; sourceTree = "<group>"; };
+		147927621A9B399A003648FF /* GKRegistrationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegistrationController.m; sourceTree = "<group>"; };
+		147927631A9B399A003648FF /* GKRegistrationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegistrationTableViewCell.h; sourceTree = "<group>"; };
+		147927641A9B399A003648FF /* GKRegistrationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegistrationTableViewCell.m; sourceTree = "<group>"; };
+		147927651A9B399A003648FF /* GKRegistrationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKRegistrationTableViewCell.xib; sourceTree = "<group>"; };
+		14BD24071A987A870015DF09 /* GKUserKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKUserKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14BD240B1A987A870015DF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14BD240C1A987A870015DF09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14BD240E1A987A870015DF09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		14BD240F1A987A870015DF09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		14BD24151A987A870015DF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14BD24171A987A870015DF09 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		14BD241A1A987A870015DF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		14BD24201A987A870015DF09 /* GKUserKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GKUserKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14BD24251A987A870015DF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKUserKitExampleTests.m; sourceTree = "<group>"; };
+		364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKUserKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FE32C04908DA3EBE876A8FB /* Pods-GKUserKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		5BDF58C889FEC4E523B1459E /* libPods-GKUserKitExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKUserKitExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73FF49C2A16D4A464CB892FB /* Pods-GKUserKitExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExampleTests/Pods-GKUserKitExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8CA7F581A9A11FC00E0B44F /* GKForgotPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKForgotPasswordController.h; sourceTree = "<group>"; };
+		C8CA7F591A9A11FC00E0B44F /* GKForgotPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKForgotPasswordController.m; sourceTree = "<group>"; };
+		C8CA7F5B1A9A121D00E0B44F /* GKForgotPasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKForgotPasswordController.xib; sourceTree = "<group>"; };
+		C8CA7F5D1A9A167E00E0B44F /* GKVerificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKVerificationTableViewCell.h; sourceTree = "<group>"; };
+		C8CA7F5E1A9A167E00E0B44F /* GKVerificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKVerificationTableViewCell.m; sourceTree = "<group>"; };
+		C8CA7F5F1A9A167E00E0B44F /* GKVerificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKVerificationTableViewCell.xib; sourceTree = "<group>"; };
+		E555C3BF1A9B70C900836965 /* GKUserRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserRegistration.h; path = Model/GKUserRegistration.h; sourceTree = "<group>"; };
+		E555C3C01A9B70C900836965 /* GKUserRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserRegistration.m; path = Model/GKUserRegistration.m; sourceTree = "<group>"; };
+		E5A126E11A98B2870016AF23 /* GKUserAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserAccessToken.h; path = Model/GKUserAccessToken.h; sourceTree = "<group>"; };
+		E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserAccessToken.m; path = Model/GKUserAccessToken.m; sourceTree = "<group>"; };
+		E5A126E31A98B2870016AF23 /* GKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUser.h; path = Model/GKUser.h; sourceTree = "<group>"; };
+		E5A126E41A98B2870016AF23 /* GKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUser.m; path = Model/GKUser.m; sourceTree = "<group>"; };
+		E5EAD9801A9CB169004E8812 /* GKUserRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserRepository.h; path = Model/GKUserRepository.h; sourceTree = "<group>"; };
+		F17EC053ABA9F4C999CD991F /* Pods-GKUserKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14BD24041A987A870015DF09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90A672F55A2E42DC80C33531 /* libPods-GKUserKitExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14BD241D1A987A870015DF09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C987B9B6891FCAC9D52E001C /* libPods-GKUserKitExampleTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		144778481A9B608000751FD3 /* GKUserBackend */ = {
+			isa = PBXGroup;
+			children = (
+				144778491A9B608000751FD3 /* GKUserBackend.h */,
+				1447784A1A9B608000751FD3 /* GKUserBackendImpl.h */,
+				1447784B1A9B608000751FD3 /* GKUserBackendImpl.m */,
+				1447784F1A9B613000751FD3 /* GKUserBackendMock.h */,
+				144778501A9B613000751FD3 /* GKUserBackendMock.m */,
+			);
+			name = GKUserBackend;
+			path = Model/GKUserBackend;
+			sourceTree = "<group>";
+		};
+		144778521A9B62CB00751FD3 /* GKUserContainer */ = {
+			isa = PBXGroup;
+			children = (
+				144778531A9B62CB00751FD3 /* GKUserContainer.h */,
+				144778541A9B62CB00751FD3 /* GKUserContainerImpl.h */,
+				144778551A9B62CB00751FD3 /* GKUserContainerImpl.m */,
+				144778561A9B62CB00751FD3 /* GKUserContainerMock.h */,
+				144778571A9B62CB00751FD3 /* GKUserContainerMock.m */,
+			);
+			name = GKUserContainer;
+			path = Model/GKUserContainer;
+			sourceTree = "<group>";
+		};
+		147927601A9B399A003648FF /* GKRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				147927611A9B399A003648FF /* GKRegistrationController.h */,
+				147927621A9B399A003648FF /* GKRegistrationController.m */,
+				147927631A9B399A003648FF /* GKRegistrationTableViewCell.h */,
+				147927641A9B399A003648FF /* GKRegistrationTableViewCell.m */,
+				147927651A9B399A003648FF /* GKRegistrationTableViewCell.xib */,
+			);
+			path = GKRegistration;
+			sourceTree = "<group>";
+		};
+		14BD23FE1A987A870015DF09 = {
+			isa = PBXGroup;
+			children = (
+				14BD24301A98954C0015DF09 /* GKUserKit */,
+				14BD24091A987A870015DF09 /* GKUserKitExample */,
+				14BD24231A987A870015DF09 /* GKUserKitExampleTests */,
+				14BD24081A987A870015DF09 /* Products */,
+				2C3098EC9E9024CFB0FB527F /* Pods */,
+				7D7EC9C8AE9772C01D6DE9C4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		14BD24081A987A870015DF09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14BD24071A987A870015DF09 /* GKUserKitExample.app */,
+				14BD24201A987A870015DF09 /* GKUserKitExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14BD24091A987A870015DF09 /* GKUserKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				14BD240E1A987A870015DF09 /* AppDelegate.h */,
+				14BD240F1A987A870015DF09 /* AppDelegate.m */,
+				14BD24141A987A870015DF09 /* Main.storyboard */,
+				14BD24171A987A870015DF09 /* Images.xcassets */,
+				14BD24191A987A870015DF09 /* LaunchScreen.xib */,
+				14BD240A1A987A870015DF09 /* Supporting Files */,
+			);
+			path = GKUserKitExample;
+			sourceTree = "<group>";
+		};
+		14BD240A1A987A870015DF09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14BD240B1A987A870015DF09 /* Info.plist */,
+				14BD240C1A987A870015DF09 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14BD24231A987A870015DF09 /* GKUserKitExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */,
+				14BD24241A987A870015DF09 /* Supporting Files */,
+			);
+			path = GKUserKitExampleTests;
+			sourceTree = "<group>";
+		};
+		14BD24241A987A870015DF09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14BD24251A987A870015DF09 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14BD24301A98954C0015DF09 /* GKUserKit */ = {
+			isa = PBXGroup;
+			children = (
+				147927601A9B399A003648FF /* GKRegistration */,
+				C8CA7F571A9A11C700E0B44F /* GKForgotPassword */,
+				E5A126E01A98B2520016AF23 /* Model */,
+			);
+			path = GKUserKit;
+			sourceTree = "<group>";
+		};
+		2C3098EC9E9024CFB0FB527F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FE32C04908DA3EBE876A8FB /* Pods-GKUserKitExample.debug.xcconfig */,
+				F17EC053ABA9F4C999CD991F /* Pods-GKUserKitExample.release.xcconfig */,
+				73FF49C2A16D4A464CB892FB /* Pods-GKUserKitExampleTests.debug.xcconfig */,
+				02EFB2AC4D09512BF8516A6B /* Pods-GKUserKitExampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D7EC9C8AE9772C01D6DE9C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */,
+				5BDF58C889FEC4E523B1459E /* libPods-GKUserKitExampleTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8CA7F571A9A11C700E0B44F /* GKForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				C8CA7F581A9A11FC00E0B44F /* GKForgotPasswordController.h */,
+				C8CA7F591A9A11FC00E0B44F /* GKForgotPasswordController.m */,
+				C8CA7F5B1A9A121D00E0B44F /* GKForgotPasswordController.xib */,
+				C8CA7F5D1A9A167E00E0B44F /* GKVerificationTableViewCell.h */,
+				C8CA7F5E1A9A167E00E0B44F /* GKVerificationTableViewCell.m */,
+				C8CA7F5F1A9A167E00E0B44F /* GKVerificationTableViewCell.xib */,
+			);
+			path = GKForgotPassword;
+			sourceTree = "<group>";
+		};
+		E5A126E01A98B2520016AF23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				144778521A9B62CB00751FD3 /* GKUserContainer */,
+				144778481A9B608000751FD3 /* GKUserBackend */,
+				E5A126E11A98B2870016AF23 /* GKUserAccessToken.h */,
+				E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */,
+				E5A126E31A98B2870016AF23 /* GKUser.h */,
+				E5A126E41A98B2870016AF23 /* GKUser.m */,
+				1447783D1A9B448D00751FD3 /* GKUserService.h */,
+				1447783E1A9B4CE600751FD3 /* GKUserServiceImpl.h */,
+				1447783F1A9B4CE600751FD3 /* GKUserServiceImpl.m */,
+				E555C3BF1A9B70C900836965 /* GKUserRegistration.h */,
+				E555C3C01A9B70C900836965 /* GKUserRegistration.m */,
+				E5EAD9801A9CB169004E8812 /* GKUserRepository.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14BD24061A987A870015DF09 /* GKUserKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14BD242A1A987A870015DF09 /* Build configuration list for PBXNativeTarget "GKUserKitExample" */;
+			buildPhases = (
+				1C9708CAB619360854A78EA1 /* Check Pods Manifest.lock */,
+				14BD24031A987A870015DF09 /* Sources */,
+				14BD24041A987A870015DF09 /* Frameworks */,
+				14BD24051A987A870015DF09 /* Resources */,
+				86939D373150884FF533A071 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GKUserKitExample;
+			productName = GKUserKitExample;
+			productReference = 14BD24071A987A870015DF09 /* GKUserKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14BD241F1A987A870015DF09 /* GKUserKitExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14BD242D1A987A870015DF09 /* Build configuration list for PBXNativeTarget "GKUserKitExampleTests" */;
+			buildPhases = (
+				233B6920FD11908CBC8591FD /* Check Pods Manifest.lock */,
+				14BD241C1A987A870015DF09 /* Sources */,
+				14BD241D1A987A870015DF09 /* Frameworks */,
+				14BD241E1A987A870015DF09 /* Resources */,
+				623F5086E1E92A47BAE4867C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14BD24221A987A870015DF09 /* PBXTargetDependency */,
+			);
+			name = GKUserKitExampleTests;
+			productName = GKUserKitExampleTests;
+			productReference = 14BD24201A987A870015DF09 /* GKUserKitExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14BD23FF1A987A870015DF09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = GKCommerce;
+				TargetAttributes = {
+					14BD24061A987A870015DF09 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					14BD241F1A987A870015DF09 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 14BD24061A987A870015DF09;
+					};
+				};
+			};
+			buildConfigurationList = 14BD24021A987A870015DF09 /* Build configuration list for PBXProject "GKUserKitExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14BD23FE1A987A870015DF09;
+			productRefGroup = 14BD24081A987A870015DF09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14BD24061A987A870015DF09 /* GKUserKitExample */,
+				14BD241F1A987A870015DF09 /* GKUserKitExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14BD24051A987A870015DF09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14BD24161A987A870015DF09 /* Main.storyboard in Resources */,
+				C8CA7F5C1A9A121D00E0B44F /* GKForgotPasswordController.xib in Resources */,
+				14BD241B1A987A870015DF09 /* LaunchScreen.xib in Resources */,
+				C8CA7F611A9A167E00E0B44F /* GKVerificationTableViewCell.xib in Resources */,
+				147927681A9B399A003648FF /* GKRegistrationTableViewCell.xib in Resources */,
+				14BD24181A987A870015DF09 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14BD241E1A987A870015DF09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C9708CAB619360854A78EA1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		233B6920FD11908CBC8591FD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		623F5086E1E92A47BAE4867C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GKUserKitExampleTests/Pods-GKUserKitExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86939D373150884FF533A071 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14BD24031A987A870015DF09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				144778401A9B4CE600751FD3 /* GKUserServiceImpl.m in Sources */,
+				147927671A9B399A003648FF /* GKRegistrationTableViewCell.m in Sources */,
+				C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */,
+				E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */,
+				E5A126E61A98B2870016AF23 /* GKUser.m in Sources */,
+				14BD24101A987A870015DF09 /* AppDelegate.m in Sources */,
+				144778581A9B62CB00751FD3 /* GKUserContainerImpl.m in Sources */,
+				144778511A9B613000751FD3 /* GKUserBackendMock.m in Sources */,
+				144778591A9B62CB00751FD3 /* GKUserContainerMock.m in Sources */,
+				C8CA7F5A1A9A11FC00E0B44F /* GKForgotPasswordController.m in Sources */,
+				1447784C1A9B608000751FD3 /* GKUserBackendImpl.m in Sources */,
+				E555C3C11A9B70C900836965 /* GKUserRegistration.m in Sources */,
+				147927661A9B399A003648FF /* GKRegistrationController.m in Sources */,
+				14BD240D1A987A870015DF09 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14BD241C1A987A870015DF09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14BD24271A987A870015DF09 /* GKUserKitExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14BD24221A987A870015DF09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14BD24061A987A870015DF09 /* GKUserKitExample */;
+			targetProxy = 14BD24211A987A870015DF09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14BD24141A987A870015DF09 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14BD24151A987A870015DF09 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14BD24191A987A870015DF09 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14BD241A1A987A870015DF09 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14BD24281A987A870015DF09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14BD24291A987A870015DF09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14BD242B1A987A870015DF09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FE32C04908DA3EBE876A8FB /* Pods-GKUserKitExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GKUserKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		14BD242C1A987A870015DF09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F17EC053ABA9F4C999CD991F /* Pods-GKUserKitExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GKUserKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		14BD242E1A987A870015DF09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73FF49C2A16D4A464CB892FB /* Pods-GKUserKitExampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GKUserKitExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GKUserKitExample.app/GKUserKitExample";
+			};
+			name = Debug;
+		};
+		14BD242F1A987A870015DF09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02EFB2AC4D09512BF8516A6B /* Pods-GKUserKitExampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GKUserKitExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GKUserKitExample.app/GKUserKitExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14BD24021A987A870015DF09 /* Build configuration list for PBXProject "GKUserKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14BD24281A987A870015DF09 /* Debug */,
+				14BD24291A987A870015DF09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14BD242A1A987A870015DF09 /* Build configuration list for PBXNativeTarget "GKUserKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14BD242B1A987A870015DF09 /* Debug */,
+				14BD242C1A987A870015DF09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14BD242D1A987A870015DF09 /* Build configuration list for PBXNativeTarget "GKUserKitExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14BD242E1A987A870015DF09 /* Debug */,
+				14BD242F1A987A870015DF09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14BD23FF1A987A870015DF09 /* Project object */;
+}
