@@ -1,5 +1,5 @@
 //
-//  GKUserRepository.h
+//  GKUserRepositoryImpl.h
 //  GKUserKitExample
 //
 //  Created by 小悟空 on 2/24/15.
@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import "GKUser.h"
+#import "GKUserRepository.h"
 
-@protocol GKUserRepository <NSObject>
+@interface GKUserRepositoryImpl : NSObject <GKUserRepository>
 
+@property (strong, nonatomic) NSManagedObjectContext *context;
 - (RACSignal *)create:(GKUser *)user;
 - (RACSignal *)findUserWithID:(NSInteger)userID;
 @end

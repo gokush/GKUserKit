@@ -17,6 +17,7 @@
     [[self.userBackend signup:registration] subscribeNext:^(id x) {
       [subscriber sendNext:x];
       [subscriber sendCompleted];
+
     } error:^(NSError *error) {
       [subscriber sendError:error];
     }];
