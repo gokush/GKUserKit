@@ -10,5 +10,6 @@ target 'GKUserKitExample' do
 end
 
 target 'GKUserKitExampleTests' do
-
+    pod 'ReactiveCocoa'
+    pod 'OCMock'
 end

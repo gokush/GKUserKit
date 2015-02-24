@@ -9,6 +9,8 @@
 #import "GKRegistrationController.h"
 #import "GKRegistrationTableViewCell.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "GKUserBackendMock.h"
+#import "GKUserAccessToken.h"
 
 @interface GKRegistrationController ()
 {
@@ -16,6 +18,7 @@
     RACSignal *nicknameSignal;
     RACSignal *pwdSignal;
     RACSignal *formValidSignal;
+    
 }
 @end
 
@@ -134,7 +137,14 @@
 }
 
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1) {
+        GKUserBackendMock *backend = [[GKUserBackendMock alloc] init];
+        [[backend submitUserFormData:@"chenyu@gmail.com" passWord:@"1233445"] subscribeNext:^(GKUserAccessToken *x) {
+            NSLog(@"GKUserAccessToken token is %@", x.accessToken);
+        }];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
