@@ -10,4 +10,9 @@
 
 @interface GKUserRegistration : NSObject
 
+@property (strong, nonatomic) NSString *username;
+@property (strong, nonatomic) NSString *password;
+@property (strong, nonatomic) NSString *passwordAgain;
+@property (strong, nonatomic) NSString *mobile;
+@property (strong, nonatomic) NSString *email;
 @end

@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "GKUserBackend.h"
 #import "GKUserService.h"
 
-@interface GKUserServiceImpl : NSObject  <GKUserService>
+@interface GKUserServiceImpl : NSObject <GKUserService>
 @property (strong, nonatomic) id<GKUserBackend> userBackend;
+
+- (RACSignal *)signup:(GKUserRegistration *)registration;
 @end

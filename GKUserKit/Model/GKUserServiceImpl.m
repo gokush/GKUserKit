@@ -10,4 +10,18 @@
 
 @implementation GKUserServiceImpl
 
+- (RACSignal *)signup:(GKUserRegistration *)registration
+{
+  return
+  [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    [[self.userBackend signup:registration] subscribeNext:^(id x) {
+      [subscriber sendNext:x];
+      [subscriber sendCompleted];
+    } error:^(NSError *error) {
+      [subscriber sendError:error];
+    }];
+    
+    return (RACDisposable *)nil;
+  }];
+}
 @end
