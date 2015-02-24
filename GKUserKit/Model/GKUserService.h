@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GKUserRegistration.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @protocol GKUserService <NSObject>
 
