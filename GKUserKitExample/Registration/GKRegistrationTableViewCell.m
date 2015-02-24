@@ -36,9 +36,7 @@
     NSUInteger numOfMatch = [regex numberOfMatchesInString:str
                                                    options:NSMatchingAnchored
                                                      range:NSMakeRange(0, [str length])];
-    
     return (numOfMatch>0);
-    
 }
 
 @end

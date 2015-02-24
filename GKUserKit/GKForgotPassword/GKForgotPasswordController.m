@@ -75,7 +75,6 @@
             _verificationCell.btnVerification.layer.masksToBounds=YES;
             [_verificationCell.btnVerification setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             _verificationCell.btnVerification.backgroundColor=[UIColor redColor];
-            
             cell=_verificationCell;
             break;
         }
