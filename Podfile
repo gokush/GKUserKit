@@ -6,9 +6,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'GKUserKitExample' do
     pod 'AFNetworking', "~> 2.5.0"
     pod 'CocoaLumberjack', '~> 2.0.0-beta4'
-    pod 'ReactiveCocoa'
+    pod 'ReactiveCocoa', '~> 2.4.7'
 end
 
 target 'GKUserKitExampleTests' do
-
+    pod 'ReactiveCocoa'
+    pod 'OCMock'
 end
