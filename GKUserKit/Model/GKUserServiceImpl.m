@@ -24,7 +24,7 @@
         GKUser *user = parameters.first;
         GKUserQueue queue = (GKUserQueue)parameters.second;
         if (queue == GKUserQueueNone) {
-            [self.userRepository userPesistent:user];
+            [self.userRepository create:user];
         }
     } error:^(NSError *error) {
       [subscriber sendError:error];

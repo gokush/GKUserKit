@@ -19,7 +19,6 @@ typedef NS_ENUM(NSInteger, GKUserQueue) {
 
 @protocol GKUserRepository <NSObject>
 
-- (void)userPesistent:(GKUser *)user;
 - (RACSignal *)create:(GKUser *)user;
 - (RACSignal *)findUserWithID:(NSInteger)userID;
 @end
