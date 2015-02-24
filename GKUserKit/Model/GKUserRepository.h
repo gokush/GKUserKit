@@ -7,8 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GKUser.h"
+
+typedef NS_ENUM(NSInteger, GKUserQueue) {
+    GKUserQueueNone,
+    GKUserQueueCreate,
+    GKUserQueueUpdate,
+    GKUserQueueDelete
+};
 
 @protocol GKUserRepository <NSObject>
 
+- (void)userPesistent:(GKUser *)user;
 
 @end
