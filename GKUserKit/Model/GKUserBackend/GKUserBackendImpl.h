@@ -16,5 +16,5 @@
 @property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
 
 - (RACSignal *)submitUserFormData:(NSString *)email passWord:(NSString *)passWord;
-
+- (RACSignal *)create:(GKUserRegistration *)user;
 @end

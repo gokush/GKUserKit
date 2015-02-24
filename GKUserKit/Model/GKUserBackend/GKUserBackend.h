@@ -24,12 +24,12 @@
 ///
 ///    id<GKUserContainer> container = [[GKUserContainerImpl alloc] init];
 ///    id<GKUserBackend> backend = [container userBackend];
-///    RACSignal *backendSignal = [backend create:registration];
+///    RACSignal *backendSignal = [backend signup:registration];
 ///    [backendSignal subscribeNext:^(RACTuple *parameters) {
 ///        RACUnpack(GKUser *user, GKUserQueue queue) = parameters;
 ///        如果是Swift，不能使用RACUnpack，parameters.second的类型是NSInteger
 ///    }]
 
-- (RACSignal *)create:(GKUserRegistration *)user;
+- (RACSignal *)signup:(GKUserRegistration *)user;
 
 @end

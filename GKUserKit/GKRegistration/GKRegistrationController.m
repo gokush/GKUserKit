@@ -146,6 +146,11 @@
     }
 }
 
+- (IBAction)signup:(id)sender
+{
+  [self.service signup:self.registration];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     

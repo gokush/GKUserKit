@@ -34,6 +34,8 @@
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             [subscriber sendError:error];
             [subscriber sendCompleted];
+          
+          [self create:nil];
         }];
         return [RACDisposable disposableWithBlock:^{
         }];

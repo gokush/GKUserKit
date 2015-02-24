@@ -7,5 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GKUserRegistration.h"
+
 @protocol GKUserService <NSObject>
+
+- (RACSignal *)signup:(GKUserRegistration *)registration;
 @end

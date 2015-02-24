@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GKUserService.h"
 
 @interface GKRegistrationController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic)  UITableView *tableView;
+@property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) id<GKUserService> service;
+@property (strong, nonatomic) GKUserRegistration *registration;
 
+- (IBAction)signup:(id)sender;
 @end
 
