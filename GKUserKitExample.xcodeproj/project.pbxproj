@@ -17,6 +17,10 @@
 		14BD24411A98AF2E0015DF09 /* GKRegistrationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BD243D1A98AF2E0015DF09 /* GKRegistrationTableViewCell.xib */; };
 		14BD24421A98AF2E0015DF09 /* GKRegistrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD243F1A98AF2E0015DF09 /* GKRegistrationController.m */; };
 		90A672F55A2E42DC80C33531 /* libPods-GKUserKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */; };
+		C8CA7F5A1A9A11FC00E0B44F /* GKForgotPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CA7F591A9A11FC00E0B44F /* GKForgotPasswordController.m */; };
+		C8CA7F5C1A9A121D00E0B44F /* GKForgotPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CA7F5B1A9A121D00E0B44F /* GKForgotPasswordController.xib */; };
+		C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CA7F5E1A9A167E00E0B44F /* GKVerificationTableViewCell.m */; };
+		C8CA7F611A9A167E00E0B44F /* GKVerificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CA7F5F1A9A167E00E0B44F /* GKVerificationTableViewCell.xib */; };
 		E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */; };
 		E5A126E61A98B2870016AF23 /* GKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E41A98B2870016AF23 /* GKUser.m */; };
 /* End PBXBuildFile section */
@@ -50,6 +54,12 @@
 		14BD243F1A98AF2E0015DF09 /* GKRegistrationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegistrationController.m; sourceTree = "<group>"; };
 		364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKUserKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE32C04908DA3EBE876A8FB /* Pods-GKUserKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		C8CA7F581A9A11FC00E0B44F /* GKForgotPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKForgotPasswordController.h; sourceTree = "<group>"; };
+		C8CA7F591A9A11FC00E0B44F /* GKForgotPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKForgotPasswordController.m; sourceTree = "<group>"; };
+		C8CA7F5B1A9A121D00E0B44F /* GKForgotPasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKForgotPasswordController.xib; sourceTree = "<group>"; };
+		C8CA7F5D1A9A167E00E0B44F /* GKVerificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKVerificationTableViewCell.h; sourceTree = "<group>"; };
+		C8CA7F5E1A9A167E00E0B44F /* GKVerificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKVerificationTableViewCell.m; sourceTree = "<group>"; };
+		C8CA7F5F1A9A167E00E0B44F /* GKVerificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKVerificationTableViewCell.xib; sourceTree = "<group>"; };
 		E5A126E11A98B2870016AF23 /* GKUserAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserAccessToken.h; path = Model/GKUserAccessToken.h; sourceTree = "<group>"; };
 		E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserAccessToken.m; path = Model/GKUserAccessToken.m; sourceTree = "<group>"; };
 		E5A126E31A98B2870016AF23 /* GKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUser.h; path = Model/GKUser.h; sourceTree = "<group>"; };
@@ -140,6 +150,7 @@
 		14BD24301A98954C0015DF09 /* GKUserKit */ = {
 			isa = PBXGroup;
 			children = (
+				C8CA7F571A9A11C700E0B44F /* GKForgotPassword */,
 				E5A126E01A98B2520016AF23 /* Model */,
 			);
 			path = GKUserKit;
@@ -172,6 +183,19 @@
 				364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8CA7F571A9A11C700E0B44F /* GKForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				C8CA7F581A9A11FC00E0B44F /* GKForgotPasswordController.h */,
+				C8CA7F591A9A11FC00E0B44F /* GKForgotPasswordController.m */,
+				C8CA7F5B1A9A121D00E0B44F /* GKForgotPasswordController.xib */,
+				C8CA7F5D1A9A167E00E0B44F /* GKVerificationTableViewCell.h */,
+				C8CA7F5E1A9A167E00E0B44F /* GKVerificationTableViewCell.m */,
+				C8CA7F5F1A9A167E00E0B44F /* GKVerificationTableViewCell.xib */,
+			);
+			path = GKForgotPassword;
 			sourceTree = "<group>";
 		};
 		E5A126E01A98B2520016AF23 /* Model */ = {
@@ -269,7 +293,9 @@
 			files = (
 				14BD24411A98AF2E0015DF09 /* GKRegistrationTableViewCell.xib in Resources */,
 				14BD24161A987A870015DF09 /* Main.storyboard in Resources */,
+				C8CA7F5C1A9A121D00E0B44F /* GKForgotPasswordController.xib in Resources */,
 				14BD241B1A987A870015DF09 /* LaunchScreen.xib in Resources */,
+				C8CA7F611A9A167E00E0B44F /* GKVerificationTableViewCell.xib in Resources */,
 				14BD24181A987A870015DF09 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,10 +347,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */,
 				14BD24401A98AF2E0015DF09 /* GKRegistrationTableViewCell.m in Sources */,
 				E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */,
 				E5A126E61A98B2870016AF23 /* GKUser.m in Sources */,
 				14BD24101A987A870015DF09 /* AppDelegate.m in Sources */,
+				C8CA7F5A1A9A11FC00E0B44F /* GKForgotPasswordController.m in Sources */,
 				14BD240D1A987A870015DF09 /* main.m in Sources */,
 				14BD24421A98AF2E0015DF09 /* GKRegistrationController.m in Sources */,
 			);
