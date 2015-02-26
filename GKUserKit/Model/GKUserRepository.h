@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "GKUser.h"
 
 typedef NS_ENUM(NSInteger, GKUserQueue) {
@@ -18,6 +19,25 @@ typedef NS_ENUM(NSInteger, GKUserQueue) {
 
 @protocol GKUserRepository <NSObject>
 
-- (void)userPesistent:(GKUser *)user;
+/// 创建本地数据库的用户记录
+///
+/// @return RACSignal
+///
+/// 示例:
+///
+///     id<GKUserRepository> repository;
+///     [[repository create] subscribeNext:^(GKUser *user) {
+///     }];
+- (RACSignal *)create:(GKUser *)user;
 
+/// 用户ID作为条件查找用户对象
+///
+/// @return RACSignal
+///
+/// 示例:
+///
+///     id<GKUserRepository> repository;
+///     [[repository findUserWithID:1] subscribeNext:^(GKUser *user) {
+///     }];
+- (RACSignal *)findUserWithID:(NSInteger)userID;
 @end

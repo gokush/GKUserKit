@@ -121,14 +121,14 @@
         cell.label.textColor = blueColor;
         cell.label.text = @"注册";
         cell.textField.hidden = YES;
-        formValidSignal = [RACSignal combineLatest:@[emailSignal, nicknameSignal, pwdSignal] reduce:^id(NSNumber *emailValid, NSNumber *nicknameValid, NSNumber *pwdValid){
-            NSLog(@"%@, %@, %@",emailValid, nicknameValid, pwdValid);
-            return @([emailValid boolValue] && [nicknameValid boolValue] && [pwdValid boolValue]);
-        }];
-        
-        [formValidSignal subscribeNext:^(id x) {
-            cell.label.textColor = [x boolValue] ? blueColor : [UIColor grayColor];
-        }];
+//        formValidSignal = [RACSignal combineLatest:@[emailSignal, nicknameSignal, pwdSignal] reduce:^id(NSNumber *emailValid, NSNumber *nicknameValid, NSNumber *pwdValid){
+//            NSLog(@"%@, %@, %@",emailValid, nicknameValid, pwdValid);
+//            return @([emailValid boolValue] && [nicknameValid boolValue] && [pwdValid boolValue]);
+//        }];
+//        
+//        [formValidSignal subscribeNext:^(id x) {
+//            cell.label.textColor = [x boolValue] ? blueColor : [UIColor grayColor];
+//        }];
     }
     
     

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GKUserKitExample-Swift.h"
 
 @interface AppDelegate ()
 
@@ -15,9 +16,29 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+  [[PersistenStack alloc] initWithStoreURL:[self storeURL]
+                                  modelURL:[self modelURL]];
+  
     return YES;
+}
+
+- (NSURL *)storeURL
+{
+  NSURL *url;
+  url = [[NSFileManager defaultManager] URLForDirectory:NSDocumentationDirectory
+                                               inDomain:NSUserDomainMask
+                                      appropriateForURL:nil
+                                                 create:YES error:nil];
+  return [url URLByAppendingPathComponent:@"database.sqlite"];
+}
+
+- (NSURL *)modelURL
+{
+  return [[NSBundle mainBundle] URLForResource:@"GKUserModel"
+                                 withExtension:@"momd"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

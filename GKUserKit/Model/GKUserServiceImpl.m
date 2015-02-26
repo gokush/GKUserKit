@@ -21,7 +21,7 @@
   [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
     [[self.userBackend signup:registration] subscribeNext:^(GKUser *user) {
 
-        [self.userRepository userPesistent:user];
+        [self.userRepository create:user];
         [subscriber sendNext:user];
         [subscriber sendCompleted];
         
