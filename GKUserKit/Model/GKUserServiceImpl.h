@@ -11,7 +11,6 @@
 #import "GKUserService.h"
 
 @interface GKUserServiceImpl : NSObject <GKUserService>
-@property (strong, nonatomic) id<GKUserBackend> userBackend;
 
 - (RACSignal *)signup:(GKUserRegistration *)registration;
 @end

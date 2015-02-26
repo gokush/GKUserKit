@@ -30,6 +30,11 @@
 		E555C3C11A9B70C900836965 /* GKUserRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C3C01A9B70C900836965 /* GKUserRegistration.m */; };
 		E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */; };
 		E5A126E61A98B2870016AF23 /* GKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E41A98B2870016AF23 /* GKUser.m */; };
+		E5EAD9831A9CB2C1004E8812 /* GKUserRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAD9821A9CB2C1004E8812 /* GKUserRepositoryImpl.m */; };
+		E5EAD9861A9CB3FA004E8812 /* PersistenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAD9851A9CB3FA004E8812 /* PersistenStack.swift */; };
+		E5EAD9891A9CBA4B004E8812 /* GKUserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5EAD9871A9CBA4B004E8812 /* GKUserModel.xcdatamodeld */; };
+		E5EAD98E1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAD98D1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m */; };
+		E5EAD9911A9CCF7A004E8812 /* GKUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAD9901A9CCF7A004E8812 /* GKUserEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +95,14 @@
 		E5A126E31A98B2870016AF23 /* GKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUser.h; path = Model/GKUser.h; sourceTree = "<group>"; };
 		E5A126E41A98B2870016AF23 /* GKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUser.m; path = Model/GKUser.m; sourceTree = "<group>"; };
 		E5EAD9801A9CB169004E8812 /* GKUserRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserRepository.h; path = Model/GKUserRepository.h; sourceTree = "<group>"; };
+		E5EAD9811A9CB2C1004E8812 /* GKUserRepositoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserRepositoryImpl.h; path = Model/GKUserRepositoryImpl.h; sourceTree = "<group>"; };
+		E5EAD9821A9CB2C1004E8812 /* GKUserRepositoryImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserRepositoryImpl.m; path = Model/GKUserRepositoryImpl.m; sourceTree = "<group>"; };
+		E5EAD9841A9CB3F9004E8812 /* GKUserKitExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GKUserKitExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		E5EAD9851A9CB3FA004E8812 /* PersistenStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenStack.swift; sourceTree = "<group>"; };
+		E5EAD9881A9CBA4B004E8812 /* GKUserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GKUserModel.xcdatamodel; sourceTree = "<group>"; };
+		E5EAD98D1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserRepositoryImplTest.m; sourceTree = "<group>"; };
+		E5EAD98F1A9CCF7A004E8812 /* GKUserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserEntity.h; path = Model/GKUserEntity.h; sourceTree = "<group>"; };
+		E5EAD9901A9CCF7A004E8812 /* GKUserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserEntity.m; path = Model/GKUserEntity.m; sourceTree = "<group>"; };
 		F17EC053ABA9F4C999CD991F /* Pods-GKUserKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +194,8 @@
 				14BD24171A987A870015DF09 /* Images.xcassets */,
 				14BD24191A987A870015DF09 /* LaunchScreen.xib */,
 				14BD240A1A987A870015DF09 /* Supporting Files */,
+				E5EAD9851A9CB3FA004E8812 /* PersistenStack.swift */,
+				E5EAD9841A9CB3F9004E8812 /* GKUserKitExample-Bridging-Header.h */,
 			);
 			path = GKUserKitExample;
 			sourceTree = "<group>";
@@ -198,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */,
+				E5EAD98D1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m */,
 				14BD24241A987A870015DF09 /* Supporting Files */,
 			);
 			path = GKUserKitExampleTests;
@@ -269,6 +285,11 @@
 				E555C3BF1A9B70C900836965 /* GKUserRegistration.h */,
 				E555C3C01A9B70C900836965 /* GKUserRegistration.m */,
 				E5EAD9801A9CB169004E8812 /* GKUserRepository.h */,
+				E5EAD9811A9CB2C1004E8812 /* GKUserRepositoryImpl.h */,
+				E5EAD9821A9CB2C1004E8812 /* GKUserRepositoryImpl.m */,
+				E5EAD9871A9CBA4B004E8812 /* GKUserModel.xcdatamodeld */,
+				E5EAD98F1A9CCF7A004E8812 /* GKUserEntity.h */,
+				E5EAD9901A9CCF7A004E8812 /* GKUserEntity.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -444,7 +465,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				144778401A9B4CE600751FD3 /* GKUserServiceImpl.m in Sources */,
+				E5EAD9911A9CCF7A004E8812 /* GKUserEntity.m in Sources */,
 				147927671A9B399A003648FF /* GKRegistrationTableViewCell.m in Sources */,
+				E5EAD9891A9CBA4B004E8812 /* GKUserModel.xcdatamodeld in Sources */,
+				E5EAD9861A9CB3FA004E8812 /* PersistenStack.swift in Sources */,
 				C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */,
 				E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */,
 				E5A126E61A98B2870016AF23 /* GKUser.m in Sources */,
@@ -456,6 +480,7 @@
 				1447784C1A9B608000751FD3 /* GKUserBackendImpl.m in Sources */,
 				E555C3C11A9B70C900836965 /* GKUserRegistration.m in Sources */,
 				147927661A9B399A003648FF /* GKRegistrationController.m in Sources */,
+				E5EAD9831A9CB2C1004E8812 /* GKUserRepositoryImpl.m in Sources */,
 				14BD240D1A987A870015DF09 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5EAD98E1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m in Sources */,
 				14BD24271A987A870015DF09 /* GKUserKitExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,10 +607,13 @@
 			baseConfigurationReference = 4FE32C04908DA3EBE876A8FB /* Pods-GKUserKitExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GKUserKitExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GKUserKitExample/GKUserKitExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -593,10 +622,12 @@
 			baseConfigurationReference = F17EC053ABA9F4C999CD991F /* Pods-GKUserKitExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GKUserKitExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GKUserKitExample/GKUserKitExample-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -613,6 +644,14 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"\"${PODS_ROOT}/Headers/Public/OCMock\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactiveCocoa\"",
+					"\"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources\"",
+				);
 				INFOPLIST_FILE = GKUserKitExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -628,6 +667,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"\"${PODS_ROOT}/Headers/Public/OCMock\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactiveCocoa\"",
+					"\"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources\"",
 				);
 				INFOPLIST_FILE = GKUserKitExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -667,6 +714,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E5EAD9871A9CBA4B004E8812 /* GKUserModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E5EAD9881A9CBA4B004E8812 /* GKUserModel.xcdatamodel */,
+			);
+			currentVersion = E5EAD9881A9CBA4B004E8812 /* GKUserModel.xcdatamodel */;
+			name = GKUserModel.xcdatamodeld;
+			path = Model/GKUserModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 14BD23FF1A987A870015DF09 /* Project object */;
 }

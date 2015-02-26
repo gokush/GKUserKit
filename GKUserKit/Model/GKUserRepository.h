@@ -7,8 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "GKUser.h"
+
+typedef NS_ENUM(NSInteger, GKUserQueue) {
+    GKUserQueueNone,
+    GKUserQueueCreate,
+    GKUserQueueUpdate,
+    GKUserQueueDelete
+};
 
 @protocol GKUserRepository <NSObject>
 
-
+- (RACSignal *)create:(GKUser *)user;
+- (RACSignal *)findUserWithID:(NSInteger)userID;
 @end
