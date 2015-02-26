@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "GKUserServiceImpl.h"
+#import "GKUserContainerMock.h"
 
 @interface GKUserServiceImpTests : XCTestCase
+
+@property (strong, nonatomic) id<GKUserService> userService;
 
 @end
 
@@ -17,7 +21,10 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    GKUserContainerMock *mock = [[GKUserContainerMock alloc] init];
+    self.userService = mock.userService;
+    
 }
 
 - (void)tearDown {
@@ -27,7 +34,25 @@
 
 - (void)testSignup
 {
-    
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    GKUserRegistration *registration = [[GKUserRegistration alloc] init];
+    registration.username = @"tong";
+    registration.password = @"11111";
+    registration.passwordAgain = @"11111";
+    registration.email = @"tong@qq.com";
+    registration.mobile = @"1111111111";
+    [[self.userService signup:registration] subscribeNext:^(id x) {
+        
+        XCTAssert(YES, @"signup success!");
+        dispatch_semaphore_signal(semaphore);
+        
+    } error:^(NSError *error) {
+        
+        XCTFail(@"signup fail!");
+        dispatch_semaphore_signal(semaphore);
+        
+    }];
+    dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 1000));
 }
 
 - (void)testPerformanceExample {
