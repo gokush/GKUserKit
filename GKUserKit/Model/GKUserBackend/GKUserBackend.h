@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "GKUserRegistration.h"
-
+#import "GKUserForgotPassword.h"
 @protocol GKUserBackend <NSObject>
 
 - (RACSignal *)submitUserFormData:(NSString *)email passWord:(NSString *)passWord;
@@ -32,4 +32,17 @@
 
 - (RACSignal *)signup:(GKUserRegistration *)user;
 
+///
+/// 请求远程服务器忘记密码后设置新密码
+///
+/// @return RACSignal发送一个GKUserForgotPassword对象
+///
+/// 示例：
+///
+///    id<GKUserContainer> container = [[GKUserContainerImpl alloc] init];
+///    id<GKUserBackend> backend = [container userBackend];
+///    RACSignal *backendSignal = [backend forgotPassword:forgotPassword];
+///    [backendSignal subscribeNext:^(GKUserForgotPassword *forgotPassword) {
+///    }]
+- (RACSignal *)forgotPassword:(GKUserForgotPassword*)forgotPassword;
 @end

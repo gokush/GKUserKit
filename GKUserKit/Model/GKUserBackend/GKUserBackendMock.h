@@ -12,4 +12,5 @@
 
 - (RACSignal *) submitUserFormData:(NSString *)email passWord:(NSString *)passWord;
 - (RACSignal *)signup:(GKUserRegistration *)user;
+- (RACSignal *)forgotPassword:(GKUserForgotPassword *) forgotPassword;
 @end

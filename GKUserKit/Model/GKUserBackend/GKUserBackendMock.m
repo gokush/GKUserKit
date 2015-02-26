@@ -42,4 +42,12 @@
         }];
     }];
 }
+- (RACSignal *)forgotPassword:(GKUserForgotPassword *) forgotPassword
+{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:forgotPassword];
+        return [RACDisposable disposableWithBlock:^{
+        }];
+    }];
+}
 @end

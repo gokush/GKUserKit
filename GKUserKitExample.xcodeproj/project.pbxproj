@@ -22,6 +22,8 @@
 		14BD241B1A987A870015DF09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BD24191A987A870015DF09 /* LaunchScreen.xib */; };
 		14BD24271A987A870015DF09 /* GKUserKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */; };
 		90A672F55A2E42DC80C33531 /* libPods-GKUserKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */; };
+		C813F3BF1A9F65DD0080155E /* GKUserForgotPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = C813F3BE1A9F65DD0080155E /* GKUserForgotPassword.m */; };
+		C813F3C11A9F6CC10080155E /* GKUserBackendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C813F3C01A9F6CC10080155E /* GKUserBackendTests.m */; };
 		C8CA7F5A1A9A11FC00E0B44F /* GKForgotPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CA7F591A9A11FC00E0B44F /* GKForgotPasswordController.m */; };
 		C8CA7F5C1A9A121D00E0B44F /* GKForgotPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CA7F5B1A9A121D00E0B44F /* GKForgotPasswordController.xib */; };
 		C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CA7F5E1A9A167E00E0B44F /* GKVerificationTableViewCell.m */; };
@@ -82,6 +84,9 @@
 		4FE32C04908DA3EBE876A8FB /* Pods-GKUserKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		5BDF58C889FEC4E523B1459E /* libPods-GKUserKitExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKUserKitExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FF49C2A16D4A464CB892FB /* Pods-GKUserKitExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExampleTests/Pods-GKUserKitExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C813F3BD1A9F65DD0080155E /* GKUserForgotPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserForgotPassword.h; sourceTree = "<group>"; };
+		C813F3BE1A9F65DD0080155E /* GKUserForgotPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserForgotPassword.m; sourceTree = "<group>"; };
+		C813F3C01A9F6CC10080155E /* GKUserBackendTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserBackendTests.m; sourceTree = "<group>"; };
 		C8CA7F581A9A11FC00E0B44F /* GKForgotPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKForgotPasswordController.h; sourceTree = "<group>"; };
 		C8CA7F591A9A11FC00E0B44F /* GKForgotPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKForgotPasswordController.m; sourceTree = "<group>"; };
 		C8CA7F5B1A9A121D00E0B44F /* GKForgotPasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKForgotPasswordController.xib; sourceTree = "<group>"; };
@@ -212,6 +217,7 @@
 		14BD24231A987A870015DF09 /* GKUserKitExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				C813F3C01A9F6CC10080155E /* GKUserBackendTests.m */,
 				14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */,
 				E5EAD98D1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m */,
 				14BD24241A987A870015DF09 /* Supporting Files */,
@@ -284,6 +290,8 @@
 				1447783F1A9B4CE600751FD3 /* GKUserServiceImpl.m */,
 				E555C3BF1A9B70C900836965 /* GKUserRegistration.h */,
 				E555C3C01A9B70C900836965 /* GKUserRegistration.m */,
+				C813F3BD1A9F65DD0080155E /* GKUserForgotPassword.h */,
+				C813F3BE1A9F65DD0080155E /* GKUserForgotPassword.m */,
 				E5EAD9801A9CB169004E8812 /* GKUserRepository.h */,
 				E5EAD9811A9CB2C1004E8812 /* GKUserRepositoryImpl.h */,
 				E5EAD9821A9CB2C1004E8812 /* GKUserRepositoryImpl.m */,
@@ -466,6 +474,7 @@
 			files = (
 				144778401A9B4CE600751FD3 /* GKUserServiceImpl.m in Sources */,
 				E5EAD9911A9CCF7A004E8812 /* GKUserEntity.m in Sources */,
+				C813F3BF1A9F65DD0080155E /* GKUserForgotPassword.m in Sources */,
 				147927671A9B399A003648FF /* GKRegistrationTableViewCell.m in Sources */,
 				E5EAD9891A9CBA4B004E8812 /* GKUserModel.xcdatamodeld in Sources */,
 				E5EAD9861A9CB3FA004E8812 /* PersistenStack.swift in Sources */,
@@ -490,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5EAD98E1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m in Sources */,
+				C813F3C11A9F6CC10080155E /* GKUserBackendTests.m in Sources */,
 				14BD24271A987A870015DF09 /* GKUserKitExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
