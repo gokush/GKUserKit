@@ -19,15 +19,14 @@
 {
   return
   [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-    [[self.userBackend signup:registration] subscribeNext:^(RACTuple *parameters) {
+    [[self.userBackend signup:registration] subscribeNext:^(GKUser *user) {
 
-        GKUser *user = parameters.first;
-        GKUserQueue queue = (GKUserQueue)parameters.second;
-        if (queue == GKUserQueueNone) {
-            [self.userRepository create:user];
-        }
+        [self.userRepository create:user];
+        [subscriber sendNext:user];
+        [subscriber sendCompleted];
+        
     } error:^(NSError *error) {
-      [subscriber sendError:error];
+        [subscriber sendError:error];
     }];
     
     return (RACDisposable *)nil;
