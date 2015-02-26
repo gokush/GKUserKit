@@ -9,16 +9,16 @@
 #import "GKForgotPasswordController.h"
 #import "GKRegistrationTableViewCell.h"
 #import "GKVerificationTableViewCell.h"
-
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #define kVerificationTime 10;
 @interface GKForgotPasswordController (){
     BOOL _isValided;
     int _verificationTime;
     NSTimer *_timer;
-    GKVerificationTableViewCell *_verificationCell;
+ 
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (strong, nonatomic) GKVerificationTableViewCell *verificationCell;
 @end
 
 @implementation GKForgotPasswordController
@@ -75,7 +75,6 @@
             _verificationCell.btnVerification.layer.masksToBounds=YES;
             [_verificationCell.btnVerification setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             _verificationCell.btnVerification.backgroundColor=[UIColor redColor];
-            
             cell=_verificationCell;
             break;
         }
@@ -106,6 +105,16 @@
 
 - (void)verifiation:(id) sender
 {
+    
+    RAC(self, self.verificationCell.btnVerification.titleLabel.text) = [[[RACSignal interval:1 onScheduler:[RACScheduler currentScheduler]] startWith:[NSDate date]] map:^id (NSDate *value) {
+        NSLog(@"value:%@", value);
+        NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitSecond |
+                                            NSCalendarUnitMinute |
+                                            NSCalendarUnitSecond fromDate:value];
+        return [NSString stringWithFormat:@"%02ld:%02ld:%02ld", (long)dateComponents.hour, (long)dateComponents.minute, (long)dateComponents.second];
+    }];
+    
+    
     if (_timer) {
         [_timer invalidate];
     }
