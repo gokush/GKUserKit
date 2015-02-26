@@ -21,6 +21,7 @@
 		14BD24181A987A870015DF09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BD24171A987A870015DF09 /* Images.xcassets */; };
 		14BD241B1A987A870015DF09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BD24191A987A870015DF09 /* LaunchScreen.xib */; };
 		14BD24271A987A870015DF09 /* GKUserKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */; };
+		341AAE371A9F56A8001823C7 /* GKUserServiceImpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 341AAE361A9F56A8001823C7 /* GKUserServiceImpTests.m */; };
 		90A672F55A2E42DC80C33531 /* libPods-GKUserKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */; };
 		C8CA7F5A1A9A11FC00E0B44F /* GKForgotPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CA7F591A9A11FC00E0B44F /* GKForgotPasswordController.m */; };
 		C8CA7F5C1A9A121D00E0B44F /* GKForgotPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CA7F5B1A9A121D00E0B44F /* GKForgotPasswordController.xib */; };
@@ -78,6 +79,7 @@
 		14BD24201A987A870015DF09 /* GKUserKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GKUserKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BD24251A987A870015DF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKUserKitExampleTests.m; sourceTree = "<group>"; };
+		341AAE361A9F56A8001823C7 /* GKUserServiceImpTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserServiceImpTests.m; sourceTree = "<group>"; };
 		364F6077750896C4F31DB077 /* libPods-GKUserKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKUserKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE32C04908DA3EBE876A8FB /* Pods-GKUserKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKUserKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKUserKitExample/Pods-GKUserKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		5BDF58C889FEC4E523B1459E /* libPods-GKUserKitExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKUserKitExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +216,7 @@
 			children = (
 				14BD24261A987A870015DF09 /* GKUserKitExampleTests.m */,
 				E5EAD98D1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m */,
+				341AAE361A9F56A8001823C7 /* GKUserServiceImpTests.m */,
 				14BD24241A987A870015DF09 /* Supporting Files */,
 			);
 			path = GKUserKitExampleTests;
@@ -491,6 +494,7 @@
 			files = (
 				E5EAD98E1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m in Sources */,
 				14BD24271A987A870015DF09 /* GKUserKitExampleTests.m in Sources */,
+				341AAE371A9F56A8001823C7 /* GKUserServiceImpTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
