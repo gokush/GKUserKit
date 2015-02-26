@@ -17,8 +17,7 @@
 ///
 /// 请求远程服务器注册新用户
 ///
-/// @return RACSignal发送一个RACTuple，tuple有两个元素，第零个是`GKUser`，
-/// 第一个是`GKUserQueue`
+/// @return `GKUser`，
 ///
 /// 示例：
 ///

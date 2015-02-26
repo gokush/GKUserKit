@@ -11,5 +11,5 @@
 @interface GKUserBackendMock : NSObject<GKUserBackend>
 
 - (RACSignal *) submitUserFormData:(NSString *)email passWord:(NSString *)passWord;
-
+- (RACSignal *)signup:(GKUserRegistration *)user;
 @end
