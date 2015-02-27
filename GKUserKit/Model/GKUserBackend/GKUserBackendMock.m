@@ -15,10 +15,8 @@
 @implementation GKUserBackendMock
 
 - (RACSignal *) submitUserFormData:(NSString *)email passWord:(NSString *)passWord {
-    @weakify(self)
     return
     [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        
         GKUserAccessToken *accessToken = [[GKUserAccessToken alloc] init];
         accessToken.accessToken = @"12334jkajgoaqagajgjagpkjg";
         
@@ -31,7 +29,8 @@
 }
 - (RACSignal *)signup:(GKUserRegistration *)user
 {
-    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    return
+    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         GKUser *user=[[GKUser alloc] init];
         user.userID=111;
         user.username=@"GG";

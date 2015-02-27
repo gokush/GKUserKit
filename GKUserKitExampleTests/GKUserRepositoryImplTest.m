@@ -57,25 +57,11 @@
   user.accessToken  = accessToken;
   [[self.repository create:user] subscribeNext:^(id x) {
     [[self.repository findUserWithID:999] subscribeNext:^(GKUser *found) {
-      
-      
       dispatch_semaphore_signal(semaphore);
     }];
   }];
   
-  dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+  dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 1000));
 }
 
 @end
