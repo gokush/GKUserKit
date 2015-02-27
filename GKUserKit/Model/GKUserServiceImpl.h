@@ -13,4 +13,5 @@
 @interface GKUserServiceImpl : NSObject <GKUserService>
 
 - (RACSignal *)signup:(GKUserRegistration *)registration;
+- (RACSignal *)authenticate:(UserAuthenticationModel *)user;
 @end

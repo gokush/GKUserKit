@@ -7,6 +7,7 @@ target 'GKUserKitExample' do
     pod 'AFNetworking', "~> 2.5.0"
     pod 'CocoaLumberjack', '~> 2.0.0-beta4'
     pod 'ReactiveCocoa', '~> 2.4.7'
+    pod 'MBProgressHUD'
 end
 
 target 'GKUserKitExampleTests' do

@@ -32,4 +32,9 @@
     return (RACDisposable *)nil;
   }];
 }
+
+- (RACSignal *)authenticate:(UserAuthenticationModel *)user
+{
+    return nil;
+}
 @end

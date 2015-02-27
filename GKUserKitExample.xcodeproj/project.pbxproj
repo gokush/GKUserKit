@@ -31,6 +31,11 @@
 		C987B9B6891FCAC9D52E001C /* libPods-GKUserKitExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDF58C889FEC4E523B1459E /* libPods-GKUserKitExampleTests.a */; };
 		E555C3C11A9B70C900836965 /* GKUserRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C3C01A9B70C900836965 /* GKUserRegistration.m */; };
 		E56478101AA0BC0E006CE49A /* GKUserServeiceImplTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E564780F1AA0BC0E006CE49A /* GKUserServeiceImplTest.m */; };
+		E564781B1AA0BC6D006CE49A /* UserAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56478141AA0BC6D006CE49A /* UserAuthenticationViewController.m */; };
+		E564781C1AA0BC6D006CE49A /* UserAuthenticationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E56478171AA0BC6D006CE49A /* UserAuthenticationTableViewCell.m */; };
+		E564781D1AA0BC6D006CE49A /* UserAuthenticationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56478181AA0BC6D006CE49A /* UserAuthenticationTableViewCell.xib */; };
+		E564781E1AA0BC6D006CE49A /* UserAuthenticationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E564781A1AA0BC6D006CE49A /* UserAuthenticationView.xib */; };
+		E56478211AA0BC9B006CE49A /* UserAuthenticationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E56478201AA0BC9B006CE49A /* UserAuthenticationModel.m */; };
 		E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */; };
 		E5A126E61A98B2870016AF23 /* GKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E41A98B2870016AF23 /* GKUser.m */; };
 		E5EAD9831A9CB2C1004E8812 /* GKUserRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAD9821A9CB2C1004E8812 /* GKUserRepositoryImpl.m */; };
@@ -97,6 +102,14 @@
 		E555C3BF1A9B70C900836965 /* GKUserRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserRegistration.h; path = Model/GKUserRegistration.h; sourceTree = "<group>"; };
 		E555C3C01A9B70C900836965 /* GKUserRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserRegistration.m; path = Model/GKUserRegistration.m; sourceTree = "<group>"; };
 		E564780F1AA0BC0E006CE49A /* GKUserServeiceImplTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserServeiceImplTest.m; sourceTree = "<group>"; };
+		E56478131AA0BC6D006CE49A /* UserAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthenticationViewController.h; sourceTree = "<group>"; };
+		E56478141AA0BC6D006CE49A /* UserAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAuthenticationViewController.m; sourceTree = "<group>"; };
+		E56478161AA0BC6D006CE49A /* UserAuthenticationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthenticationTableViewCell.h; sourceTree = "<group>"; };
+		E56478171AA0BC6D006CE49A /* UserAuthenticationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAuthenticationTableViewCell.m; sourceTree = "<group>"; };
+		E56478181AA0BC6D006CE49A /* UserAuthenticationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAuthenticationTableViewCell.xib; sourceTree = "<group>"; };
+		E564781A1AA0BC6D006CE49A /* UserAuthenticationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAuthenticationView.xib; sourceTree = "<group>"; };
+		E564781F1AA0BC9B006CE49A /* UserAuthenticationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserAuthenticationModel.h; path = Model/UserAuthenticationModel.h; sourceTree = "<group>"; };
+		E56478201AA0BC9B006CE49A /* UserAuthenticationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserAuthenticationModel.m; path = Model/UserAuthenticationModel.m; sourceTree = "<group>"; };
 		E5A126E11A98B2870016AF23 /* GKUserAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserAccessToken.h; path = Model/GKUserAccessToken.h; sourceTree = "<group>"; };
 		E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserAccessToken.m; path = Model/GKUserAccessToken.m; sourceTree = "<group>"; };
 		E5A126E31A98B2870016AF23 /* GKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUser.h; path = Model/GKUser.h; sourceTree = "<group>"; };
@@ -239,6 +252,7 @@
 		14BD24301A98954C0015DF09 /* GKUserKit */ = {
 			isa = PBXGroup;
 			children = (
+				E56478111AA0BC6D006CE49A /* GKUserAuthentication */,
 				147927601A9B399A003648FF /* GKRegistration */,
 				C8CA7F571A9A11C700E0B44F /* GKForgotPassword */,
 				E5A126E01A98B2520016AF23 /* Model */,
@@ -279,9 +293,48 @@
 			path = GKForgotPassword;
 			sourceTree = "<group>";
 		};
+		E56478111AA0BC6D006CE49A /* GKUserAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				E56478121AA0BC6D006CE49A /* Controller */,
+				E56478151AA0BC6D006CE49A /* TableVIewCell */,
+				E56478191AA0BC6D006CE49A /* View */,
+			);
+			path = GKUserAuthentication;
+			sourceTree = "<group>";
+		};
+		E56478121AA0BC6D006CE49A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E56478131AA0BC6D006CE49A /* UserAuthenticationViewController.h */,
+				E56478141AA0BC6D006CE49A /* UserAuthenticationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E56478151AA0BC6D006CE49A /* TableVIewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E56478161AA0BC6D006CE49A /* UserAuthenticationTableViewCell.h */,
+				E56478171AA0BC6D006CE49A /* UserAuthenticationTableViewCell.m */,
+				E56478181AA0BC6D006CE49A /* UserAuthenticationTableViewCell.xib */,
+			);
+			path = TableVIewCell;
+			sourceTree = "<group>";
+		};
+		E56478191AA0BC6D006CE49A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E564781A1AA0BC6D006CE49A /* UserAuthenticationView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E5A126E01A98B2520016AF23 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E564781F1AA0BC9B006CE49A /* UserAuthenticationModel.h */,
+				E56478201AA0BC9B006CE49A /* UserAuthenticationModel.m */,
 				144778521A9B62CB00751FD3 /* GKUserContainer */,
 				144778481A9B608000751FD3 /* GKUserBackend */,
 				E5A126E11A98B2870016AF23 /* GKUserAccessToken.h */,
@@ -392,7 +445,9 @@
 				14BD24161A987A870015DF09 /* Main.storyboard in Resources */,
 				C8CA7F5C1A9A121D00E0B44F /* GKForgotPasswordController.xib in Resources */,
 				14BD241B1A987A870015DF09 /* LaunchScreen.xib in Resources */,
+				E564781D1AA0BC6D006CE49A /* UserAuthenticationTableViewCell.xib in Resources */,
 				C8CA7F611A9A167E00E0B44F /* GKVerificationTableViewCell.xib in Resources */,
+				E564781E1AA0BC6D006CE49A /* UserAuthenticationView.xib in Resources */,
 				147927681A9B399A003648FF /* GKRegistrationTableViewCell.xib in Resources */,
 				14BD24181A987A870015DF09 /* Images.xcassets in Resources */,
 			);
@@ -475,6 +530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E564781C1AA0BC6D006CE49A /* UserAuthenticationTableViewCell.m in Sources */,
 				144778401A9B4CE600751FD3 /* GKUserServiceImpl.m in Sources */,
 				E5EAD9911A9CCF7A004E8812 /* GKUserEntity.m in Sources */,
 				C813F3BF1A9F65DD0080155E /* GKUserForgotPassword.m in Sources */,
@@ -482,9 +538,11 @@
 				E5EAD9891A9CBA4B004E8812 /* GKUserModel.xcdatamodeld in Sources */,
 				E5EAD9861A9CB3FA004E8812 /* PersistenStack.swift in Sources */,
 				C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */,
+				E564781B1AA0BC6D006CE49A /* UserAuthenticationViewController.m in Sources */,
 				E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */,
 				E5A126E61A98B2870016AF23 /* GKUser.m in Sources */,
 				14BD24101A987A870015DF09 /* AppDelegate.m in Sources */,
+				E56478211AA0BC9B006CE49A /* UserAuthenticationModel.m in Sources */,
 				144778581A9B62CB00751FD3 /* GKUserContainerImpl.m in Sources */,
 				144778511A9B613000751FD3 /* GKUserBackendMock.m in Sources */,
 				144778591A9B62CB00751FD3 /* GKUserContainerMock.m in Sources */,

@@ -10,6 +10,7 @@
 #import "GKUserBackend.h"
 #import "GKUserRepository.h"
 #import "GKUserRegistration.h"
+#import "UserAuthenticationModel.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 @protocol GKUserService <NSObject>
@@ -33,4 +34,6 @@
 ///    }]
 
 - (RACSignal *)signup:(GKUserRegistration *)registration;
+
+- (RACSignal *)authenticate:(UserAuthenticationModel *)user;
 @end
