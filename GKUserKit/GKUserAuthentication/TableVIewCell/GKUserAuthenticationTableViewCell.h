@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserAuthenticationTableViewCell : UITableViewCell
+@interface GKUserAuthenticationTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UITextField *inputTextField;

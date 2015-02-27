@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 GKCommerce. All rights reserved.
 //
 
-#import "UserAuthenticationTableViewCell.h"
+#import "GKUserAuthenticationTableViewCell.h"
 
-@implementation UserAuthenticationTableViewCell
+@implementation GKUserAuthenticationTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

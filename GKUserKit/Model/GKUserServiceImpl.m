@@ -33,7 +33,7 @@
   }];
 }
 
-- (RACSignal *)authenticate:(UserAuthenticationModel *)user
+- (RACSignal *)authenticate:(GKUserAuthenticationModel *)user
 {
     return nil;
 }

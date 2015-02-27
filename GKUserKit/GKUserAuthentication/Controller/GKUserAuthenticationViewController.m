@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 GKCommerce. All rights reserved.
 //
 
-#import "UserAuthenticationViewController.h"
+#import "GKUserAuthenticationViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "GKUserContainerMock.h"
 
@@ -24,18 +24,18 @@ typedef enum {
     ConfirmUserAuthenticationSection
 } UserAuthenticationSection;
 
-@interface UserAuthenticationViewController ()
+@interface GKUserAuthenticationViewController ()
 
 @end
 
-@implementation UserAuthenticationViewController
+@implementation GKUserAuthenticationViewController
 
 - (id)init
 {
-    self = [self initWithNibName:@"UserAuthenticationView" bundle:nil];
+    self = [self initWithNibName:@"GKUserAuthenticationView" bundle:nil];
     if (self) {
         self.service = [[GKUserContainerMock alloc] userService];
-        self.user = [[UserAuthenticationModel alloc] init];
+        self.user = [[GKUserAuthenticationModel alloc] init];
     }
     return self;
 }
@@ -43,7 +43,7 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    for (NSString *identifier in @[@"UserAuthenticationTableViewCell"]) {
+    for (NSString *identifier in @[@"GKUserAuthenticationTableViewCell"]) {
         UINib *nib;
         nib = [UINib nibWithNibName:identifier bundle:nil];
         [self.tableView registerNib:nib
@@ -109,7 +109,7 @@ heightForHeaderInSection:(NSInteger)section
 
 - (UITableViewCell *)inputCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UserAuthenticationTableViewCell *cell;
+    GKUserAuthenticationTableViewCell *cell;
     static NSString *name = @"UserAuthenticationTableViewCell";
     cell = [self.tableView dequeueReusableCellWithIdentifier:name];
     

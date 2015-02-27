@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UserAuthenticationModel : NSObject
+@interface GKUserAuthenticationModel : NSObject
 
 @property (strong, nonatomic) NSString *username;
 @property (strong, nonatomic) NSString *password;

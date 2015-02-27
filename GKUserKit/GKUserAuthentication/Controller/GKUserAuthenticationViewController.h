@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UserAuthenticationTableViewCell.h"
-#import "UserAuthenticationModel.h"
+#import "GKUserAuthenticationTableViewCell.h"
+#import "GKUserAuthenticationModel.h"
 #import "GKUserService.h"
 
-@interface UserAuthenticationViewController : UIViewController
+@interface GKUserAuthenticationViewController : UIViewController
 <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) id<GKUserService> service;
-@property (strong, nonatomic) UserAuthenticationModel *user;
+@property (strong, nonatomic) GKUserAuthenticationModel *user;
 @end
