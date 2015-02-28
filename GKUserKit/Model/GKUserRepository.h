@@ -36,8 +36,8 @@ typedef NS_ENUM(NSInteger, GKUserQueue) {
 ///
 /// 示例:
 ///
-///     id<GKUserRepository> repository;
-///     [[repository findUserWithID:1] subscribeNext:^(GKUser *user) {
-///     }];
+///    id<GKUserRepository> repository;
+///    [[repository findUserWithID:1] subscribeNext:^(GKUser *user) {
+///    }];
 - (RACSignal *)findUserWithID:(NSInteger)userID;
 @end

@@ -17,16 +17,18 @@
 ///
 /// 请求远程服务器注册新用户
 ///
+/// @see class GKUserRegistration
+/// @see [GKUserBackendTests testSignup]
 /// @return `GKUser`，
 ///
-/// 示例：
+/// 示例 [GKUserBackendTests testSignup]
 ///
 ///    id<GKUserContainer> container = [[GKUserContainerImpl alloc] init];
 ///    id<GKUserBackend> backend = [container userBackend];
 ///    RACSignal *backendSignal = [backend signup:registration];
 ///    [backendSignal subscribeNext:^(GKUser *user) {
 ///        NSLog(@"username %@", user.username);
-///    }]
+///    }];
 
 - (RACSignal *)signup:(GKUserRegistration *)user;
 
@@ -35,12 +37,14 @@
 ///
 /// @return RACSignal发送一个GKUserForgotPassword对象
 ///
-/// 示例：
+/// 示例 [GKUserBackendTests testForgotPassword]
 ///
 ///    id<GKUserContainer> container = [[GKUserContainerImpl alloc] init];
 ///    id<GKUserBackend> backend = [container userBackend];
 ///    RACSignal *backendSignal = [backend forgotPassword:forgotPassword];
 ///    [backendSignal subscribeNext:^(GKUserForgotPassword *forgotPassword) {
-///    }]
+///    } error:^(NSError *error) {
+///        NSLog(@"失败原因， %@", error.localizedDescription);
+///    }];
 - (RACSignal *)forgotPassword:(GKUserForgotPassword*)forgotPassword;
 @end
