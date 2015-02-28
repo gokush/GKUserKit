@@ -23,7 +23,7 @@
 /// 注册事件可能是UIButton的Tap事件，也可能是UITableView的选择事件，
 /// 无论如何都需要在接口中写出签名
 ///
-/// @param UIButton
+/// @param sender UIButton
 ///
 - (IBAction)signup:(id)sender;
 @end
