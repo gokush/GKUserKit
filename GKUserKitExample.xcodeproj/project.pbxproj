@@ -618,10 +618,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ping Chen (7E92WUZK2W)";
 				INFOPLIST_FILE = GKUserKitExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "EBF5762D-568D-40AE-84FD-B07BBA921240";
 				SWIFT_OBJC_BRIDGING_HEADER = "GKUserKitExample/GKUserKitExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -633,10 +634,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ping Chen (7E92WUZK2W)";
 				INFOPLIST_FILE = GKUserKitExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "EBF5762D-568D-40AE-84FD-B07BBA921240";
 				SWIFT_OBJC_BRIDGING_HEADER = "GKUserKitExample/GKUserKitExample-Bridging-Header.h";
 			};
 			name = Release;
