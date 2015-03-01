@@ -10,6 +10,8 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "GKUserRegistration.h"
 #import "GKUserForgotPassword.h"
+#import "GKUserAuthentication.h"
+
 @protocol GKUserBackend <NSObject>
 
 - (RACSignal *)submitUserFormData:(NSString *)email passWord:(NSString *)passWord;
@@ -47,4 +49,20 @@
 ///        NSLog(@"失败原因， %@", error.localizedDescription);
 ///    }];
 - (RACSignal *)forgotPassword:(GKUserForgotPassword*)forgotPassword;
+
+///
+/// 登录
+///
+/// @return RACSignal
+///
+/// 示例 [GKUserBackendTests testForgotPassword]
+///
+///    id<GKUserContainer> container = [[GKUserContainerImpl alloc] init];
+///    id<GKUserBackend> backend = [container userBackend];
+///    RACSignal *backendSignal = [backend authencate:authentication];
+///    [backendSignal subscribeNext:^(GKUser *user) {
+///    } error:^(NSError *error) {
+///        NSLog(@"失败原因， %@", error.localizedDescription);
+///    }];
+- (RACSignal *)authencate:(GKUserAuthentication *)authentication;
 @end

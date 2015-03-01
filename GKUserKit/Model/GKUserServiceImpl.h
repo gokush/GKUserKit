@@ -12,6 +12,9 @@
 
 @interface GKUserServiceImpl : NSObject <GKUserService>
 
+@property (strong, nonatomic) id<GKUserBackend> backend;
+@property (strong, nonatomic) id<GKUserRepository> repository;
+
 - (RACSignal *)signup:(GKUserRegistration *)registration;
-- (RACSignal *)authenticate:(GKUserAuthenticationModel *)user;
+- (RACSignal *)authenticate:(GKUserAuthentication *)authentication;
 @end

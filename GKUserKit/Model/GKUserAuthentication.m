@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 GKCommerce. All rights reserved.
 //
 
-#import "GKUserAuthenticationModel.h"
+#import "GKUserAuthentication.h"
 
 #define INVALID_USERNAME @"请输入正确的用户名"
 #define INVALID_PASSWORD @"请输入正确的密码"
 
-@implementation GKUserAuthenticationModel
+@implementation GKUserAuthentication
 
 - (id)initWithUsername:(NSString *)username password:(NSString *)aPassword
 {

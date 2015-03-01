@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 GKCommerce. All rights reserved.
 //
 
-#import "GKUserAuthenticationViewController.h"
+#import "GKUserAuthenticationController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "GKUserContainerMock.h"
 
@@ -24,20 +24,35 @@ typedef enum {
     ConfirmUserAuthenticationSection
 } UserAuthenticationSection;
 
-@interface GKUserAuthenticationViewController ()
+@interface GKUserAuthenticationController ()
 
 @end
 
-@implementation GKUserAuthenticationViewController
+@implementation GKUserAuthenticationController
 
 - (id)init
 {
     self = [self initWithNibName:@"GKUserAuthenticationView" bundle:nil];
     if (self) {
-        self.service = [[GKUserContainerMock alloc] userService];
-        self.user = [[GKUserAuthenticationModel alloc] init];
+        [self setup];
     }
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [self init];
+    if (self) {
+    }
+    return self;
+}
+
+- (void)setup
+{
+    self.service = [[GKUserContainerMock alloc] userService];
+    self.user = [[GKUserAuthentication alloc] init];
+    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
+    self.hud.mode = MBProgressHUDModeCustomView;
 }
 
 - (void)viewDidLoad
@@ -49,10 +64,6 @@ typedef enum {
         [self.tableView registerNib:nib
              forCellReuseIdentifier:identifier];
     }
-    
-    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.96f green:0.96f
-                                                      blue:0.96f alpha:1.0f];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,6 +81,66 @@ typedef enum {
 heightForHeaderInSection:(NSInteger)section
 {
     return 20.0f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView
+heightForFooterInSection:(NSInteger)section
+{
+    float height;
+    switch (section) {
+        case ConfirmUserAuthenticationSection:
+            height = 40.0f;
+            break;
+            
+        default:
+            height = 0.0f;
+            break;
+    }
+    
+    return height;
+}
+
+- (UIView *)tableView:(UITableView *)tableView
+viewForFooterInSection:(NSInteger)section
+{
+    if (section == InputUserAuthenticationSection)
+        return nil;
+    
+    CGRect footerViewRect = CGRectMake(0.0f, 0.0f, 320.0f, 40.0f);
+    UIView *footerView = [[UIView alloc] initWithFrame:footerViewRect];
+    
+    UIButton *forgotPassword = [UIButton buttonWithType:UIButtonTypeCustom];
+    [forgotPassword setTitle:@"忘记密码?" forState:UIControlStateNormal];
+    [forgotPassword addTarget:self action:@selector(forgotPasswordDidTap:)
+             forControlEvents:UIControlEventTouchUpOutside];
+    forgotPassword.frame = CGRectMake(0.0f, 10.0f, 320.0f, 40.0f);
+    [forgotPassword setTitleColor:forgotPassword.tintColor
+                         forState:UIControlStateNormal];
+    forgotPassword.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    
+    UIButton *registration = [UIButton buttonWithType:UIButtonTypeCustom];
+    [registration setTitle:@"注册新账号" forState:UIControlStateNormal];
+    [registration addTarget:self action:@selector(registrationDidTap:)
+           forControlEvents:UIControlEventTouchUpOutside];
+    registration.frame = CGRectMake(0.0f, 35.0f, 320.0f, 40.0f);
+    [registration setTitleColor:registration.tintColor
+                       forState:UIControlStateNormal];
+    registration.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    
+    [footerView addSubview:forgotPassword];
+    [footerView addSubview:registration];
+    
+    return footerView;
+}
+
+- (IBAction)forgotPasswordDidTap:(id)sender
+{
+    
+}
+
+- (IBAction)registrationDidTap:(id)sender
+{
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -110,7 +181,7 @@ heightForHeaderInSection:(NSInteger)section
 - (UITableViewCell *)inputCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GKUserAuthenticationTableViewCell *cell;
-    static NSString *name = @"UserAuthenticationTableViewCell";
+    static NSString *name = @"GKUserAuthenticationTableViewCell";
     cell = [self.tableView dequeueReusableCellWithIdentifier:name];
     
     switch (indexPath.row) {
@@ -138,7 +209,7 @@ heightForHeaderInSection:(NSInteger)section
 - (UITableViewCell *)confirmCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
-    static NSString *name = @"UserAuthenticationConfirmTableViewCell";
+    static NSString *name = @"GKUserAuthenticationConfirmTableViewCell";
     cell = [self.tableView dequeueReusableCellWithIdentifier:name];
     if (!cell) {
         cell = [[UITableViewCell alloc]
@@ -166,12 +237,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                 break;
             }
             
-            MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
-            hud.labelText = [error localizedDescription];
-            hud.mode = MBProgressHUDModeCustomView;
-            [self.view addSubview:hud];
-            [hud show:YES];
-            [hud hide:YES afterDelay:2];
+            self.hud.labelText = [error localizedDescription];
+            [self.view addSubview:self.hud];
+            [self.hud show:YES];
+            [self.hud hide:YES afterDelay:2];
+            if (self.authenticateDidFail)
+                self.authenticateDidFail(error);
+            [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
             break;
         }
         default:
@@ -196,26 +268,26 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 - (void(^)(GKUser *))didAuthencateUserSuccess
 {
     return ^(GKUser *user) {
-        MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
-        hud.labelText = @"成功登录";
-        hud.mode = MBProgressHUDModeCustomView;
-        [self.view addSubview:hud];
-        [hud show:YES];
-        [hud hide:YES afterDelay:2];
+        self.hud.labelText = @"成功登录";
+        [self.view addSubview:self.hud];
+        [self.hud show:YES];
+        [self.hud hide:YES afterDelay:2];
         
         [self.navigationController popViewControllerAnimated:YES];
+        if (self.authenticateDidSucceed)
+            self.authenticateDidSucceed(self, [[GKUser alloc] init]);
     };
 }
 
 - (void(^)(NSError *))didAuthencateUserFailure
 {
     return ^(NSError *error) {
-        MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
-        hud.labelText = error.localizedDescription;
-        hud.mode = MBProgressHUDModeCustomView;
-        [self.view addSubview:hud];
-        [hud show:YES];
-        [hud hide:YES afterDelay:2];
+        self.hud.labelText = error.localizedDescription;
+        [self.view addSubview:self.hud];
+        [self.hud show:YES];
+        [self.hud hide:YES afterDelay:2];
+        if (self.authenticateDidFail)
+            self.authenticateDidFail(error);
     };
 }
 

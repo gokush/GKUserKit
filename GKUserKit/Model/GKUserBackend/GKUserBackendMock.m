@@ -49,4 +49,24 @@
         }];
     }];
 }
+
+- (RACSignal *)authencate:(GKUserAuthentication *)authentication
+{
+    return
+    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        if ([authentication.username isEqualToString:@"gk"] &&
+            [authentication.password isEqualToString:@"gk"]) {
+            [subscriber sendNext:[[GKUser alloc] init]];
+            [subscriber sendCompleted];
+        } else {
+            NSError *error;
+            error = [NSError
+                     errorWithDomain:@"UserBackend" code:1
+                     userInfo:@{NSLocalizedDescriptionKey:@"错误的账号名或者密码"}];
+            [subscriber sendNext:error];
+        }
+        return [RACDisposable disposableWithBlock:^{
+        }];
+    }];
+}
 @end
