@@ -15,10 +15,8 @@
 @implementation GKUserBackendMock
 
 - (RACSignal *) submitUserFormData:(NSString *)email passWord:(NSString *)passWord {
-    @weakify(self)
     return
     [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        
         GKUserAccessToken *accessToken = [[GKUserAccessToken alloc] init];
         accessToken.accessToken = @"12334jkajgoaqagajgjagpkjg";
         
@@ -31,7 +29,8 @@
 }
 - (RACSignal *)signup:(GKUserRegistration *)user
 {
-    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    return
+    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         GKUser *user=[[GKUser alloc] init];
         user.userID=111;
         user.username=@"GG";
@@ -46,6 +45,26 @@
 {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:forgotPassword];
+        return [RACDisposable disposableWithBlock:^{
+        }];
+    }];
+}
+
+- (RACSignal *)authencate:(GKUserAuthentication *)authentication
+{
+    return
+    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        if ([authentication.username isEqualToString:@"gk"] &&
+            [authentication.password isEqualToString:@"gk"]) {
+            [subscriber sendNext:[[GKUser alloc] init]];
+            [subscriber sendCompleted];
+        } else {
+            NSError *error;
+            error = [NSError
+                     errorWithDomain:@"UserBackend" code:1
+                     userInfo:@{NSLocalizedDescriptionKey:@"错误的账号名或者密码"}];
+            [subscriber sendNext:error];
+        }
         return [RACDisposable disposableWithBlock:^{
         }];
     }];

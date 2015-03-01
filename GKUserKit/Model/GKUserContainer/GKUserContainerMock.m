@@ -8,10 +8,19 @@
 
 #import "GKUserContainerMock.h"
 #import "GKUserBackendMock.h"
+#import "GKUserServiceImpl.h"
+
 @implementation GKUserContainerMock
 
-- (id<GKUserBackend>) userBackend {
+- (id<GKUserBackend>)userBackend {
     return [[GKUserBackendMock alloc] init];
+}
+
+- (id<GKUserService>)userService
+{
+    id<GKUserService> service = [[GKUserServiceImpl alloc] init];
+    service.backend = [self userBackend];
+    return service;
 }
 
 @end

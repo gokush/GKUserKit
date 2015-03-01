@@ -9,28 +9,46 @@
 #import "GKUserServiceImpl.h"
 #import "GKUser.h"
 #import "GKUserRepository.h"
+#import "GKUserContainerImpl.h"
+#import "GKUserContainerMock.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
+@interface GKUserServiceImpl()
+@property (strong, nonatomic) id<GKUserContainer> container;
+@end
+
 @implementation GKUserServiceImpl
-@synthesize userBackend;
-@synthesize userRepository;
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.container = [[GKUserContainerMock alloc] init];
+        self.backend = [self.container userBackend];
+    }
+    return self;
+}
 
 - (RACSignal *)signup:(GKUserRegistration *)registration
 {
   return
   [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-    [[self.userBackend signup:registration] subscribeNext:^(RACTuple *parameters) {
+    [[self.backend signup:registration] subscribeNext:^(GKUser *user) {
 
-        GKUser *user = parameters.first;
-        GKUserQueue queue = (GKUserQueue)parameters.second;
-        if (queue == GKUserQueueNone) {
-            [self.userRepository create:user];
-        }
+        [self.repository create:user];
+        [subscriber sendNext:user];
+        [subscriber sendCompleted];
+        
     } error:^(NSError *error) {
-      [subscriber sendError:error];
+        [subscriber sendError:error];
     }];
     
     return (RACDisposable *)nil;
   }];
+}
+
+- (RACSignal *)authenticate:(GKUserAuthentication *)authentication
+{
+    return [self.backend authencate:authentication];
 }
 @end

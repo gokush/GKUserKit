@@ -39,7 +39,8 @@
         // Put the code you want to measure the time of here.
     }];
 }
-- (void) testForgotPassword {
+
+- (void)testForgotPassword {
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     id<GKUserContainer> container = [[GKUserContainerImpl alloc] init];
     id<GKUserBackend> backend = [container userBackend];
@@ -47,9 +48,14 @@
     forgotPassword.userName=@"ggg";
     forgotPassword.verificationCode=@"123456";
     forgotPassword.password=@"111";
+    
     RACSignal *backendSignal = [backend forgotPassword:forgotPassword];
     [backendSignal subscribeNext:^(GKUserForgotPassword *forgotPassword) {
         XCTAssert(YES, @"Pass");
+        dispatch_semaphore_signal(semaphore);
+    } error:^(NSError *error) {
+        NSLog(@"失败原因， %@", error.localizedDescription);
+        XCTFail(@"提交忘记密码的请求失败");
         dispatch_semaphore_signal(semaphore);
     }];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
