@@ -37,6 +37,7 @@
 		E564781E1AA0BC6D006CE49A /* GKUserAuthenticationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E564781A1AA0BC6D006CE49A /* GKUserAuthenticationView.xib */; };
 		E56478211AA0BC9B006CE49A /* GKUserAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = E56478201AA0BC9B006CE49A /* GKUserAuthentication.m */; };
 		E57D3A851AA33F5F007CE40E /* GKMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D3A831AA33F5F007CE40E /* GKMineViewController.m */; };
+		E57D3A881AA35820007CE40E /* GKUserAuthenticationControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D3A871AA35820007CE40E /* GKUserAuthenticationControllerTests.m */; };
 		E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */; };
 		E5A126E61A98B2870016AF23 /* GKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126E41A98B2870016AF23 /* GKUser.m */; };
 		E5EAD9831A9CB2C1004E8812 /* GKUserRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAD9821A9CB2C1004E8812 /* GKUserRepositoryImpl.m */; };
@@ -113,6 +114,7 @@
 		E56478201AA0BC9B006CE49A /* GKUserAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserAuthentication.m; path = Model/GKUserAuthentication.m; sourceTree = "<group>"; };
 		E57D3A821AA33F5F007CE40E /* GKMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKMineViewController.h; path = GKMine/Controller/GKMineViewController.h; sourceTree = "<group>"; };
 		E57D3A831AA33F5F007CE40E /* GKMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKMineViewController.m; path = GKMine/Controller/GKMineViewController.m; sourceTree = "<group>"; };
+		E57D3A871AA35820007CE40E /* GKUserAuthenticationControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserAuthenticationControllerTests.m; sourceTree = "<group>"; };
 		E5A126E11A98B2870016AF23 /* GKUserAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserAccessToken.h; path = Model/GKUserAccessToken.h; sourceTree = "<group>"; };
 		E5A126E21A98B2870016AF23 /* GKUserAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserAccessToken.m; path = Model/GKUserAccessToken.m; sourceTree = "<group>"; };
 		E5A126E31A98B2870016AF23 /* GKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUser.h; path = Model/GKUser.h; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				E5EAD98D1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m */,
 				E564780F1AA0BC0E006CE49A /* GKUserServeiceImplTest.m */,
 				14BD24241A987A870015DF09 /* Supporting Files */,
+				E57D3A871AA35820007CE40E /* GKUserAuthenticationControllerTests.m */,
 			);
 			path = GKUserKitExampleTests;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E57D3A881AA35820007CE40E /* GKUserAuthenticationControllerTests.m in Sources */,
 				E56478101AA0BC0E006CE49A /* GKUserServeiceImplTest.m in Sources */,
 				E5EAD98E1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m in Sources */,
 				C813F3C11A9F6CC10080155E /* GKUserBackendTests.m in Sources */,

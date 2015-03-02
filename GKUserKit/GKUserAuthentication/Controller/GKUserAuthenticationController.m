@@ -52,7 +52,8 @@ typedef enum {
     self.service = [[GKUserContainerMock alloc] userService];
     self.user = [[GKUserAuthentication alloc] init];
     self.hud = [[MBProgressHUD alloc] initWithView:self.view];
-    self.hud.mode = MBProgressHUDModeCustomView;
+    [self.view addSubview:self.hud];
+//    self.hud.mode = MBProgressHUDModeCustomView;
 }
 
 - (void)viewDidLoad
@@ -229,20 +230,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
         case ConfirmUserAuthenticationSection: {
-            NSError *error = [self.user valid];
-            if (nil == error) {
-                [[self.service authenticate:self.user]
-                 subscribeNext:[self didAuthencateUserSuccess]
-                 error:[self didAuthencateUserFailure]];
-                break;
-            }
-            
-            self.hud.labelText = [error localizedDescription];
-            [self.view addSubview:self.hud];
-            [self.hud show:YES];
-            [self.hud hide:YES afterDelay:2];
-            if (self.authenticateDidFail)
-                self.authenticateDidFail(error);
+            [self authenticate];
             [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
             break;
         }
@@ -265,15 +253,30 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     }
 }
 
+- (void)authenticate
+{
+    NSError *error = [self.user valid];
+    if (nil == error) {
+        [self.hud show:YES];
+        [[self.service authenticate:self.user]
+         subscribeNext:[self didAuthencateUserSuccess]
+         error:[self didAuthencateUserFailure]];
+        return;
+    }
+    
+    [[[UIAlertView alloc] initWithTitle:@"提示"
+                                message:error.localizedDescription delegate:nil
+                      cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
+     show];
+    if (self.authenticateDidFail)
+        self.authenticateDidFail(error);
+}
+
 - (void(^)(GKUser *))didAuthencateUserSuccess
 {
     return ^(GKUser *user) {
-        self.hud.labelText = @"成功登录";
-        [self.view addSubview:self.hud];
-        [self.hud show:YES];
-        [self.hud hide:YES afterDelay:2];
-        
         [self.navigationController popViewControllerAnimated:YES];
+        [self.hud hide:YES];
         if (self.authenticateDidSucceed)
             self.authenticateDidSucceed(self, [[GKUser alloc] init]);
     };
@@ -282,10 +285,12 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 - (void(^)(NSError *))didAuthencateUserFailure
 {
     return ^(NSError *error) {
-        self.hud.labelText = error.localizedDescription;
-        [self.view addSubview:self.hud];
-        [self.hud show:YES];
-        [self.hud hide:YES afterDelay:2];
+        [[[UIAlertView alloc] initWithTitle:@"提示"
+                                    message:error.localizedDescription
+                                   delegate:nil
+                          cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
+         show];
+        [self.hud hide:YES];
         if (self.authenticateDidFail)
             self.authenticateDidFail(error);
     };
