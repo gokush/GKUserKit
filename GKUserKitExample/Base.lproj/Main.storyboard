@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nrv-Fq-WxY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hAS-Zb-bY4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -41,10 +41,27 @@
             </objects>
             <point key="canvasLocation" x="2479" y="205"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jLk-XN-XDM">
+            <objects>
+                <navigationController id="hAS-Zb-bY4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sMJ-62-en7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Nrv-Fq-WxY" kind="relationship" relationship="rootViewController" id="sUK-Fu-Cl1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5x-4l-JBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337" y="1199"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Sth-F0-33y">
             <objects>
                 <tabBarController id="Nrv-Fq-WxY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UNY-JZ-9O7"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="NpF-Bg-Llh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -74,7 +91,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nf5-5k-FLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2793" y="1321"/>
+            <point key="canvasLocation" x="2846" y="1043"/>
         </scene>
         <!--我的-->
         <scene sceneID="Z5P-fI-Bt7">
@@ -93,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L5C-PH-Vop" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3481" y="1313"/>
+            <point key="canvasLocation" x="3547" y="1043"/>
         </scene>
         <!--Forgot Password Controller-->
         <scene sceneID="Yjm-FX-xUS">

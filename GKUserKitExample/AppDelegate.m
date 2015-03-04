@@ -8,21 +8,40 @@
 
 #import "AppDelegate.h"
 #import "GKUserKitExample-Swift.h"
-
+#import <ReactiveCocoa/ReactiveCocoa.h>
 @interface AppDelegate ()
+@property (strong,nonatomic) MBProgressHUD *HUD;
 
 @end
 
 @implementation AppDelegate
 
-
++(AppDelegate*) sharedInstance
+{
+    return (AppDelegate*)[UIApplication sharedApplication].delegate;
+}
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
   [[PersistenStack alloc] initWithStoreURL:[self storeURL]
                                   modelURL:[self modelURL]];
-  
-    return YES;
+  self.navigationController=(UINavigationController*)self.window.rootViewController;
+  @weakify(self)
+  [RACObserve(self, isShowHUD) subscribeNext:^(id x) {
+      @strongify(self)
+      BOOL isShowHUD = [x boolValue];
+      if (isShowHUD) {
+          [self showWithLabel];
+      }else{
+          [self hideHUD];
+      }
+  }];
+  [RACObserve(self, HUDText) subscribeNext:^(id x) {
+      @strongify(self)
+      
+      [self showTip:x];
+    }];
+  return YES;
 }
 
 - (NSURL *)storeURL
@@ -61,6 +80,39 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+#pragma mark - MBProgressHud Method
+
+- (void) showTip:(NSString*) tip
+{
+    if (tip.length==0) {
+        return;
+    }
+    MBProgressHUD *tipHUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    tipHUD.labelText=tip;
+    tipHUD.mode = MBProgressHUDModeCustomView;
+    [self.navigationController.view addSubview:tipHUD];
+    [tipHUD show:YES];
+    [tipHUD hide:YES afterDelay:2];
+}
+
+- (void) showWithLabel
+{
+    [self showWithLabel:@"请稍候..."];
+}
+- (void)showWithLabel:(NSString *)text
+{
+    if(!_HUD){
+        _HUD = [[MBProgressHUD alloc] initWithView:self.window.rootViewController.view];
+    }
+    [self.window.rootViewController.view addSubview:_HUD];
+    _HUD.labelText = text;
+    [_HUD show:YES];
+}
+
+- (void)hideHUD
+{
+    [_HUD removeFromSuperview];
 }
 
 @end

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "MBProgressHUD.h"
+@interface AppDelegate : UIResponder <UIApplicationDelegate,MBProgressHUDDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-
+@property (strong,nonatomic) UINavigationController *navigationController;
+@property (assign,nonatomic) BOOL isShowHUD; //等待提示的HUD
+@property (strong,nonatomic) NSString *HUDText; //提示文字用的HUD
++(AppDelegate*) sharedInstance;
 @end
 

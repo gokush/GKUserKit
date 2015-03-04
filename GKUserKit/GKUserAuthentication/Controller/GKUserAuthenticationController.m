@@ -9,7 +9,7 @@
 #import "GKUserAuthenticationController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "GKUserContainerMock.h"
-
+#import "AppDelegate.h"
 typedef enum {
     InputSectionUsernameCell,
     InputSectionPasswordCell
@@ -51,8 +51,8 @@ typedef enum {
 {
     self.service = [[GKUserContainerMock alloc] userService];
     self.user = [[GKUserAuthentication alloc] init];
-    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
-    self.hud.mode = MBProgressHUDModeCustomView;
+//    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
+//    self.hud.mode = MBProgressHUDModeCustomView;
 }
 
 - (void)viewDidLoad
@@ -237,10 +237,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                 break;
             }
             
-            self.hud.labelText = [error localizedDescription];
-            [self.view addSubview:self.hud];
-            [self.hud show:YES];
-            [self.hud hide:YES afterDelay:2];
+//            self.hud.labelText = [error localizedDescription];
+//            [self.view addSubview:self.hud];
+//            [self.hud show:YES];
+//            [self.hud hide:YES afterDelay:2];
+            [AppDelegate sharedInstance].HUDText=[error localizedDescription];
             if (self.authenticateDidFail)
                 self.authenticateDidFail(error);
             [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -268,10 +269,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 - (void(^)(GKUser *))didAuthencateUserSuccess
 {
     return ^(GKUser *user) {
-        self.hud.labelText = @"成功登录";
-        [self.view addSubview:self.hud];
-        [self.hud show:YES];
-        [self.hud hide:YES afterDelay:2];
+//        self.hud.labelText = @"成功登录";
+//        [self.view addSubview:self.hud];
+//        [self.hud show:YES];
+//        [self.hud hide:YES afterDelay:2];
+        [AppDelegate sharedInstance].HUDText=@"成功登录";
         
         [self.navigationController popViewControllerAnimated:YES];
         if (self.authenticateDidSucceed)
@@ -282,10 +284,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 - (void(^)(NSError *))didAuthencateUserFailure
 {
     return ^(NSError *error) {
-        self.hud.labelText = error.localizedDescription;
-        [self.view addSubview:self.hud];
-        [self.hud show:YES];
-        [self.hud hide:YES afterDelay:2];
+//        self.hud.labelText = error.localizedDescription;
+//        [self.view addSubview:self.hud];
+//        [self.hud show:YES];
+//        [self.hud hide:YES afterDelay:2];
+        [AppDelegate sharedInstance].HUDText=error.localizedDescription;
         if (self.authenticateDidFail)
             self.authenticateDidFail(error);
     };

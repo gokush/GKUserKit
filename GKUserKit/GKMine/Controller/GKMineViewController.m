@@ -8,33 +8,35 @@
 
 #import "GKMineViewController.h"
 #import "GKUserAuthenticationController.h"
-
+#import "AppDelegate.h"
 @interface GKMineViewController ()
 
 @end
 
 @implementation GKMineViewController
 
-- (void)setup
-{
-    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
-    self.hud.mode = MBProgressHUDModeCustomView;
-}
+//- (void)setup
+//{
+//    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
+//    self.hud.mode = MBProgressHUDModeCustomView;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setup];
+//    [self setup];
     
     GKUserAuthenticationController *authentication;
     authentication = [[GKUserAuthenticationController alloc] init];
     authentication.authenticateDidSucceed =
         ^(GKUserAuthenticationController *controller, GKUser *user) {
-            self.hud.labelText = @"登录成功";
-            [self.view addSubview:self.hud];
-            [self.hud show:YES];
-            [self.hud hide:YES afterDelay:2];
+//            self.hud.labelText = @"登录成功";
+//            [self.view addSubview:self.hud];
+//            [self.hud show:YES];
+//            [self.hud hide:YES afterDelay:2];
+            //[AppDelegate sharedInstance].isShowHUD=YES;
+            [AppDelegate sharedInstance].HUDText=@"登录成功";
     };
-    [self.navigationController pushViewController:authentication animated:YES];
+    [[AppDelegate sharedInstance].navigationController pushViewController:authentication animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
