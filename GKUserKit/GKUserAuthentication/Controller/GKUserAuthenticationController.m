@@ -9,6 +9,8 @@
 #import "GKUserAuthenticationController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "GKUserContainerMock.h"
+#import "GKForgotPasswordController.h"
+#import "GKRegistrationController.h"
 
 typedef enum {
     InputSectionUsernameCell,
@@ -90,7 +92,7 @@ heightForFooterInSection:(NSInteger)section
     float height;
     switch (section) {
         case ConfirmUserAuthenticationSection:
-            height = 40.0f;
+            height = 75.0f;
             break;
             
         default:
@@ -107,13 +109,14 @@ viewForFooterInSection:(NSInteger)section
     if (section == InputUserAuthenticationSection)
         return nil;
     
-    CGRect footerViewRect = CGRectMake(0.0f, 0.0f, 320.0f, 40.0f);
+    CGRect footerViewRect = CGRectMake(0.0f, 0.0f, 320.0f, 75.0f);
     UIView *footerView = [[UIView alloc] initWithFrame:footerViewRect];
+    footerView.userInteractionEnabled = YES;
     
     UIButton *forgotPassword = [UIButton buttonWithType:UIButtonTypeCustom];
     [forgotPassword setTitle:@"忘记密码?" forState:UIControlStateNormal];
     [forgotPassword addTarget:self action:@selector(forgotPasswordDidTap:)
-             forControlEvents:UIControlEventTouchUpOutside];
+             forControlEvents:UIControlEventTouchUpInside];
     forgotPassword.frame = CGRectMake(0.0f, 10.0f, 320.0f, 40.0f);
     [forgotPassword setTitleColor:forgotPassword.tintColor
                          forState:UIControlStateNormal];
@@ -122,7 +125,7 @@ viewForFooterInSection:(NSInteger)section
     UIButton *registration = [UIButton buttonWithType:UIButtonTypeCustom];
     [registration setTitle:@"注册新账号" forState:UIControlStateNormal];
     [registration addTarget:self action:@selector(registrationDidTap:)
-           forControlEvents:UIControlEventTouchUpOutside];
+           forControlEvents:UIControlEventTouchUpInside];
     registration.frame = CGRectMake(0.0f, 35.0f, 320.0f, 40.0f);
     [registration setTitleColor:registration.tintColor
                        forState:UIControlStateNormal];
@@ -136,12 +139,18 @@ viewForFooterInSection:(NSInteger)section
 
 - (IBAction)forgotPasswordDidTap:(id)sender
 {
+    GKForgotPasswordController *controller;
+    controller = [[GKForgotPasswordController alloc] init];
     
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (IBAction)registrationDidTap:(id)sender
 {
+    GKRegistrationController *controller;
+    controller = [[GKRegistrationController alloc] init];
     
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
