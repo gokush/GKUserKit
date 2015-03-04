@@ -121,14 +121,14 @@
         cell.label.textColor = blueColor;
         cell.label.text = @"注册";
         cell.textField.hidden = YES;
-//        formValidSignal = [RACSignal combineLatest:@[emailSignal, nicknameSignal, pwdSignal] reduce:^id(NSNumber *emailValid, NSNumber *nicknameValid, NSNumber *pwdValid){
-//            NSLog(@"%@, %@, %@",emailValid, nicknameValid, pwdValid);
-//            return @([emailValid boolValue] && [nicknameValid boolValue] && [pwdValid boolValue]);
-//        }];
-//        
-//        [formValidSignal subscribeNext:^(id x) {
-//            cell.label.textColor = [x boolValue] ? blueColor : [UIColor grayColor];
-//        }];
+        formValidSignal = [RACSignal combineLatest:@[emailSignal, nicknameSignal, pwdSignal] reduce:^id(NSNumber *emailValid, NSNumber *nicknameValid, NSNumber *pwdValid){
+            NSLog(@"%@, %@, %@",emailValid, nicknameValid, pwdValid);
+            return @([emailValid boolValue] && [nicknameValid boolValue] && [pwdValid boolValue]);
+        }];
+        
+        [formValidSignal subscribeNext:^(id x) {
+            cell.label.textColor = [x boolValue] ? blueColor : [UIColor grayColor];
+        }];
     }
     
     
@@ -139,10 +139,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
-        GKUserBackendMock *backend = [[GKUserBackendMock alloc] init];
-        [[backend submitUserFormData:@"chenyu@gmail.com" passWord:@"1233445"] subscribeNext:^(GKUserAccessToken *x) {
-            NSLog(@"GKUserAccessToken token is %@", x.accessToken);
-        }];
+        
     }
 }
 

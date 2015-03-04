@@ -30,4 +30,14 @@
 @property (strong, nonatomic) NSString *mobile;
 /// 电子邮件
 @property (strong, nonatomic) NSString *email;
+
+- (GKUserRegistration *)initRegistrationWithUsername:(NSString *)username passWord:(NSString *)password;
+- (GKUserRegistration *)initRegistrationWithUsername:(NSString *)username passWord:(NSString *)password passwordAgain:(NSString *)passwordAgain;
+- (GKUserRegistration *)initRegistrationWithUsername:(NSString *)username passWord:(NSString *)password email:(NSString *)email;
+
+- (GKUserRegistration *)initRegistrationWithEmail:(NSString *)email passWord:(NSString *)password;
+- (GKUserRegistration *)initRegistrationWithEmail:(NSString *)email passWord:(NSString *)password passwordAgain:(NSString *)passwordAgain;
+
+- (GKUserRegistration *)initRegistrationWithMobile:(NSString *)mobile passWord:(NSString *)password;
+- (GKUserRegistration *)initRegistrationWithMobile:(NSString *)mobile passWord:(NSString *)password passwordAgain:(NSString *)passwordAgain;
 @end
