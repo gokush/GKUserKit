@@ -86,6 +86,7 @@
                 cell.textField.placeholder = @"Email";
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
                  emailSignal = [[cell.textField rac_textSignal] map:^id(id value) {
+                     self.registration.email = (NSString *)value;
                     return @([cell isValidEmail:value]);
                 }];
                 
@@ -98,6 +99,7 @@
                 cell.textField.placeholder = @"昵称";
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
                 nicknameSignal = [[cell.textField rac_textSignal] map:^id(NSString *value) {
+                    self.registration.username = value;
                     return @(value.length > 2 && value.length < 10);
                 }];
             }
@@ -109,6 +111,7 @@
                 cell.textField.secureTextEntry = YES;
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
                 pwdSignal = [[cell.textField rac_textSignal] map:^id(NSString *value) {
+                    self.registration.password = value;
                     return @(value.length > 1);
                 }];
             }
@@ -139,8 +142,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
-        
+        [self createUser];
     }
+}
+
+- (void)createUser {
+    
 }
 
 - (IBAction)signup:(id)sender
