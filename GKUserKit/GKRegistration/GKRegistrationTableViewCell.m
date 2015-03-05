@@ -27,7 +27,7 @@
 }
 
 
-- (BOOL) matchRegex:(NSString*)regexStr string:(NSString*)str
+- (BOOL)matchRegex:(NSString*)regexStr string:(NSString*)str
 {
     NSError *err = nil;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexStr
