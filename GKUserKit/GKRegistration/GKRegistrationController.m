@@ -130,9 +130,7 @@
 //            cell.label.textColor = [x boolValue] ? blueColor : [UIColor grayColor];
 //        }];
     }
-    
-    
-    
+
     return cell;
 }
 
