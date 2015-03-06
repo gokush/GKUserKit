@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "GKUserAuthenticationController.h"
+#import <OCMock/OCMock.h>
 
 @interface GKUserAuthenticationControllerTests : XCTestCase
 
@@ -17,21 +18,35 @@
 
 @implementation GKUserAuthenticationControllerTests
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
     
     self.controller = [[GKUserAuthenticationController alloc] init];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testAuthencate {
-    [self.controller authenticate];
+- (void)testAuthencate
+{
+    [self.controller authenticate:nil];
+}
+
+- (void)testAuthencateFail
+{
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
+    self.controller.alertView = OCMClassMock([UIAlertView class]);
+    self.controller.authenticateDidFail = ^(NSError *error) {
+        XCTAssert(YES, @"");
+        dispatch_semaphore_signal(semaphore);
+    };
+    [self.controller authenticate:nil];
+    OCMVerify([self.controller.alertView show]);
+    
+    dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 1000));
 }
 
 @end

@@ -11,6 +11,7 @@
 #import "GKUserAuthenticationTableViewCell.h"
 #import "GKUserAuthentication.h"
 #import "GKUserService.h"
+#import "GKHUD.h"
 
 @interface GKUserAuthenticationController : UIViewController
 <UITableViewDelegate, UITableViewDataSource>
@@ -18,10 +19,11 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) id<GKUserService> service;
 @property (strong, nonatomic) GKUserAuthentication *user;
+@property (strong, nonatomic) UIAlertView *alertView;
 /// MBProgressHUD的实例
 ///
 /// 单元测试 mock hud 可以检查认证是否被触发
-@property (strong, nonatomic) MBProgressHUD *hud;
+@property (strong, nonatomic) GKHUD *hud;
 /// 认证成功
 /// @param controller 用户认证控制器
 /// @param user 用户
@@ -34,7 +36,7 @@ void (^authenticateDidSucceed)(GKUserAuthenticationController *controller,
 @property (copy, nonatomic) void (^authenticateDidFail)(NSError *error);
 
 /// 认证
-- (void)authenticate;
+- (IBAction)authenticate:(id)sender;
 - (IBAction)forgotPasswordDidTap:(id)sender;
 - (IBAction)registrationDidTap:(id)sender;
 @end

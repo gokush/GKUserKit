@@ -11,6 +11,7 @@
 #import "GKUserContainerMock.h"
 #import "GKForgotPasswordController.h"
 #import "GKRegistrationController.h"
+#import "GKHUD.h"
 
 typedef enum {
     InputSectionUsernameCell,
@@ -50,13 +51,23 @@ typedef enum {
     return self;
 }
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
 - (void)setup
 {
     self.service = [[GKUserContainerMock alloc] userService];
     self.user = [[GKUserAuthentication alloc] init];
-    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:self.hud];
-//    self.hud.mode = MBProgressHUDModeCustomView;
+    self.hud = [GKHUD defaultHUD];
+    self.alertView = [[UIAlertView alloc]
+                      initWithTitle:@"提示" message:@"" delegate:nil
+                      cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
 }
 
 - (void)viewDidLoad
@@ -242,7 +253,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
         case ConfirmUserAuthenticationSection: {
-            [self authenticate];
+            [self authenticate:nil];
             [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
             break;
         }
@@ -265,7 +276,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     }
 }
 
-- (void)authenticate
+- (IBAction)authenticate:(id)sender
 {
     NSError *error = [self.user valid];
     if (nil == error) {
@@ -276,10 +287,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         return;
     }
     
-    [[[UIAlertView alloc] initWithTitle:@"提示"
-                                message:error.localizedDescription delegate:nil
-                      cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
-     show];
+    self.alertView.message = error.localizedDescription;
+    [self.alertView show];
+    
     if (self.authenticateDidFail)
         self.authenticateDidFail(error);
 }
@@ -297,12 +307,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 - (void(^)(NSError *))didAuthencateUserFailure
 {
     return ^(NSError *error) {
-        [[[UIAlertView alloc] initWithTitle:@"提示"
-                                    message:error.localizedDescription
-                                   delegate:nil
-                          cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
-         show];
-        [self.hud hide:YES];
+        self.alertView.message = error.localizedDescription;
+        [self.alertView show];
+        
         if (self.authenticateDidFail)
             self.authenticateDidFail(error);
     };
