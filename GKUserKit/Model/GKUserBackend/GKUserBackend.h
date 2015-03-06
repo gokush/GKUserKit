@@ -14,7 +14,6 @@
 
 @protocol GKUserBackend <NSObject>
 
-- (RACSignal *)submitUserFormData:(NSString *)email passWord:(NSString *)passWord;
 
 ///
 /// 请求远程服务器注册新用户
