@@ -14,19 +14,6 @@
 
 @implementation GKUserBackendMock
 
-- (RACSignal *) submitUserFormData:(NSString *)email passWord:(NSString *)passWord {
-    return
-    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        GKUserAccessToken *accessToken = [[GKUserAccessToken alloc] init];
-        accessToken.accessToken = @"12334jkajgoaqagajgjagpkjg";
-        
-        [subscriber sendNext:accessToken];
-        [subscriber sendCompleted];
-        
-        return [RACDisposable disposableWithBlock:^{
-        }];
-    }];
-}
 - (RACSignal *)signup:(GKUserRegistration *)user
 {
     return
