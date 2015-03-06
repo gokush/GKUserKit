@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "GKUserKitExample-Swift.h"
+//#import "GKUserKitExample-Swift.h"
+#import "PersistenStack.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +20,8 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-  [[PersistenStack alloc] initWithStoreURL:[self storeURL]
-                                  modelURL:[self modelURL]];
+    [[PersistenStack alloc] initWithStoreURL:[self storeURL]
+                                    modelURL:[self modelURL]];
   
     return YES;
 }

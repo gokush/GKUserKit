@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "GKUserRepositoryImpl.h"
-#import "GKUserKitExample-Swift.h"
+//#import "GKUserKitExample-Swift.h"
+#import "PersistenStack.h"
 
 @interface GKUserRepositoryImplTest : XCTestCase
 
