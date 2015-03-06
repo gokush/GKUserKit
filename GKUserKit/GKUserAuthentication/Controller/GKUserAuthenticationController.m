@@ -109,7 +109,8 @@ viewForFooterInSection:(NSInteger)section
     if (section == InputUserAuthenticationSection)
         return nil;
     
-    CGRect footerViewRect = CGRectMake(0.0f, 0.0f, 320.0f, 75.0f);
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGRect footerViewRect = CGRectMake(0.0f, 0.0f, width, 80.0);
     UIView *footerView = [[UIView alloc] initWithFrame:footerViewRect];
     footerView.userInteractionEnabled = YES;
     
@@ -117,7 +118,7 @@ viewForFooterInSection:(NSInteger)section
     [forgotPassword setTitle:@"忘记密码?" forState:UIControlStateNormal];
     [forgotPassword addTarget:self action:@selector(forgotPasswordDidTap:)
              forControlEvents:UIControlEventTouchUpInside];
-    forgotPassword.frame = CGRectMake(0.0f, 10.0f, 320.0f, 40.0f);
+    forgotPassword.frame = CGRectMake(0.0f, 40.0f, width, 20.0f);
     [forgotPassword setTitleColor:forgotPassword.tintColor
                          forState:UIControlStateNormal];
     forgotPassword.titleLabel.font = [UIFont systemFontOfSize:14.0f];
@@ -126,7 +127,7 @@ viewForFooterInSection:(NSInteger)section
     [registration setTitle:@"注册新账号" forState:UIControlStateNormal];
     [registration addTarget:self action:@selector(registrationDidTap:)
            forControlEvents:UIControlEventTouchUpInside];
-    registration.frame = CGRectMake(0.0f, 35.0f, 320.0f, 40.0f);
+    registration.frame = CGRectMake(0.0f, 60.0f, width, 20.0f);
     [registration setTitleColor:registration.tintColor
                        forState:UIControlStateNormal];
     registration.titleLabel.font = [UIFont systemFontOfSize:14.0f];
@@ -228,6 +229,7 @@ viewForFooterInSection:(NSInteger)section
         
         cell.textLabel.textColor = [UIColor colorWithRed:0.15f green:0.47f
                                                     blue:1.0f alpha:1.0f];
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.text = @"登录";
     }
     
