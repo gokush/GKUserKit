@@ -17,7 +17,6 @@
     NSTimer *_timer;
  
 }
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) GKVerificationTableViewCell *verificationCell;
 @end
 
@@ -62,7 +61,7 @@
     switch (indexPath.row) {
         case 0:{
             GKRegistrationTableViewCell *registrationCell = (GKRegistrationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-            registrationCell.textLabel.text=@"手机号:";
+            registrationCell.label.text=@"手机号";
             registrationCell.textField.placeholder=@"请输入手机号或邮箱";
             cell=registrationCell;
             break;
@@ -80,14 +79,14 @@
         }
         case 2:{
             GKRegistrationTableViewCell *registrationCell = (GKRegistrationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-            registrationCell.textLabel.text=@"新密码:";
+            registrationCell.label.text=@"新密码";
             registrationCell.textField.placeholder=@"请输入新密码";
             cell=registrationCell;
             break;
         }
         case 3:{
             GKRegistrationTableViewCell *registrationCell = (GKRegistrationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-            registrationCell.textLabel.text=@"确认密码:";
+            registrationCell.label.text=@"确认密码";
             registrationCell.textField.placeholder=@"请确认密码";
             cell=registrationCell;
             break;

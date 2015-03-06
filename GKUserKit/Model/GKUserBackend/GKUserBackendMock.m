@@ -41,4 +41,35 @@
         }];
     }];
 }
+- (RACSignal *)forgotPassword:(GKUserForgotPassword *) forgotPassword
+{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:forgotPassword];
+        return [RACDisposable disposableWithBlock:^{
+        }];
+    }];
+}
+
+- (RACSignal *)authencate:(GKUserAuthentication *)authentication
+{
+    return
+    [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        BOOL authenticated;
+        authenticated = [authentication.username isEqualToString:@"error"] &&
+                        [authentication.password isEqualToString:@"error"];
+        if (YES == authenticated) {
+            NSError *error;
+            error = [NSError
+                     errorWithDomain:@"UserBackend" code:1
+                     userInfo:@{NSLocalizedDescriptionKey:@"错误的账号名或者密码"}];
+            [subscriber sendError:error];
+        } else {
+            [subscriber sendNext:[[GKUser alloc] init]];
+            [subscriber sendCompleted];
+            
+        }
+        return [RACDisposable disposableWithBlock:^{
+        }];
+    }] delay:2];
+}
 @end
