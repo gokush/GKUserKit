@@ -18,6 +18,33 @@
 
 @implementation GKRegistrationController
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -33,9 +60,6 @@
     self.tableView.delegate   = self;
     
     self.title = @"用户注册";
-    
-    
-    [self setup];
 }
 
 
@@ -187,7 +211,7 @@
 
 - (IBAction)signup:(id)sender
 {
-  [self.service signup:self.registration];
+    [self.service signup:self.registration];
 }
 
 - (void)didReceiveMemoryWarning {
