@@ -21,6 +21,8 @@
 /// hud 实例
 @property (strong, nonatomic) MBProgressHUD *hud;
 
+@property (strong, nonatomic) UIAlertView *alertView;
+
 /// 注册成功
 /// @param controller 用户注册控制器
 /// @param user 用户

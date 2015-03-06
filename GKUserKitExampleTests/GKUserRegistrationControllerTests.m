@@ -13,13 +13,14 @@
 
 @interface GKUserRegistrationControllerTests : XCTestCase
 
+@property (strong, nonatomic) GKRegistrationController *registrationController;
 @end
 
 @implementation GKUserRegistrationControllerTests
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.registrationController = [[GKRegistrationController alloc] init];
 }
 
 - (void)tearDown {
@@ -33,12 +34,35 @@
     alertView = OCMClassMock([UIAlertView class]);
     OCMStub([alertView show]);
     
-    GKRegistrationController *registration;
-    registration = [[GKRegistrationController alloc] init];
-    registration.alertView = alertView;
+    self.registrationController.alertView = alertView;
     
     [alertView show];
     OCMVerify([alertView show]);
+}
+
+- (void)testSignup
+{
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    GKUserRegistration *registration = [[GKUserRegistration alloc] init];
+    registration.username = @"goku";
+    registration.password = @"goku";
+    registration.passwordAgain = @"goku";
+    registration.email = @"goku@goku-commerce.com";
+    
+    self.registrationController.signupDidSucceed =
+        ^(GKRegistrationController *controller, GKUser *user) {
+            XCTAssert(NO, @"success");
+            dispatch_semaphore_signal(semaphore);
+    };
+    
+    self.registrationController.signupDidFail = ^(NSError *error) {
+        XCTAssert(NO, @"fail");
+        dispatch_semaphore_signal(semaphore);
+    };
+    
+    [self.registrationController signup:nil];
+    dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 1000));
 }
 
 @end

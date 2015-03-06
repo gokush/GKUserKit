@@ -45,6 +45,7 @@ typedef enum {
 {
     self = [self init];
     if (self) {
+        [self setup];
     }
     return self;
 }
