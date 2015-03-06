@@ -128,6 +128,8 @@
         cell.label.text = @"注册";
         cell.textField.hidden = YES;
         
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        
     }
     
     
