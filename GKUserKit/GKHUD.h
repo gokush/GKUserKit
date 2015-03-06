@@ -10,6 +10,7 @@
 
 @interface GKHUD : NSObject
 
+@property (weak, nonatomic) UIView *rootView;
 - (void)showMessage:(NSString *)message hideAfterDelay:(NSTimeInterval)second;
 - (void)show:(BOOL)animated;
 - (void)hide:(BOOL)animated;

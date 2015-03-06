@@ -28,7 +28,7 @@
 - (void)showMessage:(NSString *)message hideAfterDelay:(NSTimeInterval)second
 {
     self.mbProgressHUD.mode = MBProgressHUDModeCustomView;
-    [view addSubview:progress];
+    [self.rootView addSubview:self.mbProgressHUD];
     [self.mbProgressHUD show:YES];
     [self.mbProgressHUD hide:YES afterDelay:second];
 }
