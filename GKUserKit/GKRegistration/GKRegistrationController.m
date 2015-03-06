@@ -140,25 +140,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
-        [self createUser];
+        [self signup:nil];
     }
-}
-
-- (void)createUser {
-    NSError *error = [self.registration valid];
-    if (nil == error) {
-        [self.hud show:YES];
-        [[self.service signup:self.registration]
-         subscribeNext:[self didSignupUserSuccess] error:[self didSignupUserFailure]];
-        return;
-    }
-    
-    [[[UIAlertView alloc] initWithTitle:@"提示"
-                                message:error.localizedDescription delegate:nil
-                      cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
-     show];
-    if (self.signupDidFail)
-        self.signupDidFail(error);
 }
 
 
@@ -189,7 +172,20 @@
 
 - (IBAction)signup:(id)sender
 {
-  [self.service signup:self.registration];
+    NSError *error = [self.registration valid];
+    if (nil == error) {
+        [self.hud show:YES];
+        [[self.service signup:self.registration]
+         subscribeNext:[self didSignupUserSuccess] error:[self didSignupUserFailure]];
+        return;
+    }
+    
+    [[[UIAlertView alloc] initWithTitle:@"提示"
+                                message:error.localizedDescription delegate:nil
+                      cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
+     show];
+    if (self.signupDidFail)
+        self.signupDidFail(error);
 }
 
 - (void)didReceiveMemoryWarning {
