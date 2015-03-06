@@ -11,15 +11,9 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "GKUserBackendMock.h"
 #import "GKUserAccessToken.h"
+#import "GKUserContainerMock.h"
 
 @interface GKRegistrationController ()
-{
-    RACSignal *emailSignal;
-    RACSignal *nicknameSignal;
-    RACSignal *pwdSignal;
-    RACSignal *formValidSignal;
-    
-}
 @end
 
 @implementation GKRegistrationController
@@ -39,6 +33,18 @@
     self.tableView.delegate   = self;
     
     self.title = @"用户注册";
+    
+    
+    [self setup];
+}
+
+
+- (void)setup
+{
+    self.service = [[GKUserContainerMock alloc] userService];
+    self.registration = [[GKUserRegistration alloc] init];
+    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:self.hud];
     
 }
 
@@ -85,9 +91,9 @@
                 cell.label.text = @"邮箱";
                 cell.textField.placeholder = @"Email";
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-                 emailSignal = [[cell.textField rac_textSignal] map:^id(id value) {
-                    return @([cell isValidEmail:value]);
-                }];
+                [[cell.textField rac_textSignal] subscribeNext:^(id x) {
+                     self.registration.email = x;
+                 }];
                 
                 
             }
@@ -97,9 +103,9 @@
                 cell.label.text = @"昵称";
                 cell.textField.placeholder = @"昵称";
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-                nicknameSignal = [[cell.textField rac_textSignal] map:^id(NSString *value) {
-                    return @(value.length > 2 && value.length < 10);
-                }];
+                [[cell.textField rac_textSignal] subscribeNext:^(id x) {
+                    self.registration.username = x;
+                 }];
             }
                 break;
             case 2:
@@ -108,9 +114,9 @@
                 cell.textField.placeholder = @"密码";
                 cell.textField.secureTextEntry = YES;
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-                pwdSignal = [[cell.textField rac_textSignal] map:^id(NSString *value) {
-                    return @(value.length > 1);
-                }];
+                [[cell.textField rac_textSignal] subscribeNext:^(id x) {
+                    self.registration.password = x;
+                    }];
             }
                 break;
             default:
@@ -121,29 +127,62 @@
         cell.label.textColor = blueColor;
         cell.label.text = @"注册";
         cell.textField.hidden = YES;
-//        formValidSignal = [RACSignal combineLatest:@[emailSignal, nicknameSignal, pwdSignal] reduce:^id(NSNumber *emailValid, NSNumber *nicknameValid, NSNumber *pwdValid){
-//            NSLog(@"%@, %@, %@",emailValid, nicknameValid, pwdValid);
-//            return @([emailValid boolValue] && [nicknameValid boolValue] && [pwdValid boolValue]);
-//        }];
-//        
-//        [formValidSignal subscribeNext:^(id x) {
-//            cell.label.textColor = [x boolValue] ? blueColor : [UIColor grayColor];
-//        }];
+        
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        
     }
-    
-    
-    
+
     return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
-        GKUserBackendMock *backend = [[GKUserBackendMock alloc] init];
-        [[backend submitUserFormData:@"chenyu@gmail.com" passWord:@"1233445"] subscribeNext:^(GKUserAccessToken *x) {
-            NSLog(@"GKUserAccessToken token is %@", x.accessToken);
-        }];
+        [self createUser];
     }
+}
+
+- (void)createUser {
+    NSError *error = [self.registration valid];
+    if (nil == error) {
+        [self.hud show:YES];
+        [[self.service signup:self.registration]
+         subscribeNext:[self didSignupUserSuccess] error:[self didSignupUserFailure]];
+        return;
+    }
+    
+    [[[UIAlertView alloc] initWithTitle:@"提示"
+                                message:error.localizedDescription delegate:nil
+                      cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
+     show];
+    if (self.signupDidFail)
+        self.signupDidFail(error);
+}
+
+
+
+- (void(^)(GKUser *))didSignupUserSuccess
+{
+    return ^(GKUser *user) {
+        [self.navigationController popViewControllerAnimated:YES];
+        [self.hud hide:YES];
+        if (self.signupDidSucceed)
+            self.signupDidSucceed(self, [[GKUser alloc] init]);
+    };
+}
+
+- (void(^)(NSError *))didSignupUserFailure
+{
+    return ^(NSError *error) {
+        [[[UIAlertView alloc] initWithTitle:@"提示"
+                                    message:error.localizedDescription
+                                   delegate:nil
+                          cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
+         show];
+        [self.hud hide:YES];
+        if (self.signupDidFail)
+            self.signupDidFail(error);
+    };
 }
 
 - (IBAction)signup:(id)sender

@@ -20,9 +20,9 @@
     return self;
 }
 
-- (RACSignal *)submitUserFormData:(NSString *)email passWord:(NSString *)passWord {
+- (RACSignal *)signup:(GKUserRegistration *)user {
     @weakify(self)
-    NSDictionary *params = @{@"email":email, @"passWord":passWord};
+    NSDictionary *params = @{@"email":user.email, @"passWord":user.password, @"username":user.username};
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self)
         [self.manager POST:@"URL_TO_FILL" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -34,8 +34,8 @@
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             [subscriber sendError:error];
             [subscriber sendCompleted];
-          
-          [self create:nil];
+            
+            [self signup:nil];
         }];
         return [RACDisposable disposableWithBlock:^{
         }];
