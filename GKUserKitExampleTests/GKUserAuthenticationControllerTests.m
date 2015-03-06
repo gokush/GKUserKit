@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "GKUserAuthenticationController.h"
 #import <OCMock/OCMock.h>
+#import <ReactiveCocoa/RACEXTKeyPathCoding.h>
 
 @interface GKUserAuthenticationControllerTests : XCTestCase
 
@@ -31,7 +32,25 @@
 
 - (void)testAuthencate
 {
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    self.controller.alertView = OCMClassMock([UIAlertView class]);
+    @weakify(self);
+    self.controller.authenticateDidFail = ^(NSError *error) {
+        @strongify(self);
+        XCTAssert(NO);
+        dispatch_semaphore_signal(semaphore);
+    };
+    self.controller.authenticateDidSucceed =
+    ^(GKUserAuthenticationController *controller, GKUser *user) {
+        @strongify(self);
+        XCTAssert(NO);
+        dispatch_semaphore_signal(semaphore);
+    };
+    
     [self.controller authenticate:nil];
+    
+    dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 1000));
 }
 
 - (void)testAuthencateFail
@@ -39,10 +58,19 @@
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
     self.controller.alertView = OCMClassMock([UIAlertView class]);
+    @weakify(self);
     self.controller.authenticateDidFail = ^(NSError *error) {
-        XCTAssert(YES, @"");
+        @strongify(self);
+        XCTAssert(YES);
         dispatch_semaphore_signal(semaphore);
     };
+    self.controller.authenticateDidSucceed =
+    ^(GKUserAuthenticationController *controller, GKUser *user) {
+        @strongify(self);
+        XCTAssert(NO);
+        dispatch_semaphore_signal(semaphore);
+    };
+    
     [self.controller authenticate:nil];
     OCMVerify([self.controller.alertView show]);
     
