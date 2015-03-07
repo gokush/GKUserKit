@@ -8,6 +8,7 @@ target 'GKUserKitExample' do
     pod 'CocoaLumberjack', '~> 2.0.0-beta4'
     pod 'ReactiveCocoa', '~> 2.4.7'
     pod 'MBProgressHUD'
+    pod 'Objection'
 end
 
 target 'GKUserKitExampleTests' do

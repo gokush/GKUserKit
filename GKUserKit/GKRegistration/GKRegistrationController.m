@@ -12,11 +12,13 @@
 #import "GKUserBackendMock.h"
 #import "GKUserAccessToken.h"
 #import "GKUserContainerMock.h"
+#import <Objection/Objection.h>
 
 @interface GKRegistrationController ()
 @end
 
 @implementation GKRegistrationController
+objection_requires(@"service")
 
 - (id)init
 {
@@ -65,7 +67,7 @@
 
 - (void)setup
 {
-    self.service = [[GKUserContainerMock alloc] userService];
+//    self.service = [[GKUserContainerMock alloc] userService];
     self.registration = [[GKUserRegistration alloc] init];
     self.hud = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:self.hud];

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 //#import "GKUserKitExample-Swift.h"
 #import "PersistenStack.h"
+#import "GKApplicationContext.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +23,13 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     [[PersistenStack alloc] initWithStoreURL:[self storeURL]
                                     modelURL:[self modelURL]];
-  
+    
+    JSObjectionInjector *injector;
+    GKApplicationContextDemonstration *context;
+    context = [[GKApplicationContextDemonstration alloc] init];
+    injector = [JSObjection createInjector:context];
+    [JSObjection setDefaultInjector:injector];
+    
     return YES;
 }
 
