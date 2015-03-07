@@ -17,10 +17,12 @@
 @implementation GKHUD
 
 - (id)initWithMBProgressHUD:(MBProgressHUD *)mbProgressHUD
+                   rootView:(UIView *)view
 {
     self = [super init];
     if (self) {
         self.mbProgressHUD = mbProgressHUD;
+        self.rootView = view;
     }
     return self;
 }
@@ -35,6 +37,8 @@
 
 - (void)show:(BOOL)animated
 {
+    self.mbProgressHUD.mode = MBProgressHUDModeIndeterminate;
+    [self.rootView addSubview:self.mbProgressHUD];
     [self.mbProgressHUD show:animated];
 }
 
@@ -52,6 +56,6 @@
     UIView *view = [[[[[UIApplication sharedApplication] delegate] window]
                      rootViewController] view];
     MBProgressHUD *progress = [[MBProgressHUD alloc] initWithView:view];
-    return [[GKHUD alloc] initWithMBProgressHUD:progress];
+    return [[GKHUD alloc] initWithMBProgressHUD:progress rootView:view];
 }
 @end
