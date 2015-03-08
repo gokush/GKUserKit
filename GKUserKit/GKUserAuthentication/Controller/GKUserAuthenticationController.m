@@ -11,6 +11,7 @@
 #import "GKUserContainerMock.h"
 #import "GKForgotPasswordController.h"
 #import "GKRegistrationController.h"
+#import "GKHUD.h"
 
 typedef enum {
     InputSectionUsernameCell,
@@ -45,6 +46,16 @@ typedef enum {
 {
     self = [self init];
     if (self) {
+        [self setup];
+    }
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self setup];
     }
     return self;
 }
@@ -53,9 +64,10 @@ typedef enum {
 {
     self.service = [[GKUserContainerMock alloc] userService];
     self.user = [[GKUserAuthentication alloc] init];
-    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:self.hud];
-//    self.hud.mode = MBProgressHUDModeCustomView;
+    self.hud = [GKHUD defaultHUD];
+    self.alertView = [[UIAlertView alloc]
+                      initWithTitle:@"提示" message:@"" delegate:nil
+                      cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
 }
 
 - (void)viewDidLoad
@@ -109,7 +121,8 @@ viewForFooterInSection:(NSInteger)section
     if (section == InputUserAuthenticationSection)
         return nil;
     
-    CGRect footerViewRect = CGRectMake(0.0f, 0.0f, 320.0f, 75.0f);
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGRect footerViewRect = CGRectMake(0.0f, 0.0f, width, 80.0);
     UIView *footerView = [[UIView alloc] initWithFrame:footerViewRect];
     footerView.userInteractionEnabled = YES;
     
@@ -117,7 +130,7 @@ viewForFooterInSection:(NSInteger)section
     [forgotPassword setTitle:@"忘记密码?" forState:UIControlStateNormal];
     [forgotPassword addTarget:self action:@selector(forgotPasswordDidTap:)
              forControlEvents:UIControlEventTouchUpInside];
-    forgotPassword.frame = CGRectMake(0.0f, 10.0f, 320.0f, 40.0f);
+    forgotPassword.frame = CGRectMake(0.0f, 40.0f, width, 20.0f);
     [forgotPassword setTitleColor:forgotPassword.tintColor
                          forState:UIControlStateNormal];
     forgotPassword.titleLabel.font = [UIFont systemFontOfSize:14.0f];
@@ -126,7 +139,7 @@ viewForFooterInSection:(NSInteger)section
     [registration setTitle:@"注册新账号" forState:UIControlStateNormal];
     [registration addTarget:self action:@selector(registrationDidTap:)
            forControlEvents:UIControlEventTouchUpInside];
-    registration.frame = CGRectMake(0.0f, 35.0f, 320.0f, 40.0f);
+    registration.frame = CGRectMake(0.0f, 60.0f, width, 20.0f);
     [registration setTitleColor:registration.tintColor
                        forState:UIControlStateNormal];
     registration.titleLabel.font = [UIFont systemFontOfSize:14.0f];
@@ -228,6 +241,7 @@ viewForFooterInSection:(NSInteger)section
         
         cell.textLabel.textColor = [UIColor colorWithRed:0.15f green:0.47f
                                                     blue:1.0f alpha:1.0f];
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.text = @"登录";
     }
     
@@ -239,7 +253,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
         case ConfirmUserAuthenticationSection: {
-            [self authenticate];
+            [self authenticate:nil];
             [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
             break;
         }
@@ -262,7 +276,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     }
 }
 
-- (void)authenticate
+- (IBAction)authenticate:(id)sender
 {
     NSError *error = [self.user valid];
     if (nil == error) {
@@ -273,10 +287,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         return;
     }
     
-    [[[UIAlertView alloc] initWithTitle:@"提示"
-                                message:error.localizedDescription delegate:nil
-                      cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
-     show];
+    self.alertView.message = error.localizedDescription;
+    [self.alertView show];
+    
     if (self.authenticateDidFail)
         self.authenticateDidFail(error);
 }
@@ -294,12 +307,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 - (void(^)(NSError *))didAuthencateUserFailure
 {
     return ^(NSError *error) {
-        [[[UIAlertView alloc] initWithTitle:@"提示"
-                                    message:error.localizedDescription
-                                   delegate:nil
-                          cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
-         show];
-        [self.hud hide:YES];
+        self.alertView.message = error.localizedDescription;
+        [self.alertView show];
+        
         if (self.authenticateDidFail)
             self.authenticateDidFail(error);
     };

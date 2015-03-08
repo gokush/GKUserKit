@@ -36,4 +36,6 @@
 - (RACSignal *)signup:(GKUserRegistration *)registration;
 
 - (RACSignal *)authenticate:(GKUserAuthentication *)authentication;
+
+- (RACSignal *)forgotPassword:(GKUserForgotPassword*)forgotPassword;
 @end

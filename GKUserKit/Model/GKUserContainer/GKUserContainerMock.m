@@ -12,14 +12,21 @@
 
 @implementation GKUserContainerMock
 
-- (id<GKUserBackend>)userBackend {
+- (id<GKUserBackend>)userBackend
+{
     return [[GKUserBackendMock alloc] init];
+}
+
+- (id<GKUserRepository>)userRepository
+{
+    return nil;
 }
 
 - (id<GKUserService>)userService
 {
-    id<GKUserService> service = [[GKUserServiceImpl alloc] init];
+    GKUserServiceImpl *service = [[GKUserServiceImpl alloc] init];
     service.backend = [self userBackend];
+    service.repository = [self userRepository];
     return service;
 }
 

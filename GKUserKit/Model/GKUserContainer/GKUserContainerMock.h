@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) id<GKUserBackend> userBackend;
 @property (strong, nonatomic) id<GKUserService> userService;
+@property (strong, nonatomic) id<GKUserRepository> userRepository;
 
 @end

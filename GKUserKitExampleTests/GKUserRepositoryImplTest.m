@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "GKUserRepositoryImpl.h"
-#import "GKUserKitExample-Swift.h"
+//#import "GKUserKitExample-Swift.h"
+#import "PersistenStack.h"
 
 @interface GKUserRepositoryImplTest : XCTestCase
 
@@ -62,6 +63,15 @@
   }];
   
   dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 1000));
+}
+
+- (void)testFindUserWithID {
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    [[self.repository findUserWithID:999] subscribeNext:^(GKUser *found) {
+        NSLog(@"%@", found.username);
+        dispatch_semaphore_signal(semaphore);
+    }];
+    dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 1000));
 }
 
 @end
