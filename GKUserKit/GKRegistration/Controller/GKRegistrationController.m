@@ -13,6 +13,7 @@
 #import "GKUserAccessToken.h"
 #import "GKUserContainerMock.h"
 
+
 @interface GKRegistrationController ()
 @end
 
@@ -20,7 +21,7 @@
 
 - (id)init
 {
-    self = [super init];
+    self = [self initWithNibName:@"GKRegistrationController" bundle:nil];
     if (self) {
         [self setup];
     }
@@ -47,19 +48,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
-    [self.view addSubview:self.tableView];
-    
     for (NSString* identifier in @[@"GKRegistrationTableViewCell"]) {
         [self.tableView registerNib:[UINib nibWithNibName:identifier bundle:nil]
              forCellReuseIdentifier:identifier];
     }
-    
-    self.tableView.dataSource = self;
-    self.tableView.delegate   = self;
-    
-    self.title = @"用户注册";
 }
 
 
@@ -67,8 +59,9 @@
 {
     self.service = [[GKUserContainerMock alloc] userService];
     self.registration = [[GKUserRegistration alloc] init];
-    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:self.hud];
+    self.hud = [GKHUD defaultHUD];
+    
+    self.title = @"用户注册";
     
 }
 
