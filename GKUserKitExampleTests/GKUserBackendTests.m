@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "GKUserContainer.h"
 #import "GKUserBackend.h"
-#import "GKUserContainerImpl.h"
 #import "GKUserForgotPassword.h"
+#import <OCMock/OCMock.h>
+
 @interface GKUserBackendTests : XCTestCase
 
 @end
@@ -28,26 +28,15 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
-
 - (void)testForgotPassword {
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    id<GKUserContainer> container = [[GKUserContainerImpl alloc] init];
-    id<GKUserBackend> backend = [container userBackend];
+    id<GKUserBackend> backend = OCMProtocolMock(@protocol(GKUserBackend));
+    
     GKUserForgotPassword *forgotPassword=[[GKUserForgotPassword alloc] init];
-    forgotPassword.userName=@"ggg";
-    forgotPassword.verificationCode=@"123456";
-    forgotPassword.password=@"111";
+    
+    forgotPassword.userName = @"goku";
+    forgotPassword.verificationCode = @"123456";
+    forgotPassword.password = @"goku";
     
     RACSignal *backendSignal = [backend forgotPassword:forgotPassword];
     [backendSignal subscribeNext:^(GKUserForgotPassword *forgotPassword) {

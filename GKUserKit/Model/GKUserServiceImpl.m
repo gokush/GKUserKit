@@ -9,25 +9,15 @@
 #import "GKUserServiceImpl.h"
 #import "GKUser.h"
 #import "GKUserRepository.h"
-#import "GKUserContainerImpl.h"
-#import "GKUserContainerMock.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Objection/Objection.h>
 
 @interface GKUserServiceImpl()
-@property (strong, nonatomic) id<GKUserContainer> container;
 @end
 
 @implementation GKUserServiceImpl
+objection_requires_sel(@selector(backend))
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        self.container = [[GKUserContainerMock alloc] init];
-        self.backend = [self.container userBackend];
-    }
-    return self;
-}
 
 - (RACSignal *)signup:(GKUserRegistration *)registration
 {

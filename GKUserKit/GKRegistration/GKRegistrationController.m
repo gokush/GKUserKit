@@ -8,10 +8,8 @@
 
 #import "GKRegistrationController.h"
 #import "GKRegistrationTableViewCell.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import "GKUserBackendMock.h"
 #import "GKUserAccessToken.h"
-#import "GKUserContainerMock.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Objection/Objection.h>
 
 @interface GKRegistrationController ()

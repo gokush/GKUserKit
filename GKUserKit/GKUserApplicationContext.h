@@ -8,10 +8,10 @@
 
 #import <Objection/Objection.h>
 
-@interface GKApplicationContext : JSObjectionModule
+@interface GKUserApplicationContext : JSObjectionModule
 
 @end
 
-@interface GKApplicationContextDemonstration : JSObjectionModule
+@interface GKUserApplicationContextDemonstration : JSObjectionModule
 
 @end

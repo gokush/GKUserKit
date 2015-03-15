@@ -8,6 +8,7 @@
 
 #import "GKMineViewController.h"
 #import "GKUserAuthenticationController.h"
+#import <Objection/Objection.h>
 
 @interface GKMineViewController ()
 
