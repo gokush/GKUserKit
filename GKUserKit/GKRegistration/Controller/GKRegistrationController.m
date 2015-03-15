@@ -12,6 +12,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Objection/Objection.h>
 
+
 @interface GKRegistrationController ()
 @end
 
@@ -20,7 +21,7 @@ objection_requires(@"service")
 
 - (id)init
 {
-    self = [super init];
+    self = [self initWithNibName:@"GKRegistrationController" bundle:nil];
     if (self) {
         [self setup];
     }
@@ -47,19 +48,10 @@ objection_requires(@"service")
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
-    [self.view addSubview:self.tableView];
-    
     for (NSString* identifier in @[@"GKRegistrationTableViewCell"]) {
         [self.tableView registerNib:[UINib nibWithNibName:identifier bundle:nil]
              forCellReuseIdentifier:identifier];
     }
-    
-    self.tableView.dataSource = self;
-    self.tableView.delegate   = self;
-    
-    self.title = @"用户注册";
 }
 
 
@@ -67,8 +59,9 @@ objection_requires(@"service")
 {
 //    self.service = [[GKUserContainerMock alloc] userService];
     self.registration = [[GKUserRegistration alloc] init];
-    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:self.hud];
+    self.hud = [GKHUD defaultHUD];
+    
+    self.title = @"用户注册";
     
 }
 
@@ -162,25 +155,8 @@ objection_requires(@"service")
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
-        [self createUser];
+        [self signup:nil];
     }
-}
-
-- (void)createUser {
-    NSError *error = [self.registration valid];
-    if (nil == error) {
-        [self.hud show:YES];
-        [[self.service signup:self.registration]
-         subscribeNext:[self didSignupUserSuccess] error:[self didSignupUserFailure]];
-        return;
-    }
-    
-    [[[UIAlertView alloc] initWithTitle:@"提示"
-                                message:error.localizedDescription delegate:nil
-                      cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
-     show];
-    if (self.signupDidFail)
-        self.signupDidFail(error);
 }
 
 
@@ -211,7 +187,22 @@ objection_requires(@"service")
 
 - (IBAction)signup:(id)sender
 {
-    [self.service signup:self.registration];
+
+    NSError *error = [self.registration valid];
+    if (nil == error) {
+        [self.hud show:YES];
+        [[self.service signup:self.registration]
+         subscribeNext:[self didSignupUserSuccess] error:[self didSignupUserFailure]];
+        return;
+    }
+    
+    [[[UIAlertView alloc] initWithTitle:@"提示"
+                                message:error.localizedDescription delegate:nil
+                      cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]
+     show];
+    if (self.signupDidFail)
+        self.signupDidFail(error);
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,18 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "GKUserService.h"
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "GKHUD.h"
 
 /// 用户注册控制器
 @interface GKRegistrationController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) UITableView *tableView;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 /// Service
 @property (strong, nonatomic) id<GKUserService> service;
 /// class GKUserRegistration 模型
 @property (strong, nonatomic) GKUserRegistration *registration;
 /// hud 实例
-@property (strong, nonatomic) MBProgressHUD *hud;
+@property (strong, nonatomic) GKHUD *hud;
 
 @property (strong, nonatomic) UIAlertView *alertView;
 

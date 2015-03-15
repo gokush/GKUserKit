@@ -10,9 +10,10 @@
 		144778401A9B4CE600751FD3 /* GKUserServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1447783F1A9B4CE600751FD3 /* GKUserServiceImpl.m */; };
 		1447784C1A9B608000751FD3 /* GKUserBackendImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1447784B1A9B608000751FD3 /* GKUserBackendImpl.m */; };
 		144778511A9B613000751FD3 /* GKUserBackendMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 144778501A9B613000751FD3 /* GKUserBackendMock.m */; };
-		147927661A9B399A003648FF /* GKRegistrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147927621A9B399A003648FF /* GKRegistrationController.m */; };
-		147927671A9B399A003648FF /* GKRegistrationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 147927641A9B399A003648FF /* GKRegistrationTableViewCell.m */; };
-		147927681A9B399A003648FF /* GKRegistrationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147927651A9B399A003648FF /* GKRegistrationTableViewCell.xib */; };
+		14B37E551AADD19D00E226EA /* GKRegistrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B37E501AADD19D00E226EA /* GKRegistrationController.m */; };
+		14B37E561AADD19D00E226EA /* GKRegistrationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B37E531AADD19D00E226EA /* GKRegistrationTableViewCell.m */; };
+		14B37E571AADD19D00E226EA /* GKRegistrationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B37E541AADD19D00E226EA /* GKRegistrationTableViewCell.xib */; };
+		14B37E5A1AADD1D000E226EA /* GKRegistrationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B37E591AADD1D000E226EA /* GKRegistrationController.xib */; };
 		14BD240D1A987A870015DF09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD240C1A987A870015DF09 /* main.m */; };
 		14BD24101A987A870015DF09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BD240F1A987A870015DF09 /* AppDelegate.m */; };
 		14BD24161A987A870015DF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BD24141A987A870015DF09 /* Main.storyboard */; };
@@ -30,7 +31,7 @@
 		C987B9B6891FCAC9D52E001C /* libPods-GKUserKitExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDF58C889FEC4E523B1459E /* libPods-GKUserKitExampleTests.a */; };
 		E509391C1AA9DB01004101A4 /* GKUserRegistrationControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E509391B1AA9DB01004101A4 /* GKUserRegistrationControllerTests.m */; };
 		E509391F1AA9EC52004101A4 /* GKHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E509391E1AA9EC52004101A4 /* GKHUD.m */; };
-		E50939241AAAB234004101A4 /* GKUserApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E50939231AAAB234004101A4 /* GKUserApplicationContext.m */; };
+		E54732E71AB5C71500271704 /* GKUserApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E54732E61AB5C71500271704 /* GKUserApplicationContext.m */; };
 		E555C3C11A9B70C900836965 /* GKUserRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C3C01A9B70C900836965 /* GKUserRegistration.m */; };
 		E564781B1AA0BC6D006CE49A /* GKUserAuthenticationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56478141AA0BC6D006CE49A /* GKUserAuthenticationController.m */; };
 		E564781C1AA0BC6D006CE49A /* GKUserAuthenticationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E56478171AA0BC6D006CE49A /* GKUserAuthenticationTableViewCell.m */; };
@@ -67,11 +68,12 @@
 		1447784B1A9B608000751FD3 /* GKUserBackendImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserBackendImpl.m; sourceTree = "<group>"; };
 		1447784F1A9B613000751FD3 /* GKUserBackendMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserBackendMock.h; sourceTree = "<group>"; };
 		144778501A9B613000751FD3 /* GKUserBackendMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserBackendMock.m; sourceTree = "<group>"; };
-		147927611A9B399A003648FF /* GKRegistrationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegistrationController.h; sourceTree = "<group>"; };
-		147927621A9B399A003648FF /* GKRegistrationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegistrationController.m; sourceTree = "<group>"; };
-		147927631A9B399A003648FF /* GKRegistrationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegistrationTableViewCell.h; sourceTree = "<group>"; };
-		147927641A9B399A003648FF /* GKRegistrationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegistrationTableViewCell.m; sourceTree = "<group>"; };
-		147927651A9B399A003648FF /* GKRegistrationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKRegistrationTableViewCell.xib; sourceTree = "<group>"; };
+		14B37E4F1AADD19D00E226EA /* GKRegistrationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegistrationController.h; sourceTree = "<group>"; };
+		14B37E501AADD19D00E226EA /* GKRegistrationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegistrationController.m; sourceTree = "<group>"; };
+		14B37E521AADD19D00E226EA /* GKRegistrationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegistrationTableViewCell.h; sourceTree = "<group>"; };
+		14B37E531AADD19D00E226EA /* GKRegistrationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegistrationTableViewCell.m; sourceTree = "<group>"; };
+		14B37E541AADD19D00E226EA /* GKRegistrationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKRegistrationTableViewCell.xib; sourceTree = "<group>"; };
+		14B37E591AADD1D000E226EA /* GKRegistrationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKRegistrationController.xib; sourceTree = "<group>"; };
 		14BD24071A987A870015DF09 /* GKUserKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKUserKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BD240B1A987A870015DF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14BD240C1A987A870015DF09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,8 +103,8 @@
 		E509391B1AA9DB01004101A4 /* GKUserRegistrationControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserRegistrationControllerTests.m; sourceTree = "<group>"; };
 		E509391D1AA9EC52004101A4 /* GKHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKHUD.h; sourceTree = "<group>"; };
 		E509391E1AA9EC52004101A4 /* GKHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKHUD.m; sourceTree = "<group>"; };
-		E50939221AAAB234004101A4 /* GKUserApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserApplicationContext.h; sourceTree = "<group>"; };
-		E50939231AAAB234004101A4 /* GKUserApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserApplicationContext.m; sourceTree = "<group>"; };
+		E54732E51AB5C71500271704 /* GKUserApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserApplicationContext.h; sourceTree = "<group>"; };
+		E54732E61AB5C71500271704 /* GKUserApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserApplicationContext.m; sourceTree = "<group>"; };
 		E555C3BF1A9B70C900836965 /* GKUserRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserRegistration.h; path = Model/GKUserRegistration.h; sourceTree = "<group>"; };
 		E555C3C01A9B70C900836965 /* GKUserRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserRegistration.m; path = Model/GKUserRegistration.m; sourceTree = "<group>"; };
 		E56478131AA0BC6D006CE49A /* GKUserAuthenticationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserAuthenticationController.h; sourceTree = "<group>"; };
@@ -167,13 +169,38 @@
 		147927601A9B399A003648FF /* GKRegistration */ = {
 			isa = PBXGroup;
 			children = (
-				147927611A9B399A003648FF /* GKRegistrationController.h */,
-				147927621A9B399A003648FF /* GKRegistrationController.m */,
-				147927631A9B399A003648FF /* GKRegistrationTableViewCell.h */,
-				147927641A9B399A003648FF /* GKRegistrationTableViewCell.m */,
-				147927651A9B399A003648FF /* GKRegistrationTableViewCell.xib */,
+				14B37E581AADD1B100E226EA /* View */,
+				14B37E4E1AADD19D00E226EA /* Controller */,
+				14B37E511AADD19D00E226EA /* TableViewCell */,
 			);
 			path = GKRegistration;
+			sourceTree = "<group>";
+		};
+		14B37E4E1AADD19D00E226EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14B37E4F1AADD19D00E226EA /* GKRegistrationController.h */,
+				14B37E501AADD19D00E226EA /* GKRegistrationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		14B37E511AADD19D00E226EA /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				14B37E521AADD19D00E226EA /* GKRegistrationTableViewCell.h */,
+				14B37E531AADD19D00E226EA /* GKRegistrationTableViewCell.m */,
+				14B37E541AADD19D00E226EA /* GKRegistrationTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		14B37E581AADD1B100E226EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14B37E591AADD1D000E226EA /* GKRegistrationController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		14BD23FE1A987A870015DF09 = {
@@ -246,6 +273,8 @@
 		14BD24301A98954C0015DF09 /* GKUserKit */ = {
 			isa = PBXGroup;
 			children = (
+				E54732E51AB5C71500271704 /* GKUserApplicationContext.h */,
+				E54732E61AB5C71500271704 /* GKUserApplicationContext.m */,
 				E57D3A801AA33EE8007CE40E /* GKMine */,
 				E56478111AA0BC6D006CE49A /* GKUserAuthentication */,
 				147927601A9B399A003648FF /* GKRegistration */,
@@ -253,8 +282,6 @@
 				E5A126E01A98B2520016AF23 /* Model */,
 				E509391D1AA9EC52004101A4 /* GKHUD.h */,
 				E509391E1AA9EC52004101A4 /* GKHUD.m */,
-				E50939221AAAB234004101A4 /* GKUserApplicationContext.h */,
-				E50939231AAAB234004101A4 /* GKUserApplicationContext.m */,
 			);
 			path = GKUserKit;
 			sourceTree = "<group>";
@@ -457,13 +484,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B37E571AADD19D00E226EA /* GKRegistrationTableViewCell.xib in Resources */,
 				14BD24161A987A870015DF09 /* Main.storyboard in Resources */,
 				C8CA7F5C1A9A121D00E0B44F /* GKForgotPasswordController.xib in Resources */,
 				14BD241B1A987A870015DF09 /* LaunchScreen.xib in Resources */,
 				E564781D1AA0BC6D006CE49A /* GKUserAuthenticationTableViewCell.xib in Resources */,
 				C8CA7F611A9A167E00E0B44F /* GKVerificationTableViewCell.xib in Resources */,
+				14B37E5A1AADD1D000E226EA /* GKRegistrationController.xib in Resources */,
 				E564781E1AA0BC6D006CE49A /* GKUserAuthenticationView.xib in Resources */,
-				147927681A9B399A003648FF /* GKRegistrationTableViewCell.xib in Resources */,
 				14BD24181A987A870015DF09 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,21 +577,21 @@
 				144778401A9B4CE600751FD3 /* GKUserServiceImpl.m in Sources */,
 				E5EAD9911A9CCF7A004E8812 /* GKUserEntity.m in Sources */,
 				C813F3BF1A9F65DD0080155E /* GKUserForgotPassword.m in Sources */,
-				147927671A9B399A003648FF /* GKRegistrationTableViewCell.m in Sources */,
 				E5EAD9891A9CBA4B004E8812 /* GKUserModel.xcdatamodeld in Sources */,
 				E57D3A851AA33F5F007CE40E /* GKMineViewController.m in Sources */,
 				C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */,
 				E564781B1AA0BC6D006CE49A /* GKUserAuthenticationController.m in Sources */,
+				14B37E561AADD19D00E226EA /* GKRegistrationTableViewCell.m in Sources */,
 				E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */,
 				E5A126E61A98B2870016AF23 /* GKUser.m in Sources */,
+				E54732E71AB5C71500271704 /* GKUserApplicationContext.m in Sources */,
 				14BD24101A987A870015DF09 /* AppDelegate.m in Sources */,
 				E56478211AA0BC9B006CE49A /* GKUserAuthentication.m in Sources */,
+				14B37E551AADD19D00E226EA /* GKRegistrationController.m in Sources */,
 				144778511A9B613000751FD3 /* GKUserBackendMock.m in Sources */,
 				C8CA7F5A1A9A11FC00E0B44F /* GKForgotPasswordController.m in Sources */,
 				1447784C1A9B608000751FD3 /* GKUserBackendImpl.m in Sources */,
 				E555C3C11A9B70C900836965 /* GKUserRegistration.m in Sources */,
-				147927661A9B399A003648FF /* GKRegistrationController.m in Sources */,
-				E50939241AAAB234004101A4 /* GKUserApplicationContext.m in Sources */,
 				E5EAD9831A9CB2C1004E8812 /* GKUserRepositoryImpl.m in Sources */,
 				E509391F1AA9EC52004101A4 /* GKHUD.m in Sources */,
 				345C58561AA9E0CA00395B30 /* PersistenStack.m in Sources */,
