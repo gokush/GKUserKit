@@ -8,10 +8,10 @@
 
 #import "GKUserAuthenticationController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
-#import "GKUserContainerMock.h"
 #import "GKForgotPasswordController.h"
 #import "GKRegistrationController.h"
 #import "GKHUD.h"
+#import <Objection/Objection.h>
 
 typedef enum {
     InputSectionUsernameCell,
@@ -32,6 +32,7 @@ typedef enum {
 @end
 
 @implementation GKUserAuthenticationController
+objection_requires_sel(@selector(service))
 
 - (id)init
 {
@@ -62,7 +63,7 @@ typedef enum {
 
 - (void)setup
 {
-    self.service = [[GKUserContainerMock alloc] userService];
+    [[JSObjection defaultInjector] injectDependencies:self];
     self.user = [[GKUserAuthentication alloc] init];
     self.hud = [GKHUD defaultHUD];
     self.alertView = [[UIAlertView alloc]

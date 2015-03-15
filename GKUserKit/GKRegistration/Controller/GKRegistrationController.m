@@ -8,16 +8,16 @@
 
 #import "GKRegistrationController.h"
 #import "GKRegistrationTableViewCell.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import "GKUserBackendMock.h"
 #import "GKUserAccessToken.h"
-#import "GKUserContainerMock.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Objection/Objection.h>
 
 
 @interface GKRegistrationController ()
 @end
 
 @implementation GKRegistrationController
+objection_requires(@"service")
 
 - (id)init
 {
@@ -57,7 +57,7 @@
 
 - (void)setup
 {
-    self.service = [[GKUserContainerMock alloc] userService];
+//    self.service = [[GKUserContainerMock alloc] userService];
     self.registration = [[GKUserRegistration alloc] init];
     self.hud = [GKHUD defaultHUD];
     

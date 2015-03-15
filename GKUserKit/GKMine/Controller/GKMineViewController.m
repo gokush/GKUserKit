@@ -8,6 +8,7 @@
 
 #import "GKMineViewController.h"
 #import "GKUserAuthenticationController.h"
+#import <Objection/Objection.h>
 #import "GKRegistrationController.h"
 
 @interface GKMineViewController ()
@@ -35,12 +36,7 @@
             [self.hud show:YES];
             [self.hud hide:YES afterDelay:2];
     };
-//    [self.navigationController pushViewController:authentication animated:YES];
-    
-    GKRegistrationController *registration = [[GKRegistrationController alloc] init];
-    [self.navigationController pushViewController:registration animated:YES];
-    
-    
+    [self.navigationController pushViewController:authentication animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

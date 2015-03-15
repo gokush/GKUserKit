@@ -57,6 +57,8 @@
 {
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
+    id partialMock = OCMPartialMock(self.controller);
+    
     self.controller.alertView = OCMClassMock([UIAlertView class]);
     @weakify(self);
     self.controller.authenticateDidFail = ^(NSError *error) {
