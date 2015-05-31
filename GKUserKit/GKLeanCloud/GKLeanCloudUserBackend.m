@@ -44,6 +44,25 @@
 
 - (RACSignal *)authencate:(GKUserAuthentication *)authentication
 {
+    __block GKUser *user;
     
+    return
+    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [AVUser logInWithUsernameInBackground:authentication.username
+                                     password:authentication.password
+                                        block:^(AVUser *leancloudUser,
+                                                NSError *error) {
+                                            
+            user = [self.assembler userWithLeanCloudUser:leancloudUser];
+            if (nil == error) {
+                [subscriber sendNext:user];
+                [subscriber sendCompleted];
+            } else
+                [subscriber sendError:error];
+            
+        }];
+        
+        return nil;
+    }];
 }
 @end

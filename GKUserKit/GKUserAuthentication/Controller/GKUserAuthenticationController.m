@@ -280,7 +280,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSError *error = [self.user valid];
     if (nil == error) {
-        [self.hud show:YES];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [[self.service authenticate:self.user]
          subscribeNext:[self didAuthencateUserSuccess]
          error:[self didAuthencateUserFailure]];
@@ -297,6 +297,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 - (void(^)(GKUser *))didAuthencateUserSuccess
 {
     return ^(GKUser *user) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         [self.navigationController popViewControllerAnimated:YES];
         [self.hud hide:YES];
         if (self.authenticateDidSucceed)
@@ -307,6 +308,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 - (void(^)(NSError *))didAuthencateUserFailure
 {
     return ^(NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        
         self.alertView.message = error.localizedDescription;
         [self.alertView show];
         
