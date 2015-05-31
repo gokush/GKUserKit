@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <MBProgressHUD/MBProgressHUD.h>
-#import "GKUserAuthenticationTableViewCell.h"
 #import "GKUserAuthentication.h"
 #import "GKUserService.h"
-#import "GKHUD.h"
 
 @interface GKUserAuthenticationController : UIViewController
 <UITableViewDelegate, UITableViewDataSource>
@@ -22,8 +20,7 @@
 @property (strong, nonatomic) UIAlertView *alertView;
 /// MBProgressHUD的实例
 ///
-/// 单元测试 mock hud 可以检查认证是否被触发
-@property (strong, nonatomic) GKHUD *hud;
+
 /// 认证成功
 /// @param controller 用户认证控制器
 /// @param user 用户

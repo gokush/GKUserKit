@@ -12,6 +12,7 @@
 #import "GKRegistrationController.h"
 #import "GKHUD.h"
 #import <Objection/Objection.h>
+#import "GKTableViewCell.h"
 
 typedef enum {
     InputSectionUsernameCell,
@@ -73,12 +74,6 @@ objection_requires_sel(@selector(service))
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    for (NSString *identifier in @[@"GKUserAuthenticationTableViewCell"]) {
-        UINib *nib;
-        nib = [UINib nibWithNibName:identifier bundle:nil];
-        [self.tableView registerNib:nib
-             forCellReuseIdentifier:identifier];
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,7 +90,32 @@ objection_requires_sel(@selector(service))
 - (CGFloat)tableView:(UITableView *)tableView
 heightForHeaderInSection:(NSInteger)section
 {
-    return 20.0f;
+    CGFloat height;
+    switch (section) {
+        case 0:
+            height = 40.0f;
+            break;
+            
+        default:
+            height = 20.0f;
+            break;
+    }
+    return height;
+}
+
+- (NSString *)tableView:(UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
+    NSString *title = @"";
+    switch (section) {
+        case 0:
+            title = @"登录";
+            break;
+        default:
+            break;
+    }
+    
+    return title;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView
@@ -196,35 +216,34 @@ viewForFooterInSection:(NSInteger)section
         default:
             break;
     }
-    
-//    [tableView tableViewCell:cell setSeparatorForRowAtIndexPath:indexPath];
+
     return cell;
 }
 
 - (UITableViewCell *)inputCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GKUserAuthenticationTableViewCell *cell;
-    static NSString *name = @"GKUserAuthenticationTableViewCell";
+    GKTableViewCell *cell;
+    NSString *name = @"GKUserAuthenticationTableViewCell";
     cell = [self.tableView dequeueReusableCellWithIdentifier:name];
+    if (nil == cell)
+        cell = [[GKTableViewCell alloc] init];
     
     switch (indexPath.row) {
         case InputSectionUsernameCell: {
             cell.titleLabel.text = @"用户名";
             cell.inputTextField.placeholder = @"请输入用户名";
+            RAC(self.user, username) = cell.inputTextField.rac_textSignal;
             break;
         }
         case InputSectionPasswordCell: {
             cell.titleLabel.text = @"密码";
             cell.inputTextField.placeholder = @"请输入密码";
+            RAC(self.user, password) = cell.inputTextField.rac_textSignal;
             break;
         }
         default:
             break;
     }
-    [cell.inputTextField addTarget:self
-                            action:@selector(textFieldDidChange:)
-                  forControlEvents:UIControlEventEditingChanged];
-    cell.inputTextField.tag = indexPath.row;
     
     return cell;
 }
@@ -299,7 +318,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     return ^(GKUser *user) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         [self.navigationController popViewControllerAnimated:YES];
-        [self.hud hide:YES];
         if (self.authenticateDidSucceed)
             self.authenticateDidSucceed(self, [[GKUser alloc] init]);
     };

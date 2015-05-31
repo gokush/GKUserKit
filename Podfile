@@ -9,6 +9,7 @@ target 'GKUserKitExample' do
     pod 'ReactiveCocoa', '~> 2.4.7'
     pod 'MBProgressHUD'
     pod 'Objection'
+    pod 'Masonry'
     pod 'AVOSCloud'
 end
 
