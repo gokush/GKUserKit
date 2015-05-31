@@ -64,22 +64,76 @@
     NSFetchRequest *request;
     NSPredicate *predicate;
     NSError *error;
-    NSArray *user;
+    NSArray *users;
     
     request = [[NSFetchRequest alloc] init];
     request.entity = description;
     predicate = [NSPredicate predicateWithFormat:@"userID = %d", userID];
     [request setPredicate:predicate];
     
-    user = [self.context executeFetchRequest:request error:&error];
+    users = [self.context executeFetchRequest:request error:&error];
     
     if (error == nil) {
-      [subscriber sendNext:[self userWithEntity:user.firstObject]];
+      [subscriber sendNext:[self userWithEntity:users.firstObject]];
       [subscriber sendCompleted];
     } else
       [subscriber sendError:error];
     return (RACDisposable *)nil;
   }];
+}
+
+- (RACSignal *)updateLastAuthencateDate:(GKUser *)user
+{
+    return
+    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSEntityDescription *description;
+        description = [NSEntityDescription entityForName:@"GKUserEntity"
+                                  inManagedObjectContext:self.context];
+        
+        NSFetchRequest *request;
+        NSPredicate *predicate;
+        NSError *error;
+        NSArray *users;
+        
+        request = [[NSFetchRequest alloc] init];
+        predicate = [NSPredicate predicateWithFormat:@"userID == %d",
+                     user.userID];
+        users = [self.context executeFetchRequest:request error:&error];
+        GKUserEntity *user = users.firstObject;
+        user.lastAuthencateDate = [[NSDate alloc] init];
+        [self save];
+        
+        [subscriber sendNext:user];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+}
+
+- (RACSignal *)lastAuthencateUser
+{
+    return
+    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSEntityDescription *description;
+        description = [NSEntityDescription entityForName:@"GKUserEntity"
+                                  inManagedObjectContext:self.context];
+        
+        NSFetchRequest *request;
+        NSSortDescriptor *sortDescriptor;
+        NSError *error;
+        NSArray *users;
+        
+        request = [[NSFetchRequest alloc] init];
+        sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"lastAuthencate"
+                                                     ascending:NO];
+        [request setSortDescriptors:@[sortDescriptor]];
+        [request setFetchLimit:1];
+        users = [self.context executeFetchRequest:request error:&error];
+        
+        [subscriber sendNext:users.firstObject];
+        [subscriber sendCompleted];
+        
+        return nil;
+    }];
 }
 
 - (void)save

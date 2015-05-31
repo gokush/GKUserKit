@@ -31,7 +31,7 @@
 ///        NSLog(@"username %@", user.username);
 ///    }];
 
-- (RACSignal *)signup:(GKUserRegistration *)user;
+- (RACSignal *)signup:(GKUserRegistration *)registration;
 
 ///
 /// 请求远程服务器忘记密码后设置新密码

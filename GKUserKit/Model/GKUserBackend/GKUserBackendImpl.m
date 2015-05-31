@@ -20,9 +20,9 @@
     return self;
 }
 
-- (RACSignal *)signup:(GKUserRegistration *)user {
+- (RACSignal *)signup:(GKUserRegistration *)registration {
     @weakify(self)
-    NSDictionary *params = @{@"email":user.email, @"passWord":user.password, @"username":user.username};
+    NSDictionary *params = @{@"email":registration.email, @"passWord":registration.password, @"username":registration.username};
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self)
         [self.manager POST:@"URL_TO_FILL" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {

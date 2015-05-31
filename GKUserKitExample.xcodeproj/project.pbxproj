@@ -29,9 +29,14 @@
 		C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CA7F5E1A9A167E00E0B44F /* GKVerificationTableViewCell.m */; };
 		C8CA7F611A9A167E00E0B44F /* GKVerificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CA7F5F1A9A167E00E0B44F /* GKVerificationTableViewCell.xib */; };
 		C987B9B6891FCAC9D52E001C /* libPods-GKUserKitExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDF58C889FEC4E523B1459E /* libPods-GKUserKitExampleTests.a */; };
+		E50399CA1B1AF34A00368DE7 /* GKUserRegistration+LeanCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = E50399C91B1AF34A00368DE7 /* GKUserRegistration+LeanCloud.m */; };
+		E50399D01B1AF50700368DE7 /* GKLeanCloudUserBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = E50399CF1B1AF50700368DE7 /* GKLeanCloudUserBackend.m */; };
+		E50399D31B1AF6C600368DE7 /* GKLeanCloudUserAssembler.m in Sources */ = {isa = PBXBuildFile; fileRef = E50399D21B1AF6C600368DE7 /* GKLeanCloudUserAssembler.m */; };
+		E50399D61B1AF91300368DE7 /* GKLeanCloudApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E50399D51B1AF91300368DE7 /* GKLeanCloudApplicationContext.m */; };
 		E509391C1AA9DB01004101A4 /* GKUserRegistrationControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E509391B1AA9DB01004101A4 /* GKUserRegistrationControllerTests.m */; };
 		E509391F1AA9EC52004101A4 /* GKHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E509391E1AA9EC52004101A4 /* GKHUD.m */; };
 		E54732E71AB5C71500271704 /* GKUserApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E54732E61AB5C71500271704 /* GKUserApplicationContext.m */; };
+		E54732EC1AB5D07200271704 /* GKUserRepositoryImplTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E54732EB1AB5D07200271704 /* GKUserRepositoryImplTests.m */; };
 		E555C3C11A9B70C900836965 /* GKUserRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C3C01A9B70C900836965 /* GKUserRegistration.m */; };
 		E564781B1AA0BC6D006CE49A /* GKUserAuthenticationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56478141AA0BC6D006CE49A /* GKUserAuthenticationController.m */; };
 		E564781C1AA0BC6D006CE49A /* GKUserAuthenticationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E56478171AA0BC6D006CE49A /* GKUserAuthenticationTableViewCell.m */; };
@@ -100,11 +105,20 @@
 		C8CA7F5D1A9A167E00E0B44F /* GKVerificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKVerificationTableViewCell.h; sourceTree = "<group>"; };
 		C8CA7F5E1A9A167E00E0B44F /* GKVerificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKVerificationTableViewCell.m; sourceTree = "<group>"; };
 		C8CA7F5F1A9A167E00E0B44F /* GKVerificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKVerificationTableViewCell.xib; sourceTree = "<group>"; };
+		E50399C81B1AF34A00368DE7 /* GKUserRegistration+LeanCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GKUserRegistration+LeanCloud.h"; path = "GKLeanCloud/GKUserRegistration+LeanCloud.h"; sourceTree = "<group>"; };
+		E50399C91B1AF34A00368DE7 /* GKUserRegistration+LeanCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GKUserRegistration+LeanCloud.m"; path = "GKLeanCloud/GKUserRegistration+LeanCloud.m"; sourceTree = "<group>"; };
+		E50399CE1B1AF50700368DE7 /* GKLeanCloudUserBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKLeanCloudUserBackend.h; path = GKLeanCloud/GKLeanCloudUserBackend.h; sourceTree = "<group>"; };
+		E50399CF1B1AF50700368DE7 /* GKLeanCloudUserBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKLeanCloudUserBackend.m; path = GKLeanCloud/GKLeanCloudUserBackend.m; sourceTree = "<group>"; };
+		E50399D11B1AF6C600368DE7 /* GKLeanCloudUserAssembler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKLeanCloudUserAssembler.h; path = GKLeanCloud/GKLeanCloudUserAssembler.h; sourceTree = "<group>"; };
+		E50399D21B1AF6C600368DE7 /* GKLeanCloudUserAssembler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKLeanCloudUserAssembler.m; path = GKLeanCloud/GKLeanCloudUserAssembler.m; sourceTree = "<group>"; };
+		E50399D41B1AF91300368DE7 /* GKLeanCloudApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKLeanCloudApplicationContext.h; path = GKLeanCloud/GKLeanCloudApplicationContext.h; sourceTree = "<group>"; };
+		E50399D51B1AF91300368DE7 /* GKLeanCloudApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKLeanCloudApplicationContext.m; path = GKLeanCloud/GKLeanCloudApplicationContext.m; sourceTree = "<group>"; };
 		E509391B1AA9DB01004101A4 /* GKUserRegistrationControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserRegistrationControllerTests.m; sourceTree = "<group>"; };
 		E509391D1AA9EC52004101A4 /* GKHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKHUD.h; sourceTree = "<group>"; };
 		E509391E1AA9EC52004101A4 /* GKHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKHUD.m; sourceTree = "<group>"; };
 		E54732E51AB5C71500271704 /* GKUserApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserApplicationContext.h; sourceTree = "<group>"; };
 		E54732E61AB5C71500271704 /* GKUserApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserApplicationContext.m; sourceTree = "<group>"; };
+		E54732EB1AB5D07200271704 /* GKUserRepositoryImplTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUserRepositoryImplTests.m; sourceTree = "<group>"; };
 		E555C3BF1A9B70C900836965 /* GKUserRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUserRegistration.h; path = Model/GKUserRegistration.h; sourceTree = "<group>"; };
 		E555C3C01A9B70C900836965 /* GKUserRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUserRegistration.m; path = Model/GKUserRegistration.m; sourceTree = "<group>"; };
 		E56478131AA0BC6D006CE49A /* GKUserAuthenticationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUserAuthenticationController.h; sourceTree = "<group>"; };
@@ -257,6 +271,7 @@
 				E5EAD98D1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m */,
 				E57D3A871AA35820007CE40E /* GKUserAuthenticationControllerTests.m */,
 				E509391B1AA9DB01004101A4 /* GKUserRegistrationControllerTests.m */,
+				E54732EB1AB5D07200271704 /* GKUserRepositoryImplTests.m */,
 				14BD24241A987A870015DF09 /* Supporting Files */,
 			);
 			path = GKUserKitExampleTests;
@@ -273,6 +288,7 @@
 		14BD24301A98954C0015DF09 /* GKUserKit */ = {
 			isa = PBXGroup;
 			children = (
+				E50399C41B1AF2D900368DE7 /* GKLeanCloud */,
 				E54732E51AB5C71500271704 /* GKUserApplicationContext.h */,
 				E54732E61AB5C71500271704 /* GKUserApplicationContext.m */,
 				E57D3A801AA33EE8007CE40E /* GKMine */,
@@ -317,6 +333,21 @@
 				C8CA7F5F1A9A167E00E0B44F /* GKVerificationTableViewCell.xib */,
 			);
 			path = GKForgotPassword;
+			sourceTree = "<group>";
+		};
+		E50399C41B1AF2D900368DE7 /* GKLeanCloud */ = {
+			isa = PBXGroup;
+			children = (
+				E50399C81B1AF34A00368DE7 /* GKUserRegistration+LeanCloud.h */,
+				E50399C91B1AF34A00368DE7 /* GKUserRegistration+LeanCloud.m */,
+				E50399CE1B1AF50700368DE7 /* GKLeanCloudUserBackend.h */,
+				E50399CF1B1AF50700368DE7 /* GKLeanCloudUserBackend.m */,
+				E50399D11B1AF6C600368DE7 /* GKLeanCloudUserAssembler.h */,
+				E50399D21B1AF6C600368DE7 /* GKLeanCloudUserAssembler.m */,
+				E50399D41B1AF91300368DE7 /* GKLeanCloudApplicationContext.h */,
+				E50399D51B1AF91300368DE7 /* GKLeanCloudApplicationContext.m */,
+			);
+			name = GKLeanCloud;
 			sourceTree = "<group>";
 		};
 		E56478111AA0BC6D006CE49A /* GKUserAuthentication */ = {
@@ -580,11 +611,13 @@
 				E5EAD9891A9CBA4B004E8812 /* GKUserModel.xcdatamodeld in Sources */,
 				E57D3A851AA33F5F007CE40E /* GKMineViewController.m in Sources */,
 				C8CA7F601A9A167E00E0B44F /* GKVerificationTableViewCell.m in Sources */,
+				E50399D31B1AF6C600368DE7 /* GKLeanCloudUserAssembler.m in Sources */,
 				E564781B1AA0BC6D006CE49A /* GKUserAuthenticationController.m in Sources */,
 				14B37E561AADD19D00E226EA /* GKRegistrationTableViewCell.m in Sources */,
 				E5A126E51A98B2870016AF23 /* GKUserAccessToken.m in Sources */,
 				E5A126E61A98B2870016AF23 /* GKUser.m in Sources */,
 				E54732E71AB5C71500271704 /* GKUserApplicationContext.m in Sources */,
+				E50399D01B1AF50700368DE7 /* GKLeanCloudUserBackend.m in Sources */,
 				14BD24101A987A870015DF09 /* AppDelegate.m in Sources */,
 				E56478211AA0BC9B006CE49A /* GKUserAuthentication.m in Sources */,
 				14B37E551AADD19D00E226EA /* GKRegistrationController.m in Sources */,
@@ -596,6 +629,8 @@
 				E509391F1AA9EC52004101A4 /* GKHUD.m in Sources */,
 				345C58561AA9E0CA00395B30 /* PersistenStack.m in Sources */,
 				14BD240D1A987A870015DF09 /* main.m in Sources */,
+				E50399D61B1AF91300368DE7 /* GKLeanCloudApplicationContext.m in Sources */,
+				E50399CA1B1AF34A00368DE7 /* GKUserRegistration+LeanCloud.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54732EC1AB5D07200271704 /* GKUserRepositoryImplTests.m in Sources */,
 				E57D3A881AA35820007CE40E /* GKUserAuthenticationControllerTests.m in Sources */,
 				E5EAD98E1A9CBDBF004E8812 /* GKUserRepositoryImplTest.m in Sources */,
 				E509391C1AA9DB01004101A4 /* GKUserRegistrationControllerTests.m in Sources */,

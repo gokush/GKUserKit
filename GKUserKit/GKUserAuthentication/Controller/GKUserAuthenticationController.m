@@ -65,7 +65,6 @@ objection_requires_sel(@selector(service))
 {
     [[JSObjection defaultInjector] injectDependencies:self];
     self.user = [[GKUserAuthentication alloc] init];
-    self.hud = [GKHUD defaultHUD];
     self.alertView = [[UIAlertView alloc]
                       initWithTitle:@"提示" message:@"" delegate:nil
                       cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];

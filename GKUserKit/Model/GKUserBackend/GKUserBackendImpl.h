@@ -14,6 +14,4 @@
 @interface GKUserBackendImpl : NSObject <GKUserBackend>
 
 @property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
-
-- (RACSignal *)signup:(GKUserRegistration *)user;
 @end

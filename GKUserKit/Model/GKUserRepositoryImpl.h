@@ -14,4 +14,6 @@
 @property (strong, nonatomic) NSManagedObjectContext *context;
 - (RACSignal *)create:(GKUser *)user;
 - (RACSignal *)findUserWithID:(NSInteger)userID;
+- (RACSignal *)updateLastAuthencateDate:(GKUser *)user;
+- (RACSignal *)lastAuthencateUser;
 @end

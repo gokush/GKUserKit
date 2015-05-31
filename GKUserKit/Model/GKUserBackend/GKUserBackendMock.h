@@ -9,7 +9,5 @@
 #import <Foundation/Foundation.h>
 #import "GKUserBackend.h"
 @interface GKUserBackendMock : NSObject<GKUserBackend>
-
-- (RACSignal *)signup:(GKUserRegistration *)user;
 - (RACSignal *)forgotPassword:(GKUserForgotPassword *) forgotPassword;
 @end

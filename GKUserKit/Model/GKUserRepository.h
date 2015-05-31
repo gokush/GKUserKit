@@ -40,4 +40,7 @@ typedef NS_ENUM(NSInteger, GKUserQueue) {
 ///    [[repository findUserWithID:1] subscribeNext:^(GKUser *user) {
 ///    }];
 - (RACSignal *)findUserWithID:(NSInteger)userID;
+
+- (RACSignal *)updateLastAuthencateDate:(GKUser *)user;
+- (RACSignal *)lastAuthencateUser;
 @end

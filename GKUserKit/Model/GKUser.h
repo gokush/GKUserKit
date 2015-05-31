@@ -13,11 +13,14 @@
 @interface GKUser : NSObject <NSCoding>
 
 @property (assign, nonatomic) NSInteger userID;
+@property (strong, nonatomic) NSString *objectID;
 @property (strong, nonatomic) NSString *sessionID;
 @property (strong, nonatomic) NSString *username;
 @property (strong, nonatomic) NSString *email;
+@property (strong, nonatomic) NSString *mobilePhoneNumber;
 @property (strong, nonatomic) GKResizer *avatar;
 @property (strong, nonatomic) GKUserAccessToken *accessToken;
+@property (strong, nonatomic) NSDate *lastAuthencateDate;
 
 - (BOOL)authorized;
 - (void)merge:(GKUser *)user;

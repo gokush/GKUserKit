@@ -1,9 +1,9 @@
 //
 //  GKUserEntity.h
-//  GKUserKitExample
+//  Pods
 //
-//  Created by 小悟空 on 2/24/15.
-//  Copyright (c) 2015 GKCommerce. All rights reserved.
+//  Created by 小悟空 on 3/15/15.
+//
 //
 
 #import <Foundation/Foundation.h>
@@ -12,12 +12,13 @@
 
 @interface GKUserEntity : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * userID;
-@property (nonatomic, retain) NSString * username;
 @property (nonatomic, retain) NSString * accessToken;
 @property (nonatomic, retain) NSNumber * accessTokenExpires;
 @property (nonatomic, retain) NSNumber * accessTokenType;
-@property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSString * avatar;
+@property (nonatomic, retain) NSString * email;
+@property (nonatomic, retain) NSNumber * userID;
+@property (nonatomic, retain) NSString * username;
+@property (nonatomic, retain) NSDate * lastAuthencateDate;
 
 @end

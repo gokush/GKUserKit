@@ -14,7 +14,7 @@
 
 @implementation GKUserBackendMock
 
-- (RACSignal *)signup:(GKUserRegistration *)user
+- (RACSignal *)signup:(GKUserRegistration *)registration
 {
     return
     [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {

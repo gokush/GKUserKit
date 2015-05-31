@@ -10,6 +10,8 @@
 //#import "GKUserKitExample-Swift.h"
 #import "PersistenStack.h"
 #import "GKUserApplicationContext.h"
+#import "GKLeanCloudApplicationContext.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface AppDelegate ()
 
@@ -24,10 +26,15 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[PersistenStack alloc] initWithStoreURL:[self storeURL]
                                     modelURL:[self modelURL]];
     
+    [AVOSCloud setApplicationId:@"7p372n08zdejj35l5vsw6bxaizd4o4iubr60j5r6fjh1hu39"
+                      clientKey:@"5u2tc36b5161dfrbxpcv8w5g68omxs2zv45azw7gz1uj5uxh"];
+    
     JSObjectionInjector *injector;
     GKUserApplicationContextDemonstration *context;
     context = [[GKUserApplicationContextDemonstration alloc] init];
-    injector = [JSObjection createInjector:context];
+    injector = [JSObjection createInjector:[[GKLeanCloudApplicationContext alloc] init]];
+//    injector = [JSObjection createInjector:context];
+//    [injector withModule:[[GKLeanCloudApplicationContext alloc] init]];
     [JSObjection setDefaultInjector:injector];
     
     return YES;

@@ -1,9 +1,9 @@
 //
 //  GKUserEntity.m
-//  GKUserKitExample
+//  Pods
 //
-//  Created by 小悟空 on 2/24/15.
-//  Copyright (c) 2015 GKCommerce. All rights reserved.
+//  Created by 小悟空 on 3/15/15.
+//
 //
 
 #import "GKUserEntity.h"
@@ -11,12 +11,13 @@
 
 @implementation GKUserEntity
 
-@dynamic userID;
-@dynamic username;
 @dynamic accessToken;
 @dynamic accessTokenExpires;
 @dynamic accessTokenType;
-@dynamic email;
 @dynamic avatar;
+@dynamic email;
+@dynamic userID;
+@dynamic username;
+@dynamic lastAuthencateDate;
 
 @end

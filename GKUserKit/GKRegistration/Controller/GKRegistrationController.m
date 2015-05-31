@@ -11,18 +11,21 @@
 #import "GKUserAccessToken.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Objection/Objection.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 
 @interface GKRegistrationController ()
 @end
 
 @implementation GKRegistrationController
-objection_requires(@"service")
+objection_requires_sel(@selector(service))
 
 - (id)init
 {
     self = [self initWithNibName:@"GKRegistrationController" bundle:nil];
     if (self) {
+        self.service = [[JSObjection defaultInjector]
+                        getObject:@protocol(GKUserService)];
         [self setup];
     }
     return self;
@@ -164,6 +167,7 @@ objection_requires(@"service")
 - (void(^)(GKUser *))didSignupUserSuccess
 {
     return ^(GKUser *user) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         [self.navigationController popViewControllerAnimated:YES];
         [self.hud hide:YES];
         if (self.signupDidSucceed)
@@ -174,6 +178,8 @@ objection_requires(@"service")
 - (void(^)(NSError *))didSignupUserFailure
 {
     return ^(NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        
         [[[UIAlertView alloc] initWithTitle:@"提示"
                                     message:error.localizedDescription
                                    delegate:nil
@@ -187,10 +193,10 @@ objection_requires(@"service")
 
 - (IBAction)signup:(id)sender
 {
-
     NSError *error = [self.registration valid];
     if (nil == error) {
-        [self.hud show:YES];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
         [[self.service signup:self.registration]
          subscribeNext:[self didSignupUserSuccess] error:[self didSignupUserFailure]];
         return;
